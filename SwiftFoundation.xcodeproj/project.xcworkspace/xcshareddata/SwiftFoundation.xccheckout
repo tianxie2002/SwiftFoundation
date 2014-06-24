@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C3A17304-1894-4A8D-AB76-346819F3C954</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SwiftFoundation</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D187D82D-4941-4B68-83B2-EBB76C196AAE</key>
+		<string>https://github.com/baxiang/SwiftFoundation.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SwiftFoundation.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D187D82D-4941-4B68-83B2-EBB76C196AAE</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/baxiang/SwiftFoundation.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D187D82D-4941-4B68-83B2-EBB76C196AAE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D187D82D-4941-4B68-83B2-EBB76C196AAE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SwiftFoundation</string>
+		</dict>
+	</array>
+</dict>
+</plist>
