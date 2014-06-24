@@ -20,7 +20,11 @@ class FoundationViewController: BaseViewController,UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "基础"
-        self.uikitArray = ["定位", "单例", "UIImageView", "UISlider", "UIWebView", "UISegmentedControl", "UISwitch", "UITextField", "UIScrollView", "UISearchBar", "UIPageControl", "UIDatePicker", "UIPickerView", "UIProgressView", "UITextView", "UIToolbar", "UIActionSheet", "UIActivityIndicatorView"]
+        self.uikitArray = ["常量和变量",
+                            "数组与字典",
+                            "Closures闭包",
+                            "可选链",
+                          ]
         self.uikitTableView  = UITableView(frame:self.view.frame, style:UITableViewStyle.Plain)
         self.uikitTableView!.delegate = self
         self.uikitTableView!.dataSource = self
