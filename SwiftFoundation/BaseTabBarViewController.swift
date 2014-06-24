@@ -17,11 +17,8 @@ class BaseTabBarViewController: UITabBarController {
 
     init(){
        super.init(nibName:nil, bundle:nil)
-        
-    
-    
+
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         let foundationVC = FoundationViewController()
@@ -33,10 +30,10 @@ class BaseTabBarViewController: UITabBarController {
         foundationNC.tabBarItem = UITabBarItem(title: "基础", image: nil, tag: 1);
         let UIKitNC = UINavigationController(rootViewController:UIKitVC);
         UIKitNC.tabBarItem = UITabBarItem(title: "图形", image: nil, tag: 2);
-         UIKitNC.title = "图形"
+        UIKitNC.title = "图形"
         let netWorkNC = UINavigationController(rootViewController:netWorkVC);
         netWorkNC.tabBarItem = UITabBarItem(title: "网络", image: nil, tag: 3);
-       let databaseNC = UINavigationController(rootViewController:databaseVC);
+        let databaseNC = UINavigationController(rootViewController:databaseVC);
         databaseNC.tabBarItem = UITabBarItem(title: "数据", image: nil, tag: 4);
         let otherNC = UINavigationController(rootViewController:otherVC);
         otherNC.tabBarItem = UITabBarItem(title: "其他", image: nil, tag: 5);
@@ -49,7 +46,6 @@ class BaseTabBarViewController: UITabBarController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // #pragma mark - Navigation
 

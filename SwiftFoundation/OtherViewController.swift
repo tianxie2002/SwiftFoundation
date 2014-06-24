@@ -15,7 +15,6 @@ class OtherViewController: BaseViewController, UITableViewDelegate, UITableViewD
 //        // Custom initialization
 //    }
 
-   
     var uikitTableView : UITableView?
     var uikitArray : NSArray?
     override func viewDidLoad() {
