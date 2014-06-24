@@ -20,7 +20,8 @@ class UIKitViewController: BaseViewController, UITableViewDelegate, UITableViewD
          self.uikitTableView  = UITableView(frame:self.view.frame, style:UITableViewStyle.Plain)
         self.uikitTableView!.delegate = self
         self.uikitTableView!.dataSource = self
-         self.uikitTableView!.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        // self.uikitTableView!.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+       // self.uikitTableView!.
         self.view.addSubview(self.uikitTableView)
     }
     // UITableViewDataSource Methods
@@ -28,7 +29,11 @@ class UIKitViewController: BaseViewController, UITableViewDelegate, UITableViewD
     {
         return 1
     }
+    func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat{
     
+    
+        return 50;
+    }
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int
     {
         return self.uikitArray!.count
@@ -36,15 +41,18 @@ class UIKitViewController: BaseViewController, UITableViewDelegate, UITableViewD
     
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!
     {
+       //let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell!
+       //let cell =  UITableViewCell.init(style: UITableViewCellStyle.Value2, reuseIdentifier: "Cell")
+        var cell = tableView.dequeueReusableCellWithIdentifier("CELL") as? UITableViewCell
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell!
-        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
-        cell.textLabel.text = self.uikitArray?.objectAtIndex(indexPath.row) as String
-        
+        if !cell {
+            cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "CELL")
+        }
+        cell!.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+        cell!.textLabel.text = self.uikitArray?.objectAtIndex(indexPath.row) as String
         return cell
     }
     
-    // UITableViewDelegate Methods
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!)
     {
         self.uikitTableView!.deselectRowAtIndexPath(indexPath, animated: true)
