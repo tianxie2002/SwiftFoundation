@@ -1,14 +1,14 @@
 //
-//  DatabaseViewController.swift
+//  DataStoreViewController.swift
 //  SwiftFoundation
 //
-//  Created by baxiang on 14-6-24.
+//  Created by baxiang on 14-6-27.
 //  Copyright (c) 2014年 baxiang. All rights reserved.
 //
 
 import UIKit
 
-class DatabaseViewController: BaseViewController,UITableViewDelegate, UITableViewDataSource {
+class DataStoreViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource  {
 
 //    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
 //        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -20,7 +20,7 @@ class DatabaseViewController: BaseViewController,UITableViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "网络"
-        self.dataArray = ["Sqlite", "coreData", "文件存储", "归档"]
+        self.dataArray = ["SQLite", "CoreData", "文件存储", "归档"]
         self.dataTableView  = UITableView(frame:self.view.frame, style:UITableViewStyle.Plain)
         self.dataTableView!.delegate = self
         self.dataTableView!.dataSource = self
@@ -49,11 +49,11 @@ class DatabaseViewController: BaseViewController,UITableViewDelegate, UITableVie
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell!
         //let cell =  UITableViewCell.init(style: UITableViewCellStyle.Value2, reuseIdentifier: "Cell")
-//        var cell = tableView.dequeueReusableCellWithIdentifier("CELL") as? UITableViewCell
-//        
-//        if !cell {
-//            cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "CELL")
-//        }
+        //        var cell = tableView.dequeueReusableCellWithIdentifier("CELL") as? UITableViewCell
+        //
+        //        if !cell {
+        //            cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "CELL")
+        //        }
         cell!.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         cell!.textLabel.text = self.dataArray?.objectAtIndex(indexPath.row) as String
         return cell
@@ -72,16 +72,13 @@ class DatabaseViewController: BaseViewController,UITableViewDelegate, UITableVie
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    
-
     /*
     // #pragma mark - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
     }
     */
 
