@@ -32,7 +32,6 @@ class BaseTabBarViewController: UITabBarController {
         UIKitNC.title = "图形"
         let dataNC = UINavigationController(rootViewController:dataVC);
         dataNC.tabBarItem = UITabBarItem(title: "数据", image: UIImage(named:"tab_icon_data"), tag: 3);
-        //dataNC.title = "数据"
         let otherNC = UINavigationController(rootViewController:otherVC);
         otherNC.tabBarItem = UITabBarItem(title: "其他", image: UIImage(named:"tab_icon_other"), tag: 4);
         var tabViewControllers = [foundationNC,UIKitNC,dataNC,otherNC];
