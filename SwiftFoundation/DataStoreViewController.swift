@@ -20,7 +20,7 @@ class DataStoreViewController: BaseViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "网络"
-        self.dataArray = ["SQLite", "CoreData", "文件存储", "归档"]
+        self.dataArray = ["网络数据-百度知道", "CoreData", "文件存储", "归档"]
         self.dataTableView  = UITableView(frame:self.view.frame, style:UITableViewStyle.Plain)
         self.dataTableView!.delegate = self
         self.dataTableView!.dataSource = self
@@ -62,10 +62,14 @@ class DataStoreViewController: BaseViewController, UITableViewDelegate, UITableV
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!)
     {
         self.dataTableView!.deselectRowAtIndexPath(indexPath, animated: true)
-        
-        //        var detailViewController = DetailViewController()
-        //        detailViewController.title = self.items?.objectAtIndex(indexPath.row)  as String
-        //        self.navigationController.pushViewController(detailViewController, animated:true)
+        switch indexPath.row{
+        case 0 :
+            var detailViewController = BaiduZhiDaoController()
+            detailViewController.title = self.dataArray?.objectAtIndex(indexPath.row)  as String
+            self.navigationController.pushViewController(detailViewController, animated:false)
+        default:
+            println()
+        }
     }
     
     override func didReceiveMemoryWarning() {
