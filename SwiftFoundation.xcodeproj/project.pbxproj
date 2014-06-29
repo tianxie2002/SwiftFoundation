@@ -21,6 +21,7 @@
 		C2190CAC19597D2000AF0202 /* FoundationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2190CAB19597D2000AF0202 /* FoundationViewController.swift */; };
 		C2190CAE19597D6B00AF0202 /* UIKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2190CAD19597D6B00AF0202 /* UIKitViewController.swift */; };
 		C2190CB419597FD500AF0202 /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2190CB319597FD500AF0202 /* OtherViewController.swift */; };
+		C2CA1AFB1960170700027DEF /* UITableBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CA1AFA1960170700027DEF /* UITableBaseViewController.swift */; };
 		C2ED3DDE195D4B3000C14C63 /* DataStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ED3DDD195D4B3000C14C63 /* DataStoreViewController.swift */; };
 		C2ED3DEB195D4DAB00C14C63 /* icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2ED3DE0195D4DAB00C14C63 /* icon-29@2x.png */; };
 		C2ED3DEC195D4DAB00C14C63 /* icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2ED3DE1195D4DAB00C14C63 /* icon-40@2x.png */; };
@@ -64,6 +65,7 @@
 		C2190CAB19597D2000AF0202 /* FoundationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationViewController.swift; sourceTree = "<group>"; };
 		C2190CAD19597D6B00AF0202 /* UIKitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitViewController.swift; sourceTree = "<group>"; };
 		C2190CB319597FD500AF0202 /* OtherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
+		C2CA1AFA1960170700027DEF /* UITableBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableBaseViewController.swift; sourceTree = "<group>"; };
 		C2ED3DDD195D4B3000C14C63 /* DataStoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStoreViewController.swift; sourceTree = "<group>"; };
 		C2ED3DE0195D4DAB00C14C63 /* icon-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-29@2x.png"; sourceTree = "<group>"; };
 		C2ED3DE1195D4DAB00C14C63 /* icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-40@2x.png"; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			children = (
 				C2ED3DDF195D4DAB00C14C63 /* images */,
 				C214F21C1959F22B00D53562 /* UIView */,
+				C2CA1AF9196016A500027DEF /* UIKitViewController */,
 				C214F20F1959DE5D00D53562 /* extension */,
 				C2190C8D1959733700AF0202 /* AppDelegate.swift */,
 				C2190CA719597C1700AF0202 /* BaseTabBarViewController.swift */,
@@ -176,6 +179,14 @@
 				C2190C9A1959733700AF0202 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C2CA1AF9196016A500027DEF /* UIKitViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C2CA1AFA1960170700027DEF /* UITableBaseViewController.swift */,
+			);
+			name = UIKitViewController;
 			sourceTree = "<group>";
 		};
 		C2ED3DDF195D4DAB00C14C63 /* images */ = {
@@ -311,6 +322,7 @@
 				C214F2171959ED0000D53562 /* ArrayExt.swift in Sources */,
 				C2190CAA19597CBF00AF0202 /* BaseViewController.swift in Sources */,
 				C214F21E1959F2B900D53562 /* UITableViewManager.swift in Sources */,
+				C2CA1AFB1960170700027DEF /* UITableBaseViewController.swift in Sources */,
 				C214F2131959E9DB00D53562 /* UIImageExt.swift in Sources */,
 				C2190CA819597C1700AF0202 /* BaseTabBarViewController.swift in Sources */,
 				C214F21B1959F0CD00D53562 /* UIImageCache.swift in Sources */,
