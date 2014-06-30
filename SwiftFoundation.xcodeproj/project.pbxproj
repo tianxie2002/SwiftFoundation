@@ -21,6 +21,7 @@
 		C2190CAC19597D2000AF0202 /* FoundationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2190CAB19597D2000AF0202 /* FoundationViewController.swift */; };
 		C2190CAE19597D6B00AF0202 /* UIKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2190CAD19597D6B00AF0202 /* UIKitViewController.swift */; };
 		C2190CB419597FD500AF0202 /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2190CB319597FD500AF0202 /* OtherViewController.swift */; };
+		C278DAB519613DA100110012 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C278DAB419613DA100110012 /* Foundation.framework */; };
 		C2CA1AFB1960170700027DEF /* UITableBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CA1AFA1960170700027DEF /* UITableBaseViewController.swift */; };
 		C2CA1AFE1960569700027DEF /* BaiduZhiDaoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CA1AFD1960569700027DEF /* BaiduZhiDaoController.swift */; };
 		C2ED3DDE195D4B3000C14C63 /* DataStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ED3DDD195D4B3000C14C63 /* DataStoreViewController.swift */; };
@@ -66,6 +67,7 @@
 		C2190CAB19597D2000AF0202 /* FoundationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationViewController.swift; sourceTree = "<group>"; };
 		C2190CAD19597D6B00AF0202 /* UIKitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitViewController.swift; sourceTree = "<group>"; };
 		C2190CB319597FD500AF0202 /* OtherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
+		C278DAB419613DA100110012 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C2CA1AFA1960170700027DEF /* UITableBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableBaseViewController.swift; sourceTree = "<group>"; };
 		C2CA1AFD1960569700027DEF /* BaiduZhiDaoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaiduZhiDaoController.swift; sourceTree = "<group>"; };
 		C2ED3DDD195D4B3000C14C63 /* DataStoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStoreViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C278DAB519613DA100110012 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +165,7 @@
 		C2190C8B1959733700AF0202 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C278DAB419613DA100110012 /* Foundation.framework */,
 				C2190C8C1959733700AF0202 /* Info.plist */,
 			);
 			name = "Supporting Files";
