@@ -15,18 +15,21 @@ class OtherViewController: BaseViewController, UITableViewDelegate, UITableViewD
 //        // Custom initialization
 //    }
 
-    var uikitTableView : UITableView?
-    var uikitArray : NSArray?
+    var otherTableView : UITableView?
+    var dataArray : NSArray?
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "其他"
-        self.uikitArray = ["定位", "单例", "UIImageView", "UISlider", "UIWebView", "UISegmentedControl", "UISwitch", "UITextField", "UIScrollView", "UISearchBar", "UIPageControl", "UIDatePicker", "UIPickerView", "UIProgressView", "UITextView", "UIToolbar", "UIActionSheet", "UIActivityIndicatorView"]
-        self.uikitTableView  = UITableView(frame:self.view.frame, style:UITableViewStyle.Plain)
-        self.uikitTableView!.delegate = self
-        self.uikitTableView!.dataSource = self
+        self.dataArray = ["地图"]
+        self.otherTableView  = UITableView(frame:self.view.frame, style:UITableViewStyle.Plain)
+        self.otherTableView!.delegate = self
+        self.otherTableView!.dataSource = self
+        let footView = UIView()
+        footView.backgroundColor = UIColor.clearColor()
+        self.otherTableView!.tableFooterView = footView
         // self.uikitTableView!.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         // self.uikitTableView!.
-        self.view.addSubview(self.uikitTableView)
+        self.view.addSubview(self.otherTableView)
     }
     // UITableViewDataSource Methods
     func numberOfSectionsInTableView(tableView: UITableView!) -> Int
@@ -40,7 +43,7 @@ class OtherViewController: BaseViewController, UITableViewDelegate, UITableViewD
     }
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int
     {
-        return self.uikitArray!.count
+        return self.dataArray!.count
     }
     
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!
@@ -53,13 +56,21 @@ class OtherViewController: BaseViewController, UITableViewDelegate, UITableViewD
             cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "CELL")
         }
         cell!.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
-        cell!.textLabel.text = self.uikitArray?.objectAtIndex(indexPath.row) as String
+        cell!.textLabel.text = self.dataArray?.objectAtIndex(indexPath.row) as String
         return cell
     }
     
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!)
     {
-        self.uikitTableView!.deselectRowAtIndexPath(indexPath, animated: true)
+        self.otherTableView!.deselectRowAtIndexPath(indexPath, animated: true)
+        switch indexPath.row{
+        case 0:
+            var detailViewController = MapViewViewController()
+            detailViewController.title = self.dataArray?.objectAtIndex(indexPath.row)  as String
+            self.navigationController.pushViewController(detailViewController, animated:false)
+        default:
+            println()
+        }
         
         //        var detailViewController = DetailViewController()
         //        detailViewController.title = self.items?.objectAtIndex(indexPath.row)  as String

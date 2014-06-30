@@ -21,7 +21,12 @@
 		C2190CAC19597D2000AF0202 /* FoundationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2190CAB19597D2000AF0202 /* FoundationViewController.swift */; };
 		C2190CAE19597D6B00AF0202 /* UIKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2190CAD19597D6B00AF0202 /* UIKitViewController.swift */; };
 		C2190CB419597FD500AF0202 /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2190CB319597FD500AF0202 /* OtherViewController.swift */; };
-		C278DAB519613DA100110012 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C278DAB419613DA100110012 /* Foundation.framework */; };
+		C278DAB519613DA100110012 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C278DAB419613DA100110012 /* Foundation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		C278DAB8196145F400110012 /* MapViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C278DAB7196145F400110012 /* MapViewViewController.swift */; };
+		C27E9C5219614A9D00D839D1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27E9C5119614A9D00D839D1 /* MapKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		C27E9C5419614AB200D839D1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27E9C5319614AB200D839D1 /* CoreLocation.framework */; };
+		C292017519617E2D00D7CDE6 /* CustomCellByXibViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C292017419617E2D00D7CDE6 /* CustomCellByXibViewController.swift */; };
+		C292017719617EAD00D7CDE6 /* CustomCellByXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = C292017619617EAD00D7CDE6 /* CustomCellByXib.xib */; };
 		C2CA1AFB1960170700027DEF /* UITableBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CA1AFA1960170700027DEF /* UITableBaseViewController.swift */; };
 		C2CA1AFE1960569700027DEF /* BaiduZhiDaoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CA1AFD1960569700027DEF /* BaiduZhiDaoController.swift */; };
 		C2ED3DDE195D4B3000C14C63 /* DataStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ED3DDD195D4B3000C14C63 /* DataStoreViewController.swift */; };
@@ -68,6 +73,11 @@
 		C2190CAD19597D6B00AF0202 /* UIKitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitViewController.swift; sourceTree = "<group>"; };
 		C2190CB319597FD500AF0202 /* OtherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
 		C278DAB419613DA100110012 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C278DAB7196145F400110012 /* MapViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewViewController.swift; sourceTree = "<group>"; };
+		C27E9C5119614A9D00D839D1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C27E9C5319614AB200D839D1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C292017419617E2D00D7CDE6 /* CustomCellByXibViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellByXibViewController.swift; sourceTree = "<group>"; };
+		C292017619617EAD00D7CDE6 /* CustomCellByXib.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCellByXib.xib; sourceTree = "<group>"; };
 		C2CA1AFA1960170700027DEF /* UITableBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableBaseViewController.swift; sourceTree = "<group>"; };
 		C2CA1AFD1960569700027DEF /* BaiduZhiDaoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaiduZhiDaoController.swift; sourceTree = "<group>"; };
 		C2ED3DDD195D4B3000C14C63 /* DataStoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStoreViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +99,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C27E9C5419614AB200D839D1 /* CoreLocation.framework in Frameworks */,
+				C27E9C5219614A9D00D839D1 /* MapKit.framework in Frameworks */,
 				C278DAB519613DA100110012 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +156,8 @@
 		C2190C8A1959733700AF0202 /* SwiftFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				C27E9C5519614E8500D839D1 /* Frameworks */,
+				C278DAB6196145C100110012 /* Other */,
 				C2CA1AFC1960562C00027DEF /* DataStore */,
 				C2ED3DDF195D4DAB00C14C63 /* images */,
 				C214F21C1959F22B00D53562 /* UIView */,
@@ -165,7 +179,6 @@
 		C2190C8B1959733700AF0202 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C278DAB419613DA100110012 /* Foundation.framework */,
 				C2190C8C1959733700AF0202 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -188,10 +201,30 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C278DAB6196145C100110012 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				C278DAB7196145F400110012 /* MapViewViewController.swift */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		C27E9C5519614E8500D839D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C278DAB419613DA100110012 /* Foundation.framework */,
+				C27E9C5319614AB200D839D1 /* CoreLocation.framework */,
+				C27E9C5119614A9D00D839D1 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C2CA1AF9196016A500027DEF /* UIKitViewController */ = {
 			isa = PBXGroup;
 			children = (
 				C2CA1AFA1960170700027DEF /* UITableBaseViewController.swift */,
+				C292017419617E2D00D7CDE6 /* CustomCellByXibViewController.swift */,
+				C292017619617EAD00D7CDE6 /* CustomCellByXib.xib */,
 			);
 			name = UIKitViewController;
 			sourceTree = "<group>";
@@ -303,6 +336,7 @@
 			files = (
 				C2ED3DF0195D4DAB00C14C63 /* tab_icon_data@2x.png in Resources */,
 				C2ED3DEB195D4DAB00C14C63 /* icon-29@2x.png in Resources */,
+				C292017719617EAD00D7CDE6 /* CustomCellByXib.xib in Resources */,
 				C2ED3DF1195D4DAB00C14C63 /* tab_icon_other@2x.png in Resources */,
 				C2190C901959733700AF0202 /* Images.xcassets in Resources */,
 				C2ED3DF3195D4DAB00C14C63 /* tab_icon_uikit_s@2x.png in Resources */,
@@ -339,11 +373,13 @@
 				C2190CAA19597CBF00AF0202 /* BaseViewController.swift in Sources */,
 				C214F21E1959F2B900D53562 /* UITableViewManager.swift in Sources */,
 				C2CA1AFB1960170700027DEF /* UITableBaseViewController.swift in Sources */,
+				C292017519617E2D00D7CDE6 /* CustomCellByXibViewController.swift in Sources */,
 				C214F2131959E9DB00D53562 /* UIImageExt.swift in Sources */,
 				C2190CA819597C1700AF0202 /* BaseTabBarViewController.swift in Sources */,
 				C214F21B1959F0CD00D53562 /* UIImageCache.swift in Sources */,
 				C214F2111959E2E000D53562 /* UIViewSizeExt.swift in Sources */,
 				C2ED3DDE195D4B3000C14C63 /* DataStoreViewController.swift in Sources */,
+				C278DAB8196145F400110012 /* MapViewViewController.swift in Sources */,
 				C2190CAE19597D6B00AF0202 /* UIKitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

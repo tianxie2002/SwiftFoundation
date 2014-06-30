@@ -8,7 +8,7 @@
 
 import UIKit
 /**
-*  糗事百科数据解析
+*  百度知道数据解析
 */
 class BaiduZhiDaoController: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
@@ -24,6 +24,7 @@ class BaiduZhiDaoController: UIViewController,UITableViewDataSource,UITableViewD
         setupViews()
         loadData()
     }
+    
     func setupViews()
     {
         var width = self.view.frame.size.width
