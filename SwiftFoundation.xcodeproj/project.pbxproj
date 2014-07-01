@@ -127,12 +127,12 @@
 			name = extension;
 			sourceTree = "<group>";
 		};
-		C214F21C1959F22B00D53562 /* UIView */ = {
+		C214F21C1959F22B00D53562 /* UIViews */ = {
 			isa = PBXGroup;
 			children = (
 				C214F21D1959F2B900D53562 /* UITableViewManager.swift */,
 			);
-			name = UIView;
+			name = UIViews;
 			sourceTree = "<group>";
 		};
 		C2190C7F1959733700AF0202 = {
@@ -156,20 +156,16 @@
 		C2190C8A1959733700AF0202 /* SwiftFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				C249C05219626B3400E5D3AA /* Classes */,
+				C249C05119626A6600E5D3AA /* Resources */,
+				C249C05019626A2A00E5D3AA /* Vendors */,
 				C27E9C5519614E8500D839D1 /* Frameworks */,
-				C278DAB6196145C100110012 /* Other */,
-				C2CA1AFC1960562C00027DEF /* DataStore */,
-				C2ED3DDF195D4DAB00C14C63 /* images */,
-				C214F21C1959F22B00D53562 /* UIView */,
-				C2CA1AF9196016A500027DEF /* UIKitViewController */,
 				C214F20F1959DE5D00D53562 /* extension */,
 				C2190C8D1959733700AF0202 /* AppDelegate.swift */,
 				C2190CA719597C1700AF0202 /* BaseTabBarViewController.swift */,
 				C2190CA919597CBF00AF0202 /* BaseViewController.swift */,
 				C2190CAB19597D2000AF0202 /* FoundationViewController.swift */,
-				C2190CAD19597D6B00AF0202 /* UIKitViewController.swift */,
 				C2190CB319597FD500AF0202 /* OtherViewController.swift */,
-				C2ED3DDD195D4B3000C14C63 /* DataStoreViewController.swift */,
 				C2190C8F1959733700AF0202 /* Images.xcassets */,
 				C2190C8B1959733700AF0202 /* Supporting Files */,
 			);
@@ -201,6 +197,40 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C249C05019626A2A00E5D3AA /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Vendors;
+			sourceTree = "<group>";
+		};
+		C249C05119626A6600E5D3AA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C2ED3DDF195D4DAB00C14C63 /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C249C05219626B3400E5D3AA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C249C05319626B6D00E5D3AA /* Controllers */,
+				C214F21C1959F22B00D53562 /* UIViews */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		C249C05319626B6D00E5D3AA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C2CA1AFC1960562C00027DEF /* DataStore */,
+				C2CA1AF9196016A500027DEF /* UIKitView */,
+				C278DAB6196145C100110012 /* Other */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		C278DAB6196145C100110012 /* Other */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,25 +249,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C2CA1AF9196016A500027DEF /* UIKitViewController */ = {
+		C2CA1AF9196016A500027DEF /* UIKitView */ = {
 			isa = PBXGroup;
 			children = (
+				C2190CAD19597D6B00AF0202 /* UIKitViewController.swift */,
 				C2CA1AFA1960170700027DEF /* UITableBaseViewController.swift */,
 				C292017419617E2D00D7CDE6 /* CustomCellByXibViewController.swift */,
 				C292017619617EAD00D7CDE6 /* CustomCellByXib.xib */,
 			);
-			name = UIKitViewController;
+			name = UIKitView;
 			sourceTree = "<group>";
 		};
 		C2CA1AFC1960562C00027DEF /* DataStore */ = {
 			isa = PBXGroup;
 			children = (
+				C2ED3DDD195D4B3000C14C63 /* DataStoreViewController.swift */,
 				C2CA1AFD1960569700027DEF /* BaiduZhiDaoController.swift */,
 			);
 			name = DataStore;
 			sourceTree = "<group>";
 		};
-		C2ED3DDF195D4DAB00C14C63 /* images */ = {
+		C2ED3DDF195D4DAB00C14C63 /* Images */ = {
 			isa = PBXGroup;
 			children = (
 				C2ED3DE0195D4DAB00C14C63 /* icon-29@2x.png */,
@@ -252,6 +284,7 @@
 				C2ED3DE9195D4DAB00C14C63 /* tab_icon_data_s@2x.png */,
 				C2ED3DEA195D4DAB00C14C63 /* tab_icon_other_s@2xpng */,
 			);
+			name = Images;
 			path = images;
 			sourceTree = "<group>";
 		};
