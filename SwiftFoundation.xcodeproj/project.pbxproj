@@ -40,6 +40,8 @@
 		C2A6823B1963085700E46F8E /* ClosureEditValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A6823A1963085700E46F8E /* ClosureEditValueViewController.swift */; };
 		C2A6823D1963114E00E46F8E /* ProtocolShowValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A6823C1963114E00E46F8E /* ProtocolShowValueViewController.swift */; };
 		C2A6823F1963119E00E46F8E /* ProtocolEditValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A6823E1963119E00E46F8E /* ProtocolEditValueViewController.swift */; };
+		C2A6824419631CD600E46F8E /* ZhiHuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A6824219631CD600E46F8E /* ZhiHuViewController.swift */; };
+		C2A6824519631CD600E46F8E /* ZhiHuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2A6824319631CD600E46F8E /* ZhiHuViewController.xib */; };
 		C2CA1AFB1960170700027DEF /* UITableBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CA1AFA1960170700027DEF /* UITableBaseViewController.swift */; };
 		C2CA1AFE1960569700027DEF /* BaiduZhiDaoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CA1AFD1960569700027DEF /* BaiduZhiDaoController.swift */; };
 		C2ED3DDE195D4B3000C14C63 /* DataStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ED3DDD195D4B3000C14C63 /* DataStoreViewController.swift */; };
@@ -112,6 +114,8 @@
 		C2A6823A1963085700E46F8E /* ClosureEditValueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosureEditValueViewController.swift; sourceTree = "<group>"; };
 		C2A6823C1963114E00E46F8E /* ProtocolShowValueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolShowValueViewController.swift; sourceTree = "<group>"; };
 		C2A6823E1963119E00E46F8E /* ProtocolEditValueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolEditValueViewController.swift; sourceTree = "<group>"; };
+		C2A6824219631CD600E46F8E /* ZhiHuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZhiHuViewController.swift; sourceTree = "<group>"; };
+		C2A6824319631CD600E46F8E /* ZhiHuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZhiHuViewController.xib; sourceTree = "<group>"; };
 		C2CA1AFA1960170700027DEF /* UITableBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableBaseViewController.swift; sourceTree = "<group>"; };
 		C2CA1AFD1960569700027DEF /* BaiduZhiDaoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaiduZhiDaoController.swift; sourceTree = "<group>"; };
 		C2ED3DDD195D4B3000C14C63 /* DataStoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStoreViewController.swift; sourceTree = "<group>"; };
@@ -354,6 +358,8 @@
 				C2ED3DDD195D4B3000C14C63 /* DataStoreViewController.swift */,
 				C2CA1AFD1960569700027DEF /* BaiduZhiDaoController.swift */,
 				C2A0D36E1962B13300EDB6A6 /* FMDBViewController.swift */,
+				C2A6824219631CD600E46F8E /* ZhiHuViewController.swift */,
+				C2A6824319631CD600E46F8E /* ZhiHuViewController.xib */,
 			);
 			name = DataStore;
 			sourceTree = "<group>";
@@ -467,6 +473,7 @@
 				C2ED3DEC195D4DAB00C14C63 /* icon-40@2x.png in Resources */,
 				C2ED3DED195D4DAB00C14C63 /* icon-60@2x.png in Resources */,
 				C2ED3DEF195D4DAB00C14C63 /* tab_icon_uikit@2x.png in Resources */,
+				C2A6824519631CD600E46F8E /* ZhiHuViewController.xib in Resources */,
 				C2ED3DF5195D4DAB00C14C63 /* tab_icon_other_s@2xpng in Resources */,
 				C2ED3DEE195D4DAB00C14C63 /* tab_icon_base@2x.png in Resources */,
 			);
@@ -504,6 +511,7 @@
 				C2CA1AFB1960170700027DEF /* UITableBaseViewController.swift in Sources */,
 				C292017519617E2D00D7CDE6 /* CustomCellByXibViewController.swift in Sources */,
 				C2A0D36F1962B13300EDB6A6 /* FMDBViewController.swift in Sources */,
+				C2A6824419631CD600E46F8E /* ZhiHuViewController.swift in Sources */,
 				C214F2131959E9DB00D53562 /* UIImageExt.swift in Sources */,
 				C2190CA819597C1700AF0202 /* BaseTabBarViewController.swift in Sources */,
 				C214F21B1959F0CD00D53562 /* UIImageCache.swift in Sources */,
