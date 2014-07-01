@@ -15,22 +15,21 @@ class FoundationViewController: BaseViewController,UITableViewDelegate, UITableV
 //        // Custom initialization
 //    }
 
-    var uikitTableView : UITableView?
-    var uikitArray : NSArray?
+    var  foundationTableView : UITableView?
+    var  foundationArray : NSArray?
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "基础"
-        self.uikitArray = ["常量和变量",
-                            "数组与字典",
-                            "Closures闭包",
+        self.foundationArray = ["Closures闭包",
+                            "Protocol传值",
                             "可选链",
                           ]
-        self.uikitTableView  = UITableView(frame:self.view.frame, style:UITableViewStyle.Plain)
-        self.uikitTableView!.delegate = self
-        self.uikitTableView!.dataSource = self
+        self.foundationTableView  = UITableView(frame:self.view.frame, style:UITableViewStyle.Plain)
+        self.foundationTableView!.delegate = self
+        self.foundationTableView!.dataSource = self
         // self.uikitTableView!.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         // self.uikitTableView!.
-        self.view.addSubview(self.uikitTableView)
+        self.view.addSubview(self.foundationTableView)
     }
     // UITableViewDataSource Methods
     func numberOfSectionsInTableView(tableView: UITableView!) -> Int
@@ -44,7 +43,7 @@ class FoundationViewController: BaseViewController,UITableViewDelegate, UITableV
     }
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int
     {
-        return self.uikitArray!.count
+        return self.foundationArray!.count
     }
     
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!
@@ -57,17 +56,27 @@ class FoundationViewController: BaseViewController,UITableViewDelegate, UITableV
             cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "CELL")
         }
         cell!.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
-        cell!.textLabel.text = self.uikitArray?.objectAtIndex(indexPath.row) as String
+        cell!.textLabel.text = self.foundationArray?.objectAtIndex(indexPath.row) as String
         return cell
     }
     
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!)
     {
-        self.uikitTableView!.deselectRowAtIndexPath(indexPath, animated: true)
+        self.foundationTableView!.deselectRowAtIndexPath(indexPath, animated: true)
+        switch indexPath.row
+        {
+        case 0:
+         var detailViewController = ClosureShowValueViewController()
+         detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
+         self.navigationController.pushViewController(detailViewController, animated:false)
+        case 1:
+            var detailViewController = ProtocolShowValueViewController()
+            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
+            self.navigationController.pushViewController(detailViewController, animated:false)
+        default:
+            println()
+        }
         
-        //        var detailViewController = DetailViewController()
-        //        detailViewController.title = self.items?.objectAtIndex(indexPath.row)  as String
-        //        self.navigationController.pushViewController(detailViewController, animated:true)
     }
     
     override func didReceiveMemoryWarning() {
