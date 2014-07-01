@@ -16,7 +16,7 @@ class UIKitViewController: BaseViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "图形"
-        self.uikitArray = ["UITableView操作", "UIButton", "UIImageView", "UISlider", "UIWebView", "UISegmentedControl", "UISwitch", "UITextField", "UIScrollView", "UISearchBar", "UIPageControl", "UIDatePicker", "UIPickerView", "UIProgressView", "UITextView", "UIToolbar", "UIActionSheet", "UIActivityIndicatorView"]
+        self.uikitArray = ["UITableView操作","UILabel", "UIButton", "UIImageView", "UISlider", "UIWebView", "UISegmentedControl", "UISwitch", "UITextField", "UIScrollView", "UISearchBar", "UIPageControl", "UIDatePicker", "UIPickerView", "UIProgressView", "UITextView", "UIToolbar", "UIActionSheet", "UIActivityIndicatorView"]
          self.uikitTableView  = UITableView(frame:self.view.frame, style:UITableViewStyle.Plain)
         self.uikitTableView!.delegate = self
         self.uikitTableView!.dataSource = self
@@ -62,10 +62,11 @@ class UIKitViewController: BaseViewController, UITableViewDelegate, UITableViewD
            detailViewController.title = self.uikitArray?.objectAtIndex(indexPath.row)  as String
             self.navigationController.pushViewController(detailViewController, animated:false)
         default:
-          println()
+            var detailViewController = UIKitDetailViewController()
+            detailViewController.title = self.uikitArray?.objectAtIndex(indexPath.row)  as String
+            self.navigationController.pushViewController(detailViewController, animated:false)
         }
-        
-        
+
         
 //        var detailViewController = DetailViewController()
 //        detailViewController.title = self.items?.objectAtIndex(indexPath.row)  as String
