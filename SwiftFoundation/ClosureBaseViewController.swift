@@ -1,28 +1,23 @@
 //
-//  BaseViewController.swift
+//  ClosureBaseViewController.swift
 //  SwiftFoundation
 //
-//  Created by baxiang on 14-6-24.
+//  Created by baxiang on 14-7-2.
 //  Copyright (c) 2014年 baxiang. All rights reserved.
 //
 
 import UIKit
 
+class ClosureBaseViewController: BaseViewController {
 
-
-class BaseViewController: UIViewController {
-
-    
-   
-
-//    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-//        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-//        // Custom initialization
-//    }
+    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        // Custom initialization
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
     }
 
@@ -31,10 +26,7 @@ class BaseViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(animated: Bool){
-       super.viewWillAppear(animated)
-        
-    }
+
     /*
     // #pragma mark - Navigation
 

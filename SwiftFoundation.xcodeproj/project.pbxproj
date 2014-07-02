@@ -11,6 +11,9 @@
 		C208AC4E1964078100E9ED76 /* NeteaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C208AC4D1964078100E9ED76 /* NeteaseViewController.swift */; };
 		C208AC5519641B2C00E9ED76 /* NeteaseNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C208AC5319641B2C00E9ED76 /* NeteaseNewsCell.swift */; };
 		C208AC5619641B2C00E9ED76 /* NeteaseNewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C208AC5419641B2C00E9ED76 /* NeteaseNewsCell.xib */; };
+		C208AC581964256600E9ED76 /* ClosureBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C208AC571964256600E9ED76 /* ClosureBaseViewController.swift */; };
+		C208AC5C1964390E00E9ED76 /* webService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C208AC5B1964390E00E9ED76 /* webService.swift */; };
+		C208AC5E19643AE100E9ED76 /* webRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C208AC5D19643AE100E9ED76 /* webRequestViewController.swift */; };
 		C214F2111959E2E000D53562 /* UIViewSizeExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C214F2101959E2E000D53562 /* UIViewSizeExt.swift */; };
 		C214F2131959E9DB00D53562 /* UIImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C214F2121959E9DB00D53562 /* UIImageExt.swift */; };
 		C214F2151959EBCA00D53562 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C214F2141959EBCA00D53562 /* StringExt.swift */; };
@@ -82,6 +85,9 @@
 		C208AC4D1964078100E9ED76 /* NeteaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeteaseViewController.swift; sourceTree = "<group>"; };
 		C208AC5319641B2C00E9ED76 /* NeteaseNewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeteaseNewsCell.swift; sourceTree = "<group>"; };
 		C208AC5419641B2C00E9ED76 /* NeteaseNewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NeteaseNewsCell.xib; sourceTree = "<group>"; };
+		C208AC571964256600E9ED76 /* ClosureBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosureBaseViewController.swift; sourceTree = "<group>"; };
+		C208AC5B1964390E00E9ED76 /* webService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = webService.swift; sourceTree = "<group>"; };
+		C208AC5D19643AE100E9ED76 /* webRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = webRequestViewController.swift; sourceTree = "<group>"; };
 		C214F2101959E2E000D53562 /* UIViewSizeExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewSizeExt.swift; sourceTree = "<group>"; };
 		C214F2121959E9DB00D53562 /* UIImageExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExt.swift; sourceTree = "<group>"; };
 		C214F2141959EBCA00D53562 /* StringExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
@@ -333,6 +339,9 @@
 				C2C8186B1963A5850028A8CB /* SingletonTwo.swift */,
 				C2C8186D1963A5BA0028A8CB /* SingletonThree.swift */,
 				C2C8186F1963AD8E0028A8CB /* SingletonPatternViewController.swift */,
+				C208AC571964256600E9ED76 /* ClosureBaseViewController.swift */,
+				C208AC5B1964390E00E9ED76 /* webService.swift */,
+				C208AC5D19643AE100E9ED76 /* webRequestViewController.swift */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
@@ -541,6 +550,7 @@
 				C2A6823D1963114E00E46F8E /* ProtocolShowValueViewController.swift in Sources */,
 				C214F2171959ED0000D53562 /* ArrayExt.swift in Sources */,
 				C2190CAA19597CBF00AF0202 /* BaseViewController.swift in Sources */,
+				C208AC581964256600E9ED76 /* ClosureBaseViewController.swift in Sources */,
 				C2C8186A1963A4540028A8CB /* SingletonOne.swift in Sources */,
 				C2A0D36B1962B06A00EDB6A6 /* FMResultSet.m in Sources */,
 				C208AC4E1964078100E9ED76 /* NeteaseViewController.swift in Sources */,
@@ -553,6 +563,7 @@
 				C2A0D36F1962B13300EDB6A6 /* FMDBViewController.swift in Sources */,
 				C208AC4C1963F39800E9ED76 /* Agent.swift in Sources */,
 				C214F2131959E9DB00D53562 /* UIImageExt.swift in Sources */,
+				C208AC5E19643AE100E9ED76 /* webRequestViewController.swift in Sources */,
 				C2190CA819597C1700AF0202 /* BaseTabBarViewController.swift in Sources */,
 				C214F21B1959F0CD00D53562 /* UIImageCache.swift in Sources */,
 				C2CCD21A1963E7EC000F08A5 /* UIImageView+WebCache.swift in Sources */,
@@ -561,6 +572,7 @@
 				C2ED3DDE195D4B3000C14C63 /* DataStoreViewController.swift in Sources */,
 				C2A0D36A1962B06A00EDB6A6 /* FMDatabaseQueue.m in Sources */,
 				C2A0D3691962B06A00EDB6A6 /* FMDatabasePool.m in Sources */,
+				C208AC5C1964390E00E9ED76 /* webService.swift in Sources */,
 				C2C818731963B91B0028A8CB /* FileUtility.swift in Sources */,
 				C278DAB8196145F400110012 /* MapViewViewController.swift in Sources */,
 				C2C818701963AD8E0028A8CB /* SingletonPatternViewController.swift in Sources */,

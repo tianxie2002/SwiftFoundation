@@ -20,7 +20,7 @@ class DataStoreViewController: BaseViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "数据"
-        self.dataArray = ["网络数据-百度知道", "SQLite-FMDB", "图片缓存","网易新闻"]
+        self.dataArray = ["百度知道", "SQLite-FMDB", "图片缓存","网易新闻"]
         self.dataTableView  = UITableView(frame:self.view.frame, style:UITableViewStyle.Plain)
         self.dataTableView!.delegate = self
         self.dataTableView!.dataSource = self
@@ -78,6 +78,7 @@ class DataStoreViewController: BaseViewController, UITableViewDelegate, UITableV
         case 3 :
             var detailViewController = NeteaseViewController(nibName: nil, bundle: nil)
             detailViewController.title = self.dataArray?.objectAtIndex(indexPath.row)  as String
+            detailViewController.hidesBottomBarWhenPushed = true;
             self.navigationController.pushViewController(detailViewController, animated:false)
             
         default:

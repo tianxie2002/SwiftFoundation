@@ -80,7 +80,7 @@ class NeteaseViewController: BaseViewController,UITableViewDelegate, UITableView
         
         let object = dataArray[indexPath.row] as NSDictionary
         cell.title.text = object["title"] as? String
-         cell.title.font = UIFont.systemFontOfSize(15)
+         cell.title.font = UIFont.systemFontOfSize(14)
         cell.newsDetail.numberOfLines = 0
         cell.newsDetail.text = object["digest"] as? String
         cell.newsDetail.font = UIFont.systemFontOfSize(12)

@@ -22,6 +22,7 @@ class FoundationViewController: BaseViewController,UITableViewDelegate, UITableV
         self.foundationArray = ["Closures闭包",
                             "Protocol传值",
                             "单例模式",
+                             "网络请求"
                           ]
         self.foundationTableView  = UITableView(frame:self.view.frame, style:UITableViewStyle.Plain)
         self.foundationTableView!.delegate = self
@@ -74,6 +75,10 @@ class FoundationViewController: BaseViewController,UITableViewDelegate, UITableV
             self.navigationController.pushViewController(detailViewController, animated:false)
         case 2:
             var detailViewController = SingletonPatternViewController()
+            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
+            self.navigationController.pushViewController(detailViewController, animated:false)
+        case 3:
+            var detailViewController = webRequestViewController()
             detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
             self.navigationController.pushViewController(detailViewController, animated:false)
         default:
