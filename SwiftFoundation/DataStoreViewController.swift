@@ -19,8 +19,8 @@ class DataStoreViewController: BaseViewController, UITableViewDelegate, UITableV
     var dataArray : NSArray?
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "网络"
-        self.dataArray = ["网络数据-百度知道", "SQLite-FMDB", "文件存储", "归档"]
+        self.title = "数据"
+        self.dataArray = ["网络数据-百度知道", "SQLite-FMDB", "图片缓存"]
         self.dataTableView  = UITableView(frame:self.view.frame, style:UITableViewStyle.Plain)
         self.dataTableView!.delegate = self
         self.dataTableView!.dataSource = self
@@ -71,6 +71,11 @@ class DataStoreViewController: BaseViewController, UITableViewDelegate, UITableV
             var detailViewController = FMDBViewController(nibName: nil, bundle: nil)
             detailViewController.title = self.dataArray?.objectAtIndex(indexPath.row)  as String
             self.navigationController.pushViewController(detailViewController, animated:false)
+        case 2 :
+            var detailViewController = UIImageCacheViewController(nibName: nil, bundle: nil)
+            detailViewController.title = self.dataArray?.objectAtIndex(indexPath.row)  as String
+            self.navigationController.pushViewController(detailViewController, animated:false)
+            
         default:
             println()
         }

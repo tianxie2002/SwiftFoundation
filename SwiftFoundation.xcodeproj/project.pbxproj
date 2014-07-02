@@ -40,13 +40,15 @@
 		C2A6823B1963085700E46F8E /* ClosureEditValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A6823A1963085700E46F8E /* ClosureEditValueViewController.swift */; };
 		C2A6823D1963114E00E46F8E /* ProtocolShowValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A6823C1963114E00E46F8E /* ProtocolShowValueViewController.swift */; };
 		C2A6823F1963119E00E46F8E /* ProtocolEditValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A6823E1963119E00E46F8E /* ProtocolEditValueViewController.swift */; };
-		C2A6824419631CD600E46F8E /* ZhiHuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A6824219631CD600E46F8E /* ZhiHuViewController.swift */; };
-		C2A6824519631CD600E46F8E /* ZhiHuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2A6824319631CD600E46F8E /* ZhiHuViewController.xib */; };
 		C2C8186A1963A4540028A8CB /* SingletonOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C818691963A4540028A8CB /* SingletonOne.swift */; };
 		C2C8186C1963A5850028A8CB /* SingletonTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8186B1963A5850028A8CB /* SingletonTwo.swift */; };
 		C2C8186E1963A5BA0028A8CB /* SingletonThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8186D1963A5BA0028A8CB /* SingletonThree.swift */; };
+		C2C818701963AD8E0028A8CB /* SingletonPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8186F1963AD8E0028A8CB /* SingletonPatternViewController.swift */; };
+		C2C818731963B91B0028A8CB /* FileUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C818721963B91B0028A8CB /* FileUtility.swift */; };
 		C2CA1AFB1960170700027DEF /* UITableBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CA1AFA1960170700027DEF /* UITableBaseViewController.swift */; };
 		C2CA1AFE1960569700027DEF /* BaiduZhiDaoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CA1AFD1960569700027DEF /* BaiduZhiDaoController.swift */; };
+		C2CCD21A1963E7EC000F08A5 /* UIImageView+WebCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CCD2191963E7EC000F08A5 /* UIImageView+WebCache.swift */; };
+		C2CCD21C1963E9A4000F08A5 /* UIImageCacheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CCD21B1963E9A4000F08A5 /* UIImageCacheViewController.swift */; };
 		C2ED3DDE195D4B3000C14C63 /* DataStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ED3DDD195D4B3000C14C63 /* DataStoreViewController.swift */; };
 		C2ED3DEB195D4DAB00C14C63 /* icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2ED3DE0195D4DAB00C14C63 /* icon-29@2x.png */; };
 		C2ED3DEC195D4DAB00C14C63 /* icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2ED3DE1195D4DAB00C14C63 /* icon-40@2x.png */; };
@@ -117,13 +119,15 @@
 		C2A6823A1963085700E46F8E /* ClosureEditValueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosureEditValueViewController.swift; sourceTree = "<group>"; };
 		C2A6823C1963114E00E46F8E /* ProtocolShowValueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolShowValueViewController.swift; sourceTree = "<group>"; };
 		C2A6823E1963119E00E46F8E /* ProtocolEditValueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolEditValueViewController.swift; sourceTree = "<group>"; };
-		C2A6824219631CD600E46F8E /* ZhiHuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZhiHuViewController.swift; sourceTree = "<group>"; };
-		C2A6824319631CD600E46F8E /* ZhiHuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZhiHuViewController.xib; sourceTree = "<group>"; };
 		C2C818691963A4540028A8CB /* SingletonOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingletonOne.swift; sourceTree = "<group>"; };
 		C2C8186B1963A5850028A8CB /* SingletonTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingletonTwo.swift; sourceTree = "<group>"; };
 		C2C8186D1963A5BA0028A8CB /* SingletonThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingletonThree.swift; sourceTree = "<group>"; };
+		C2C8186F1963AD8E0028A8CB /* SingletonPatternViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingletonPatternViewController.swift; sourceTree = "<group>"; };
+		C2C818721963B91B0028A8CB /* FileUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtility.swift; sourceTree = "<group>"; };
 		C2CA1AFA1960170700027DEF /* UITableBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableBaseViewController.swift; sourceTree = "<group>"; };
 		C2CA1AFD1960569700027DEF /* BaiduZhiDaoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaiduZhiDaoController.swift; sourceTree = "<group>"; };
+		C2CCD2191963E7EC000F08A5 /* UIImageView+WebCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+WebCache.swift"; sourceTree = "<group>"; };
+		C2CCD21B1963E9A4000F08A5 /* UIImageCacheViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageCacheViewController.swift; sourceTree = "<group>"; };
 		C2ED3DDD195D4B3000C14C63 /* DataStoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStoreViewController.swift; sourceTree = "<group>"; };
 		C2ED3DE0195D4DAB00C14C63 /* icon-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-29@2x.png"; sourceTree = "<group>"; };
 		C2ED3DE1195D4DAB00C14C63 /* icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-40@2x.png"; sourceTree = "<group>"; };
@@ -202,6 +206,7 @@
 		C2190C8A1959733700AF0202 /* SwiftFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				C2C818711963B8AB0028A8CB /* Util */,
 				C249C05219626B3400E5D3AA /* Classes */,
 				C249C05119626A6600E5D3AA /* Resources */,
 				C249C05019626A2A00E5D3AA /* Vendors */,
@@ -319,6 +324,7 @@
 				C2C818691963A4540028A8CB /* SingletonOne.swift */,
 				C2C8186B1963A5850028A8CB /* SingletonTwo.swift */,
 				C2C8186D1963A5BA0028A8CB /* SingletonThree.swift */,
+				C2C8186F1963AD8E0028A8CB /* SingletonPatternViewController.swift */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
@@ -349,6 +355,15 @@
 			path = FMDB;
 			sourceTree = "<group>";
 		};
+		C2C818711963B8AB0028A8CB /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				C2C818721963B91B0028A8CB /* FileUtility.swift */,
+				C2CCD2191963E7EC000F08A5 /* UIImageView+WebCache.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		C2CA1AF9196016A500027DEF /* UIKitView */ = {
 			isa = PBXGroup;
 			children = (
@@ -367,8 +382,7 @@
 				C2ED3DDD195D4B3000C14C63 /* DataStoreViewController.swift */,
 				C2CA1AFD1960569700027DEF /* BaiduZhiDaoController.swift */,
 				C2A0D36E1962B13300EDB6A6 /* FMDBViewController.swift */,
-				C2A6824219631CD600E46F8E /* ZhiHuViewController.swift */,
-				C2A6824319631CD600E46F8E /* ZhiHuViewController.xib */,
+				C2CCD21B1963E9A4000F08A5 /* UIImageCacheViewController.swift */,
 			);
 			name = DataStore;
 			sourceTree = "<group>";
@@ -482,7 +496,6 @@
 				C2ED3DEC195D4DAB00C14C63 /* icon-40@2x.png in Resources */,
 				C2ED3DED195D4DAB00C14C63 /* icon-60@2x.png in Resources */,
 				C2ED3DEF195D4DAB00C14C63 /* tab_icon_uikit@2x.png in Resources */,
-				C2A6824519631CD600E46F8E /* ZhiHuViewController.xib in Resources */,
 				C2ED3DF5195D4DAB00C14C63 /* tab_icon_other_s@2xpng in Resources */,
 				C2ED3DEE195D4DAB00C14C63 /* tab_icon_base@2x.png in Resources */,
 			);
@@ -523,16 +536,19 @@
 				C2CA1AFB1960170700027DEF /* UITableBaseViewController.swift in Sources */,
 				C292017519617E2D00D7CDE6 /* CustomCellByXibViewController.swift in Sources */,
 				C2A0D36F1962B13300EDB6A6 /* FMDBViewController.swift in Sources */,
-				C2A6824419631CD600E46F8E /* ZhiHuViewController.swift in Sources */,
 				C214F2131959E9DB00D53562 /* UIImageExt.swift in Sources */,
 				C2190CA819597C1700AF0202 /* BaseTabBarViewController.swift in Sources */,
 				C214F21B1959F0CD00D53562 /* UIImageCache.swift in Sources */,
+				C2CCD21A1963E7EC000F08A5 /* UIImageView+WebCache.swift in Sources */,
 				C214F2111959E2E000D53562 /* UIViewSizeExt.swift in Sources */,
 				C2A0D3681962B06A00EDB6A6 /* FMDatabaseAdditions.m in Sources */,
 				C2ED3DDE195D4B3000C14C63 /* DataStoreViewController.swift in Sources */,
 				C2A0D36A1962B06A00EDB6A6 /* FMDatabaseQueue.m in Sources */,
 				C2A0D3691962B06A00EDB6A6 /* FMDatabasePool.m in Sources */,
+				C2C818731963B91B0028A8CB /* FileUtility.swift in Sources */,
 				C278DAB8196145F400110012 /* MapViewViewController.swift in Sources */,
+				C2C818701963AD8E0028A8CB /* SingletonPatternViewController.swift in Sources */,
+				C2CCD21C1963E9A4000F08A5 /* UIImageCacheViewController.swift in Sources */,
 				C2190CAE19597D6B00AF0202 /* UIKitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

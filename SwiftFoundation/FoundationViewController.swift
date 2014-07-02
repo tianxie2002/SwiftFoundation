@@ -14,7 +14,6 @@ class FoundationViewController: BaseViewController,UITableViewDelegate, UITableV
 //        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
 //        // Custom initialization
 //    }
-
     var  foundationTableView : UITableView?
     var  foundationArray : NSArray?
     override func viewDidLoad() {
@@ -71,6 +70,10 @@ class FoundationViewController: BaseViewController,UITableViewDelegate, UITableV
          self.navigationController.pushViewController(detailViewController, animated:false)
         case 1:
             var detailViewController = ProtocolShowValueViewController()
+            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
+            self.navigationController.pushViewController(detailViewController, animated:false)
+        case 2:
+            var detailViewController = SingletonPatternViewController()
             detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
             self.navigationController.pushViewController(detailViewController, animated:false)
         default:

@@ -12,7 +12,7 @@ let _SingletonShareInstance = SingletonOne()
 // 全局常量
 class SingletonOne: NSObject {
 
-    class var ShareInstance:SingletonOne{
+    class var shareInstance:SingletonOne{
         return _SingletonShareInstance
     }
     init()
