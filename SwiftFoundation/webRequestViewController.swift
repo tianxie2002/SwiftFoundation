@@ -9,11 +9,13 @@
 import UIKit
 import Foundation
 class webRequestViewController: BaseViewController,DataServiceDelegate {
-
+    
+    var imageViewIcon : UIImageView?
+    var weathlabel :UILabel?
     override func viewDidLoad() {
         // 自定义代码
         super.viewDidLoad()
-        var dataService = webService(url: "http://m.weather.com.cn/data/101010100.html")
+        var dataService = webService(url: "http://www.weather.com.cn/data/cityinfo/101010100.html")
         // 1.代理获取数据方式
         // dataService.delegate = self
         
@@ -21,33 +23,128 @@ class webRequestViewController: BaseViewController,DataServiceDelegate {
         dataService.dataClosure = dataReceviedFinishedClosure
         dataService.connectionErrorClosure = connectionErrorClosure
         dataService.headerResponse = receviedResponseClosure
-        /*
+        
         // 3.闭包获取方式第二种，通过初始化的时候指定闭包
-        var dataServiceClosure = DataService(url: "http://m.weather.com.cn/data/101010100.html", _dataClosure: {
-        (dataService: DataService, data: NSData) -> Void in
-        // 数据接收完毕
-        println("data is done:\(data)")
-        var decoder : JSONDecoder = JSONDecoder.decoder() as JSONDecoder
-        var json : NSDictionary = decoder.objectWithData(data) as NSDictionary
-        println("天气预报 数据是:\(json)")
-        }, _connectionErrorClosure: {
-        (dataService: DataService, error: NSError) -> Void in
-        // 接受数据发生错误
-        println("error:\(error)")
-        })
-        dataServiceClosure.start()
-        */
+//        var dataServiceClosure = webService(url: "http://m.weather.com.cn/data/101010100.html", _dataClosure: {
+//        (dataService: webService, data: NSData) -> Void in
+//        // 数据接收完毕
+//        let jsonData = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
+//       
+//        println("天气预报 数据是:\(jsonData)")
+//        }, _connectionErrorClosure: {
+//        (dataService: webService, error: NSError) -> Void in
+//        // 接受数据发生错误
+//        println("error:\(error)")
+//        })
+//        dataServiceClosure.start()
+
         
         dataService.start()
+        setupView()
     }
     
+    func setupView(){
+    
+        var imagebg     = UIImage(named: "天气预报.png")
+        var imageViewbg = UIImageView(frame: CGRectMake( 50, 120.0, 220, imagebg.size.height+50))
+        imageViewbg.image = imagebg
+        self.view.addSubview(imageViewbg)
+        imageViewIcon = UIImageView(frame: CGRectMake((CGRectGetWidth(self.view.bounds) - imagebg.size.width) / 2.0-40, 80.0, 175, 100))
+        self.view.addSubview(imageViewIcon)
+        var label = UILabel(frame: CGRectMake(150, 130.0, 100, 25))
+        label.backgroundColor = UIColor.clearColor()
+        label.textAlignment = NSTextAlignment.Center
+        label.font = UIFont.boldSystemFontOfSize(30)
+        label.textColor = UIColor.whiteColor()
+        label.text = "北京"
+        self.view.addSubview(label)
+        weathlabel = UILabel(frame: CGRectMake(150, 160.0, 100, 25))
+        weathlabel!.backgroundColor = UIColor.clearColor()
+        weathlabel!.textAlignment = NSTextAlignment.Center
+        weathlabel!.font = UIFont.boldSystemFontOfSize(17)
+        weathlabel!.textColor = UIColor.whiteColor()
+        
+        self.view.addSubview(weathlabel)
+    }
     // 定义数据加载完毕请求闭包
     func dataReceviedFinishedClosure(dataService: webService, data: NSData) -> Void {
-        println("data is done:\(data)")
-         let jsonData = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
-//        var decoder : JSONDecoder = JSONDecoder.decoder() as JSONDecoder
-//        var json : NSDictionary = decoder.objectWithData(data) as NSDictionary
-          println("天气预报 数据是:\(jsonData)")
+        let jsonData = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
+        
+        let  jsonWeather   = jsonData["weatherinfo"] as NSDictionary
+        println("天气预报 数据是:\(jsonWeather)")
+        let  strWeather = jsonWeather["weather"] as String
+        weathlabel!.text = strWeather
+        var fileName = "晴.png"
+        if  strWeather.containsString("雷阵雨")
+        {
+            fileName = "雷阵雨.png";
+        }
+        else if  strWeather.containsString("雾")
+        {
+            fileName = "雾.png";
+        }
+        else if  strWeather.containsString("大雪")
+        {
+            fileName = "大雪.png";
+        }
+        else if  strWeather.containsString("大雨")
+        {
+            fileName = "大雨.png";
+        }
+        else if  strWeather.containsString("中雪")
+        {
+            fileName = "中雪.png";
+        }
+        else if  strWeather.containsString("中雨")
+        {
+            fileName = "中雨.png";
+        }
+        else if  strWeather.containsString("小雪")
+        {
+            fileName = "小雪.png";
+        }
+        else if  strWeather.containsString("小雨")
+        {
+            fileName = "小雨.png";
+        }
+        else if  strWeather.containsString("雷雨")
+        {
+            fileName = "雷雨.png";
+        }
+        else if  strWeather.containsString("多云")
+        {
+            fileName = "多云.png";
+        }
+        else if  strWeather.containsString("阴")
+        {
+            fileName = "阴.png";
+        }
+        else if  strWeather.containsString("雨")
+        {
+            fileName = "雨.png";
+        }
+        else if  strWeather.containsString("雪")
+        {
+            fileName = "雪.png";
+        }
+        else if  strWeather.containsString("阴转晴")
+        {
+            fileName = "阴转晴.png";
+        }
+        else if  strWeather.containsString("风")
+        {
+            fileName = "风.png";
+        }
+        else if  strWeather.containsString("阴转晴")
+        {
+            fileName = "阴转晴.png";
+        }
+        else if  strWeather.containsString("大雨转晴")
+        {
+            fileName = "大雨转晴.png";
+        }
+       imageViewIcon!.image = UIImage(named: fileName)
+
     }
     
     // 定义数据请求失败的闭包
