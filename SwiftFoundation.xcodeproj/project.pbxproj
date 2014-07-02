@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C208AC4C1963F39800E9ED76 /* Agent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C208AC4B1963F39800E9ED76 /* Agent.swift */; };
+		C208AC4E1964078100E9ED76 /* NeteaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C208AC4D1964078100E9ED76 /* NeteaseViewController.swift */; };
+		C208AC5019641A2900E9ED76 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = C208AC4F19641A2900E9ED76 /* View.xib */; };
+		C208AC5219641AF700E9ED76 /* NeteaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C208AC5119641AF700E9ED76 /* NeteaseTableViewCell.swift */; };
+		C208AC5519641B2C00E9ED76 /* NeteaseNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C208AC5319641B2C00E9ED76 /* NeteaseNewsCell.swift */; };
+		C208AC5619641B2C00E9ED76 /* NeteaseNewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C208AC5419641B2C00E9ED76 /* NeteaseNewsCell.xib */; };
 		C214F2111959E2E000D53562 /* UIViewSizeExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C214F2101959E2E000D53562 /* UIViewSizeExt.swift */; };
 		C214F2131959E9DB00D53562 /* UIImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C214F2121959E9DB00D53562 /* UIImageExt.swift */; };
 		C214F2151959EBCA00D53562 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C214F2141959EBCA00D53562 /* StringExt.swift */; };
@@ -74,6 +80,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C208AC4B1963F39800E9ED76 /* Agent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Agent.swift; sourceTree = "<group>"; };
+		C208AC4D1964078100E9ED76 /* NeteaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeteaseViewController.swift; sourceTree = "<group>"; };
+		C208AC4F19641A2900E9ED76 /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
+		C208AC5119641AF700E9ED76 /* NeteaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeteaseTableViewCell.swift; sourceTree = "<group>"; };
+		C208AC5319641B2C00E9ED76 /* NeteaseNewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeteaseNewsCell.swift; sourceTree = "<group>"; };
+		C208AC5419641B2C00E9ED76 /* NeteaseNewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NeteaseNewsCell.xib; sourceTree = "<group>"; };
 		C214F2101959E2E000D53562 /* UIViewSizeExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewSizeExt.swift; sourceTree = "<group>"; };
 		C214F2121959E9DB00D53562 /* UIImageExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExt.swift; sourceTree = "<group>"; };
 		C214F2141959EBCA00D53562 /* StringExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
@@ -358,6 +370,7 @@
 		C2C818711963B8AB0028A8CB /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				C208AC4B1963F39800E9ED76 /* Agent.swift */,
 				C2C818721963B91B0028A8CB /* FileUtility.swift */,
 				C2CCD2191963E7EC000F08A5 /* UIImageView+WebCache.swift */,
 			);
@@ -383,6 +396,11 @@
 				C2CA1AFD1960569700027DEF /* BaiduZhiDaoController.swift */,
 				C2A0D36E1962B13300EDB6A6 /* FMDBViewController.swift */,
 				C2CCD21B1963E9A4000F08A5 /* UIImageCacheViewController.swift */,
+				C208AC4D1964078100E9ED76 /* NeteaseViewController.swift */,
+				C208AC4F19641A2900E9ED76 /* View.xib */,
+				C208AC5119641AF700E9ED76 /* NeteaseTableViewCell.swift */,
+				C208AC5319641B2C00E9ED76 /* NeteaseNewsCell.swift */,
+				C208AC5419641B2C00E9ED76 /* NeteaseNewsCell.xib */,
 			);
 			name = DataStore;
 			sourceTree = "<group>";
@@ -485,11 +503,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C208AC5019641A2900E9ED76 /* View.xib in Resources */,
 				C2ED3DF0195D4DAB00C14C63 /* tab_icon_data@2x.png in Resources */,
 				C2ED3DEB195D4DAB00C14C63 /* icon-29@2x.png in Resources */,
 				C292017719617EAD00D7CDE6 /* CustomCellByXib.xib in Resources */,
 				C2ED3DF1195D4DAB00C14C63 /* tab_icon_other@2x.png in Resources */,
 				C2190C901959733700AF0202 /* Images.xcassets in Resources */,
+				C208AC5619641B2C00E9ED76 /* NeteaseNewsCell.xib in Resources */,
 				C2ED3DF3195D4DAB00C14C63 /* tab_icon_uikit_s@2x.png in Resources */,
 				C2ED3DF2195D4DAB00C14C63 /* tab_icon_base_s@2x.png in Resources */,
 				C2ED3DF4195D4DAB00C14C63 /* tab_icon_data_s@2x.png in Resources */,
@@ -520,15 +540,18 @@
 				C2190CB419597FD500AF0202 /* OtherViewController.swift in Sources */,
 				C2A0D3671962B06A00EDB6A6 /* FMDatabase.m in Sources */,
 				C2190CAC19597D2000AF0202 /* FoundationViewController.swift in Sources */,
+				C208AC5219641AF700E9ED76 /* NeteaseTableViewCell.swift in Sources */,
 				C2C8186C1963A5850028A8CB /* SingletonTwo.swift in Sources */,
 				C2C8186E1963A5BA0028A8CB /* SingletonThree.swift in Sources */,
 				C2CA1AFE1960569700027DEF /* BaiduZhiDaoController.swift in Sources */,
+				C208AC5519641B2C00E9ED76 /* NeteaseNewsCell.swift in Sources */,
 				C2A6823B1963085700E46F8E /* ClosureEditValueViewController.swift in Sources */,
 				C2A6823D1963114E00E46F8E /* ProtocolShowValueViewController.swift in Sources */,
 				C214F2171959ED0000D53562 /* ArrayExt.swift in Sources */,
 				C2190CAA19597CBF00AF0202 /* BaseViewController.swift in Sources */,
 				C2C8186A1963A4540028A8CB /* SingletonOne.swift in Sources */,
 				C2A0D36B1962B06A00EDB6A6 /* FMResultSet.m in Sources */,
+				C208AC4E1964078100E9ED76 /* NeteaseViewController.swift in Sources */,
 				C2A682391963081F00E46F8E /* ClosureShowValueViewController.swift in Sources */,
 				C214F21E1959F2B900D53562 /* UITableViewManager.swift in Sources */,
 				C2A6823F1963119E00E46F8E /* ProtocolEditValueViewController.swift in Sources */,
@@ -536,6 +559,7 @@
 				C2CA1AFB1960170700027DEF /* UITableBaseViewController.swift in Sources */,
 				C292017519617E2D00D7CDE6 /* CustomCellByXibViewController.swift in Sources */,
 				C2A0D36F1962B13300EDB6A6 /* FMDBViewController.swift in Sources */,
+				C208AC4C1963F39800E9ED76 /* Agent.swift in Sources */,
 				C214F2131959E9DB00D53562 /* UIImageExt.swift in Sources */,
 				C2190CA819597C1700AF0202 /* BaseTabBarViewController.swift in Sources */,
 				C214F21B1959F0CD00D53562 /* UIImageCache.swift in Sources */,
