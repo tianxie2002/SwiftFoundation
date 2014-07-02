@@ -22,7 +22,7 @@ class FoundationViewController: BaseViewController,UITableViewDelegate, UITableV
         self.title = "基础"
         self.foundationArray = ["Closures闭包",
                             "Protocol传值",
-                            "可选链",
+                            "单例模式",
                           ]
         self.foundationTableView  = UITableView(frame:self.view.frame, style:UITableViewStyle.Plain)
         self.foundationTableView!.delegate = self

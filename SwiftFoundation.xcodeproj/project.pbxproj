@@ -42,6 +42,9 @@
 		C2A6823F1963119E00E46F8E /* ProtocolEditValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A6823E1963119E00E46F8E /* ProtocolEditValueViewController.swift */; };
 		C2A6824419631CD600E46F8E /* ZhiHuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A6824219631CD600E46F8E /* ZhiHuViewController.swift */; };
 		C2A6824519631CD600E46F8E /* ZhiHuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2A6824319631CD600E46F8E /* ZhiHuViewController.xib */; };
+		C2C8186A1963A4540028A8CB /* SingletonOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C818691963A4540028A8CB /* SingletonOne.swift */; };
+		C2C8186C1963A5850028A8CB /* SingletonTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8186B1963A5850028A8CB /* SingletonTwo.swift */; };
+		C2C8186E1963A5BA0028A8CB /* SingletonThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8186D1963A5BA0028A8CB /* SingletonThree.swift */; };
 		C2CA1AFB1960170700027DEF /* UITableBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CA1AFA1960170700027DEF /* UITableBaseViewController.swift */; };
 		C2CA1AFE1960569700027DEF /* BaiduZhiDaoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CA1AFD1960569700027DEF /* BaiduZhiDaoController.swift */; };
 		C2ED3DDE195D4B3000C14C63 /* DataStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ED3DDD195D4B3000C14C63 /* DataStoreViewController.swift */; };
@@ -116,6 +119,9 @@
 		C2A6823E1963119E00E46F8E /* ProtocolEditValueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolEditValueViewController.swift; sourceTree = "<group>"; };
 		C2A6824219631CD600E46F8E /* ZhiHuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZhiHuViewController.swift; sourceTree = "<group>"; };
 		C2A6824319631CD600E46F8E /* ZhiHuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZhiHuViewController.xib; sourceTree = "<group>"; };
+		C2C818691963A4540028A8CB /* SingletonOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingletonOne.swift; sourceTree = "<group>"; };
+		C2C8186B1963A5850028A8CB /* SingletonTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingletonTwo.swift; sourceTree = "<group>"; };
+		C2C8186D1963A5BA0028A8CB /* SingletonThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingletonThree.swift; sourceTree = "<group>"; };
 		C2CA1AFA1960170700027DEF /* UITableBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableBaseViewController.swift; sourceTree = "<group>"; };
 		C2CA1AFD1960569700027DEF /* BaiduZhiDaoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaiduZhiDaoController.swift; sourceTree = "<group>"; };
 		C2ED3DDD195D4B3000C14C63 /* DataStoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStoreViewController.swift; sourceTree = "<group>"; };
@@ -310,6 +316,9 @@
 				C2A6823A1963085700E46F8E /* ClosureEditValueViewController.swift */,
 				C2A6823C1963114E00E46F8E /* ProtocolShowValueViewController.swift */,
 				C2A6823E1963119E00E46F8E /* ProtocolEditValueViewController.swift */,
+				C2C818691963A4540028A8CB /* SingletonOne.swift */,
+				C2C8186B1963A5850028A8CB /* SingletonTwo.swift */,
+				C2C8186D1963A5BA0028A8CB /* SingletonThree.swift */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
@@ -498,11 +507,14 @@
 				C2190CB419597FD500AF0202 /* OtherViewController.swift in Sources */,
 				C2A0D3671962B06A00EDB6A6 /* FMDatabase.m in Sources */,
 				C2190CAC19597D2000AF0202 /* FoundationViewController.swift in Sources */,
+				C2C8186C1963A5850028A8CB /* SingletonTwo.swift in Sources */,
+				C2C8186E1963A5BA0028A8CB /* SingletonThree.swift in Sources */,
 				C2CA1AFE1960569700027DEF /* BaiduZhiDaoController.swift in Sources */,
 				C2A6823B1963085700E46F8E /* ClosureEditValueViewController.swift in Sources */,
 				C2A6823D1963114E00E46F8E /* ProtocolShowValueViewController.swift in Sources */,
 				C214F2171959ED0000D53562 /* ArrayExt.swift in Sources */,
 				C2190CAA19597CBF00AF0202 /* BaseViewController.swift in Sources */,
+				C2C8186A1963A4540028A8CB /* SingletonOne.swift in Sources */,
 				C2A0D36B1962B06A00EDB6A6 /* FMResultSet.m in Sources */,
 				C2A682391963081F00E46F8E /* ClosureShowValueViewController.swift in Sources */,
 				C214F21E1959F2B900D53562 /* UITableViewManager.swift in Sources */,
