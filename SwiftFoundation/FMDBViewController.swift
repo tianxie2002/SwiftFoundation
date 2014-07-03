@@ -40,6 +40,7 @@ class FMDBViewController: BaseViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+         CreatContactTabel()
         let namelabel = UILabel(frame:CGRectMake(10.0, 80.0, 50, 30.0))
         namelabel.text = "姓名"
         self.view.addSubview(namelabel)
@@ -65,12 +66,12 @@ class FMDBViewController: BaseViewController {
         button?.setTitleColor(UIColor.redColor(), forState: UIControlState.Normal)
         button!.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Highlighted)
         button?.setTitle("保存", forState: UIControlState.Normal)
-        button?.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        button?.addTarget(self, action: "saveData", forControlEvents: UIControlEvents.TouchUpInside)
         button!.tag = 100
         self.view.addSubview(button)
         // Do any additional setup after loading the view.
     }
-    func CreatContatTabel(){
+    func CreatContactTabel(){
     
         let docDirPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory,
         NSSearchPathDomainMask.UserDomainMask, true)[0] as String
@@ -108,7 +109,7 @@ class FMDBViewController: BaseViewController {
         if db.open() {
             let name: NSString = nameField!.text
             let phone: NSString = phoneField!.text
-            db.executeUpdate("INSERT INTO CONTACTS(NAME, PHONE) VALUES(?, ?, ?)", withArgumentsInArray: [name, phone])
+            db.executeUpdate("INSERT INTO CONTACTS(NAME, PHONE) VALUES(?, ?)", withArgumentsInArray: [name, phone])
             if db.hadError() {
                 let error = db.lastError()
               //  label.text = error.localizedDescription
