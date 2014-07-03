@@ -33,13 +33,13 @@ class FMDBViewController: BaseViewController {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }
-    var databasePath: String!
     var nameField : UITextField?
     var phoneField : UITextField?
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        // CreatContactTabel()
         let namelabel = UILabel(frame:CGRectMake(10.0, 80.0, 50, 30.0))
         namelabel.text = "姓名"
         self.view.addSubview(namelabel)
@@ -65,37 +65,12 @@ class FMDBViewController: BaseViewController {
         button?.setTitleColor(UIColor.redColor(), forState: UIControlState.Normal)
         button!.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Highlighted)
         button?.setTitle("保存", forState: UIControlState.Normal)
-        button?.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        button?.addTarget(self, action: "saveData", forControlEvents: UIControlEvents.TouchUpInside)
         button!.tag = 100
         self.view.addSubview(button)
         // Do any additional setup after loading the view.
     }
-    func CreatContatTabel(){
     
-        let docDirPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory,
-        NSSearchPathDomainMask.UserDomainMask, true)[0] as String
-        
-        databasePath = docDirPath.stringByAppendingPathComponent("contact.db")
-        
-        let fileMgr = NSFileManager.defaultManager()
-        
-        if !fileMgr.fileExistsAtPath(databasePath) {
-            let db = FMDatabase(path: databasePath)
-            if db.open() {
-                db.executeUpdate("CREATE TABLE IF NOT EXISTS CONTACTS " +
-                    "( ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                    " NAME TEXT, " +
-                    " PHONE TEXT)", withArgumentsInArray: nil)
-                if db.hadError() {
-                    let error = db.lastError()
-                   // label.text = error.localizedDescription
-                }
-                
-                db.close()
-            }
-        }
-    
-    }
     func backupgroupTap()
     {
         nameField!.resignFirstResponder()
@@ -103,12 +78,17 @@ class FMDBViewController: BaseViewController {
     }
     
     
-    func saveData(){
+    func saveData()
+    {
+        let docDirPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory,
+            NSSearchPathDomainMask.UserDomainMask, true)[0] as String
+        
+        let databasePath = docDirPath.stringByAppendingPathComponent("contact.db")
         let db = FMDatabase(path: databasePath)
         if db.open() {
             let name: NSString = nameField!.text
             let phone: NSString = phoneField!.text
-            db.executeUpdate("INSERT INTO CONTACTS(NAME, PHONE) VALUES(?, ?, ?)", withArgumentsInArray: [name, phone])
+            db.executeUpdate("INSERT INTO CONTACTS(NAME, PHONE) VALUES(?, ?)", withArgumentsInArray: [name, phone])
             if db.hadError() {
                 let error = db.lastError()
               //  label.text = error.localizedDescription
@@ -117,7 +97,7 @@ class FMDBViewController: BaseViewController {
             }
             db.close()
         }
-    
+       self.navigationController.popViewControllerAnimated(false)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

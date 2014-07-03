@@ -26,13 +26,11 @@ class BaseTabBarViewController: UITabBarController {
         let  dataVC =  DataStoreViewController()
         let  otherVC = OtherViewController()
         let foundationNC = UINavigationController(rootViewController: foundationVC)
-        foundationNC.hidesBottomBarWhenPushed = true;
         foundationNC.tabBarItem = UITabBarItem(title: "基础", image: UIImage(named:"tab_icon_base"), tag: 1);
         let UIKitNC = UINavigationController(rootViewController:UIKitVC);
         UIKitNC.tabBarItem = UITabBarItem(title: "图形", image: UIImage(named:"tab_icon_uikit"), tag: 2);
         let dataNC = UINavigationController(rootViewController:dataVC);
         dataNC.tabBarItem = UITabBarItem(title: "数据", image: UIImage(named:"tab_icon_data"), tag: 3);
-         //dataNC.hidesBottomBarWhenPushed = true;
         let otherNC = UINavigationController(rootViewController:otherVC);
         otherNC.tabBarItem = UITabBarItem(title: "其他", image: UIImage(named:"tab_icon_other"), tag: 4);
         var tabViewControllers = [foundationNC,UIKitNC,dataNC,otherNC];
