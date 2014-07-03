@@ -75,6 +75,7 @@
 		C2CA1AFE1960569700027DEF /* BaiduZhiDaoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CA1AFD1960569700027DEF /* BaiduZhiDaoController.swift */; };
 		C2CCD21A1963E7EC000F08A5 /* UIImageView+WebCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CCD2191963E7EC000F08A5 /* UIImageView+WebCache.swift */; };
 		C2CCD21C1963E9A4000F08A5 /* UIImageCacheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CCD21B1963E9A4000F08A5 /* UIImageCacheViewController.swift */; };
+		C2DF1B58196504F4009E760E /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DF1B57196504F4009E760E /* ContactViewController.swift */; };
 		C2ED3DDE195D4B3000C14C63 /* DataStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ED3DDD195D4B3000C14C63 /* DataStoreViewController.swift */; };
 		C2ED3DEB195D4DAB00C14C63 /* icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2ED3DE0195D4DAB00C14C63 /* icon-29@2x.png */; };
 		C2ED3DEC195D4DAB00C14C63 /* icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2ED3DE1195D4DAB00C14C63 /* icon-40@2x.png */; };
@@ -180,6 +181,7 @@
 		C2CA1AFD1960569700027DEF /* BaiduZhiDaoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaiduZhiDaoController.swift; sourceTree = "<group>"; };
 		C2CCD2191963E7EC000F08A5 /* UIImageView+WebCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+WebCache.swift"; sourceTree = "<group>"; };
 		C2CCD21B1963E9A4000F08A5 /* UIImageCacheViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageCacheViewController.swift; sourceTree = "<group>"; };
+		C2DF1B57196504F4009E760E /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		C2ED3DDD195D4B3000C14C63 /* DataStoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStoreViewController.swift; sourceTree = "<group>"; };
 		C2ED3DE0195D4DAB00C14C63 /* icon-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-29@2x.png"; sourceTree = "<group>"; };
 		C2ED3DE1195D4DAB00C14C63 /* icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-40@2x.png"; sourceTree = "<group>"; };
@@ -469,6 +471,7 @@
 				C208AC4D1964078100E9ED76 /* NeteaseViewController.swift */,
 				C208AC5319641B2C00E9ED76 /* NeteaseNewsCell.swift */,
 				C208AC5419641B2C00E9ED76 /* NeteaseNewsCell.xib */,
+				C2DF1B57196504F4009E760E /* ContactViewController.swift */,
 			);
 			name = DataStore;
 			sourceTree = "<group>";
@@ -650,6 +653,7 @@
 				C208AC5E19643AE100E9ED76 /* webRequestViewController.swift in Sources */,
 				C2190CA819597C1700AF0202 /* BaseTabBarViewController.swift in Sources */,
 				C214F21B1959F0CD00D53562 /* UIImageCache.swift in Sources */,
+				C2DF1B58196504F4009E760E /* ContactViewController.swift in Sources */,
 				C2CCD21A1963E7EC000F08A5 /* UIImageView+WebCache.swift in Sources */,
 				C214F2111959E2E000D53562 /* UIViewSizeExt.swift in Sources */,
 				C2A0D3681962B06A00EDB6A6 /* FMDatabaseAdditions.m in Sources */,

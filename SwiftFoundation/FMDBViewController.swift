@@ -40,7 +40,7 @@ class FMDBViewController: BaseViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-         CreatContactTabel()
+        // CreatContactTabel()
         let namelabel = UILabel(frame:CGRectMake(10.0, 80.0, 50, 30.0))
         namelabel.text = "姓名"
         self.view.addSubview(namelabel)
@@ -71,32 +71,7 @@ class FMDBViewController: BaseViewController {
         self.view.addSubview(button)
         // Do any additional setup after loading the view.
     }
-    func CreatContactTabel(){
     
-        let docDirPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory,
-        NSSearchPathDomainMask.UserDomainMask, true)[0] as String
-        
-        databasePath = docDirPath.stringByAppendingPathComponent("contact.db")
-        
-        let fileMgr = NSFileManager.defaultManager()
-        
-        if !fileMgr.fileExistsAtPath(databasePath) {
-            let db = FMDatabase(path: databasePath)
-            if db.open() {
-                db.executeUpdate("CREATE TABLE IF NOT EXISTS CONTACTS " +
-                    "( ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                    " NAME TEXT, " +
-                    " PHONE TEXT)", withArgumentsInArray: nil)
-                if db.hadError() {
-                    let error = db.lastError()
-                   // label.text = error.localizedDescription
-                }
-                
-                db.close()
-            }
-        }
-    
-    }
     func backupgroupTap()
     {
         nameField!.resignFirstResponder()

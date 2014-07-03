@@ -19,7 +19,7 @@ class ProtocolShowValueViewController: BaseViewController,ProtocolEditValueDeleg
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        var item = UIBarButtonItem(title:"编辑",style:UIBarButtonItemStyle.Plain,target:self,action:"nextBtnClicked")
+        var item = UIBarButtonItem(title:"下一页",style:UIBarButtonItemStyle.Plain,target:self,action:"nextBtnClicked")
         self.navigationItem.rightBarButtonItem = item
         myLabel = UILabel(frame:CGRectMake(0,100,320,60))
         myLabel!.text = "当前值——0"
