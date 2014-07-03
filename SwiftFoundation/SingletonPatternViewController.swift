@@ -17,8 +17,13 @@ class SingletonPatternViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        println("================================单例模式一==============================================")
         testSingleOne()
-        // Do any additional setup after loading the view.
+        println("================================单例模式二==============================================")
+        testSingleTwo()
+        println("================================单例模式三==============================================")
+        testSingleThreee()
     }
     /*
     “等价于"（用三个等号表示，===） 与“等于"（用两个等号表示，==）的不同：
@@ -39,6 +44,36 @@ class SingletonPatternViewController: BaseViewController {
             println(singleton4)
         }
     
+    }
+    func testSingleTwo(){
+        let singleton1 = SingletonTwo()
+        let singleton2 = SingletonTwo()
+        if singleton1 === singleton2{
+            println(singleton1)
+            println(singleton2)
+        }
+        let singleton3 = SingletonTwo.shareInstance
+        let singleton4 = SingletonTwo.shareInstance
+        if singleton3 === singleton4{
+            println(singleton3)
+            println(singleton4)
+        }
+        
+    }
+    func testSingleThreee(){
+        let singleton1 = SingletonThree()
+        let singleton2 = SingletonThree()
+        if singleton1 === singleton2{
+            println(singleton1)
+            println(singleton2)
+        }
+        let singleton3 = SingletonThree.sharedInstance
+        let singleton4 = SingletonThree.sharedInstance
+        if singleton3 === singleton4{
+            println(singleton3)
+            println(singleton4)
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
