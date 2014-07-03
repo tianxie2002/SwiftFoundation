@@ -89,11 +89,7 @@ class BaiduZhiDaoController: UIViewController,UITableViewDataSource,UITableViewD
     func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
         return self.dataArray.count
     }
-    func tableView(tableView: UITableView!, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat{
-    
-        return 150;
-    }
-
+   
     
     
     func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath?) -> UITableViewCell? {

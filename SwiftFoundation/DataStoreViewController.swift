@@ -68,7 +68,7 @@ class DataStoreViewController: BaseViewController, UITableViewDelegate, UITableV
             detailViewController.title = self.dataArray?.objectAtIndex(indexPath.row)  as String
             self.navigationController.pushViewController(detailViewController, animated:false)
         case 1 :
-            var detailViewController = FMDBViewController(nibName: nil, bundle: nil)
+            var detailViewController = ContactViewController(nibName: nil, bundle: nil)
             detailViewController.title = self.dataArray?.objectAtIndex(indexPath.row)  as String
             self.navigationController.pushViewController(detailViewController, animated:false)
         case 2 :

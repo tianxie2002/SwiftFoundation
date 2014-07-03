@@ -33,7 +33,6 @@ class FMDBViewController: BaseViewController {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }
-    var databasePath: String!
     var nameField : UITextField?
     var phoneField : UITextField?
 
@@ -79,7 +78,12 @@ class FMDBViewController: BaseViewController {
     }
     
     
-    func saveData(){
+    func saveData()
+    {
+        let docDirPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory,
+            NSSearchPathDomainMask.UserDomainMask, true)[0] as String
+        
+        let databasePath = docDirPath.stringByAppendingPathComponent("contact.db")
         let db = FMDatabase(path: databasePath)
         if db.open() {
             let name: NSString = nameField!.text
@@ -93,7 +97,7 @@ class FMDBViewController: BaseViewController {
             }
             db.close()
         }
-    
+       self.navigationController.popViewControllerAnimated(false)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
