@@ -9,7 +9,7 @@
 import UIKit
 
 class NeteaseViewController: BaseViewController,UITableViewDelegate, UITableViewDataSource {
-
+    
     var dataTableView : UITableView?
     var dataArray = NSMutableArray()
     var thumbQueue = NSOperationQueue()
@@ -31,10 +31,10 @@ class NeteaseViewController: BaseViewController,UITableViewDelegate, UITableView
         self.dataTableView!.registerNib(nib, forCellReuseIdentifier: "NewsCell")
         self.view.addSubview(self.dataTableView)
         loadDataSource()
-//        let refreshControl = UIRefreshControl()
-//        refreshControl.attributedTitle = NSAttributedString(string: "下拉刷新")
-//        refreshControl.addTarget(self, action: "loadDataSource", forControlEvents: UIControlEvents.ValueChanged)
-//        self.refreshControl = refreshControl
+        //        let refreshControl = UIRefreshControl()
+        //        refreshControl.attributedTitle = NSAttributedString(string: "下拉刷新")
+        //        refreshControl.addTarget(self, action: "loadDataSource", forControlEvents: UIControlEvents.ValueChanged)
+        //        self.refreshControl = refreshControl
         // Do any additional setup after loading the view.
     }
     func loadDataSource() {
@@ -67,54 +67,54 @@ class NeteaseViewController: BaseViewController,UITableViewDelegate, UITableView
     
     // #pragma mark - Table View
     
-     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
-     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataArray.count
     }
     
-     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("NewsCell", forIndexPath: indexPath) as NeteaseNewsCell
         
         let object = dataArray[indexPath.row] as NSDictionary
         cell.title.text = object["title"] as? String
-         cell.title.font = UIFont.systemFontOfSize(14)
+        cell.title.font = UIFont.systemFontOfSize(14)
         cell.newsDetail.numberOfLines = 0
         cell.newsDetail.text = object["digest"] as? String
         cell.newsDetail.font = UIFont.systemFontOfSize(12)
         //cell.imageView.image = UIImage(named :"cell_photo_default_small")
         cell.newImage.contentMode = UIViewContentMode.ScaleAspectFit
         cell.newImage.setImage(object["imgsrc"] as String, placeHolder: nil)
-//        let request = NSURLRequest(URL :NSURL.URLWithString(object["imgsrc"] as String))
-//        NSURLConnection.sendAsynchronousRequest(request, queue: thumbQueue, completionHandler: { response, data, error in
-//            if error {
-//                println(error)
-//                
-//            } else {
-//                let image = UIImage.init(data :data)
-//                dispatch_async(dispatch_get_main_queue(), {
-//                    cell.imageView.image = image
-//                    })
-//            }
-//            })
+        //        let request = NSURLRequest(URL :NSURL.URLWithString(object["imgsrc"] as String))
+        //        NSURLConnection.sendAsynchronousRequest(request, queue: thumbQueue, completionHandler: { response, data, error in
+        //            if error {
+        //                println(error)
+        //
+        //            } else {
+        //                let image = UIImage.init(data :data)
+        //                dispatch_async(dispatch_get_main_queue(), {
+        //                    cell.imageView.image = image
+        //                    })
+        //            }
+        //            })
         
         
         return cell
     }
     
-     func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
+    func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
         return 100
     }
     /*
     // #pragma mark - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
