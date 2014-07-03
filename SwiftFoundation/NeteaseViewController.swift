@@ -26,7 +26,8 @@ class NeteaseViewController: BaseViewController,UITableViewDelegate, UITableView
         let footView = UIView()
         footView.backgroundColor = UIColor.lightGrayColor()
         self.dataTableView!.tableFooterView = footView
-        var nib = UINib(nibName:"NeteaseNewsCell", bundle: nil)
+        var nib = UINib(nibName:"NewsViewCell", bundle: nil)
+        //println(NeteaseNewsCell);
         //self.tableView?.registerNib(nib, forCellReuseIdentifier: identifier)
         self.dataTableView!.registerNib(nib, forCellReuseIdentifier: "NewsCell")
         self.view.addSubview(self.dataTableView)
@@ -76,7 +77,7 @@ class NeteaseViewController: BaseViewController,UITableViewDelegate, UITableView
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("NewsCell", forIndexPath: indexPath) as NeteaseNewsCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("NewsCell", forIndexPath: indexPath) as NewsViewCell
         
         let object = dataArray[indexPath.row] as NSDictionary
         cell.title.text = object["title"] as? String
@@ -85,8 +86,8 @@ class NeteaseViewController: BaseViewController,UITableViewDelegate, UITableView
         cell.newsDetail.text = object["digest"] as? String
         cell.newsDetail.font = UIFont.systemFontOfSize(12)
         //cell.imageView.image = UIImage(named :"cell_photo_default_small")
-        cell.newImage.contentMode = UIViewContentMode.ScaleAspectFit
-        cell.newImage.setImage(object["imgsrc"] as String, placeHolder: nil)
+        cell.newsImage.contentMode = UIViewContentMode.ScaleAspectFit
+        cell.newsImage.setImage(object["imgsrc"] as String, placeHolder: nil)
         //        let request = NSURLRequest(URL :NSURL.URLWithString(object["imgsrc"] as String))
         //        NSURLConnection.sendAsynchronousRequest(request, queue: thumbQueue, completionHandler: { response, data, error in
         //            if error {
@@ -105,7 +106,7 @@ class NeteaseViewController: BaseViewController,UITableViewDelegate, UITableView
     }
     
     func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
-        return 100
+        return 80
     }
     /*
     // #pragma mark - Navigation

@@ -1,20 +1,19 @@
 //
-//  NeteaseNewsCell.swift
+//  NewsViewCell.swift
 //  SwiftFoundation
 //
-//  Created by baxiang on 14-7-2.
+//  Created by baxiang on 14-7-3.
 //  Copyright (c) 2014年 baxiang. All rights reserved.
 //
 
 import UIKit
 
-class NeteaseNewsCell: UITableViewCell {
+class NewsViewCell: UITableViewCell {
 
     
-    @IBOutlet var newImage : UIImageView
-    @IBOutlet var title : UILabel
-    
+    @IBOutlet var title : UILabel = nil
     @IBOutlet var newsDetail : UILabel = nil
+    @IBOutlet var newsImage : UIImageView = nil
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
