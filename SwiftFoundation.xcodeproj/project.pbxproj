@@ -76,6 +76,11 @@
 		C2DF1B5B19654744009E760E /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DF1B5919654744009E760E /* ContactViewController.swift */; };
 		C2DF1B5F1965479E009E760E /* NewsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DF1B5D1965479E009E760E /* NewsViewCell.swift */; };
 		C2DF1B601965479E009E760E /* NewsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2DF1B5E1965479E009E760E /* NewsViewCell.xib */; };
+		C2DF1B62196647CF009E760E /* ConstantAndVariablesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DF1B61196647CF009E760E /* ConstantAndVariablesController.swift */; };
+		C2DF1B641966496D009E760E /* IntegerAndFloatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DF1B631966496D009E760E /* IntegerAndFloatController.swift */; };
+		C2DF1B6619664B64009E760E /* TuplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DF1B6519664B64009E760E /* TuplesViewController.swift */; };
+		C2DF1B6819664CD6009E760E /* OptionalsValueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DF1B6719664CD6009E760E /* OptionalsValueController.swift */; };
+		C2DF1B6A196660CE009E760E /* BasicOperatorsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DF1B69196660CE009E760E /* BasicOperatorsController.swift */; };
 		C2ED3DDE195D4B3000C14C63 /* DataStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ED3DDD195D4B3000C14C63 /* DataStoreViewController.swift */; };
 		C2ED3DEB195D4DAB00C14C63 /* icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2ED3DE0195D4DAB00C14C63 /* icon-29@2x.png */; };
 		C2ED3DEC195D4DAB00C14C63 /* icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2ED3DE1195D4DAB00C14C63 /* icon-40@2x.png */; };
@@ -182,6 +187,11 @@
 		C2DF1B5919654744009E760E /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		C2DF1B5D1965479E009E760E /* NewsViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewCell.swift; sourceTree = "<group>"; };
 		C2DF1B5E1965479E009E760E /* NewsViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsViewCell.xib; sourceTree = "<group>"; };
+		C2DF1B61196647CF009E760E /* ConstantAndVariablesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantAndVariablesController.swift; sourceTree = "<group>"; };
+		C2DF1B631966496D009E760E /* IntegerAndFloatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntegerAndFloatController.swift; sourceTree = "<group>"; };
+		C2DF1B6519664B64009E760E /* TuplesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TuplesViewController.swift; sourceTree = "<group>"; };
+		C2DF1B6719664CD6009E760E /* OptionalsValueController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalsValueController.swift; sourceTree = "<group>"; };
+		C2DF1B69196660CE009E760E /* BasicOperatorsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicOperatorsController.swift; sourceTree = "<group>"; };
 		C2ED3DDD195D4B3000C14C63 /* DataStoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStoreViewController.swift; sourceTree = "<group>"; };
 		C2ED3DE0195D4DAB00C14C63 /* icon-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-29@2x.png"; sourceTree = "<group>"; };
 		C2ED3DE1195D4DAB00C14C63 /* icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-40@2x.png"; sourceTree = "<group>"; };
@@ -383,6 +393,11 @@
 				C208AC571964256600E9ED76 /* ClosureBaseViewController.swift */,
 				C208AC5B1964390E00E9ED76 /* webService.swift */,
 				C208AC5D19643AE100E9ED76 /* webRequestViewController.swift */,
+				C2DF1B61196647CF009E760E /* ConstantAndVariablesController.swift */,
+				C2DF1B631966496D009E760E /* IntegerAndFloatController.swift */,
+				C2DF1B6519664B64009E760E /* TuplesViewController.swift */,
+				C2DF1B6719664CD6009E760E /* OptionalsValueController.swift */,
+				C2DF1B69196660CE009E760E /* BasicOperatorsController.swift */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
@@ -626,6 +641,7 @@
 			files = (
 				C2190C8E1959733700AF0202 /* AppDelegate.swift in Sources */,
 				C214F2151959EBCA00D53562 /* StringExt.swift in Sources */,
+				C2DF1B641966496D009E760E /* IntegerAndFloatController.swift in Sources */,
 				C2190CB419597FD500AF0202 /* OtherViewController.swift in Sources */,
 				C2A0D3671962B06A00EDB6A6 /* FMDatabase.m in Sources */,
 				C2190CAC19597D2000AF0202 /* FoundationViewController.swift in Sources */,
@@ -650,14 +666,18 @@
 				C208AC4C1963F39800E9ED76 /* Agent.swift in Sources */,
 				C214F2131959E9DB00D53562 /* UIImageExt.swift in Sources */,
 				C208AC5E19643AE100E9ED76 /* webRequestViewController.swift in Sources */,
+				C2DF1B62196647CF009E760E /* ConstantAndVariablesController.swift in Sources */,
 				C2190CA819597C1700AF0202 /* BaseTabBarViewController.swift in Sources */,
 				C214F21B1959F0CD00D53562 /* UIImageCache.swift in Sources */,
+				C2DF1B6A196660CE009E760E /* BasicOperatorsController.swift in Sources */,
 				C2DF1B5B19654744009E760E /* ContactViewController.swift in Sources */,
 				C2CCD21A1963E7EC000F08A5 /* UIImageView+WebCache.swift in Sources */,
+				C2DF1B6619664B64009E760E /* TuplesViewController.swift in Sources */,
 				C214F2111959E2E000D53562 /* UIViewSizeExt.swift in Sources */,
 				C2A0D3681962B06A00EDB6A6 /* FMDatabaseAdditions.m in Sources */,
 				C2ED3DDE195D4B3000C14C63 /* DataStoreViewController.swift in Sources */,
 				C2A0D36A1962B06A00EDB6A6 /* FMDatabaseQueue.m in Sources */,
+				C2DF1B6819664CD6009E760E /* OptionalsValueController.swift in Sources */,
 				C2A0D3691962B06A00EDB6A6 /* FMDatabasePool.m in Sources */,
 				C208AC5C1964390E00E9ED76 /* webService.swift in Sources */,
 				C2C818731963B91B0028A8CB /* FileUtility.swift in Sources */,
