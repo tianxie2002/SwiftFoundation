@@ -96,6 +96,9 @@
 		C2DF1B861966BE4B009E760E /* AutomaticReferenceCountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DF1B851966BE4B009E760E /* AutomaticReferenceCountController.swift */; };
 		C2DF1B881966BFFC009E760E /* OptionalChainningController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DF1B871966BFFC009E760E /* OptionalChainningController.swift */; };
 		C2DF1B8A1966C570009E760E /* GenericController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DF1B891966C570009E760E /* GenericController.swift */; };
+		C2DF1B8C1966D4CA009E760E /* TypeCastingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DF1B8B1966D4CA009E760E /* TypeCastingController.swift */; };
+		C2DF1B8E1966D6BB009E760E /* NestedTypesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DF1B8D1966D6BB009E760E /* NestedTypesController.swift */; };
+		C2DF1B901966D7BA009E760E /* ExtensionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DF1B8F1966D7BA009E760E /* ExtensionsController.swift */; };
 		C2ED3DDE195D4B3000C14C63 /* DataStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ED3DDD195D4B3000C14C63 /* DataStoreViewController.swift */; };
 		C2ED3DEB195D4DAB00C14C63 /* icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2ED3DE0195D4DAB00C14C63 /* icon-29@2x.png */; };
 		C2ED3DEC195D4DAB00C14C63 /* icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2ED3DE1195D4DAB00C14C63 /* icon-40@2x.png */; };
@@ -222,6 +225,9 @@
 		C2DF1B851966BE4B009E760E /* AutomaticReferenceCountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutomaticReferenceCountController.swift; sourceTree = "<group>"; };
 		C2DF1B871966BFFC009E760E /* OptionalChainningController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalChainningController.swift; sourceTree = "<group>"; };
 		C2DF1B891966C570009E760E /* GenericController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericController.swift; sourceTree = "<group>"; };
+		C2DF1B8B1966D4CA009E760E /* TypeCastingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeCastingController.swift; sourceTree = "<group>"; };
+		C2DF1B8D1966D6BB009E760E /* NestedTypesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NestedTypesController.swift; sourceTree = "<group>"; };
+		C2DF1B8F1966D7BA009E760E /* ExtensionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionsController.swift; sourceTree = "<group>"; };
 		C2ED3DDD195D4B3000C14C63 /* DataStoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStoreViewController.swift; sourceTree = "<group>"; };
 		C2ED3DE0195D4DAB00C14C63 /* icon-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-29@2x.png"; sourceTree = "<group>"; };
 		C2ED3DE1195D4DAB00C14C63 /* icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-40@2x.png"; sourceTree = "<group>"; };
@@ -443,6 +449,9 @@
 				C2DF1B851966BE4B009E760E /* AutomaticReferenceCountController.swift */,
 				C2DF1B871966BFFC009E760E /* OptionalChainningController.swift */,
 				C2DF1B891966C570009E760E /* GenericController.swift */,
+				C2DF1B8B1966D4CA009E760E /* TypeCastingController.swift */,
+				C2DF1B8D1966D6BB009E760E /* NestedTypesController.swift */,
+				C2DF1B8F1966D7BA009E760E /* ExtensionsController.swift */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
@@ -702,6 +711,7 @@
 				C2A6823D1963114E00E46F8E /* ProtocolShowValueViewController.swift in Sources */,
 				C214F2171959ED0000D53562 /* ArrayExt.swift in Sources */,
 				C2190CAA19597CBF00AF0202 /* BaseViewController.swift in Sources */,
+				C2DF1B8E1966D6BB009E760E /* NestedTypesController.swift in Sources */,
 				C208AC581964256600E9ED76 /* ClosureBaseViewController.swift in Sources */,
 				C2DF1B8A1966C570009E760E /* GenericController.swift in Sources */,
 				C2C8186A1963A4540028A8CB /* SingletonOne.swift in Sources */,
@@ -722,6 +732,7 @@
 				C208AC4C1963F39800E9ED76 /* Agent.swift in Sources */,
 				C214F2131959E9DB00D53562 /* UIImageExt.swift in Sources */,
 				C208AC5E19643AE100E9ED76 /* webRequestViewController.swift in Sources */,
+				C2DF1B901966D7BA009E760E /* ExtensionsController.swift in Sources */,
 				C2DF1B62196647CF009E760E /* ConstantAndVariablesController.swift in Sources */,
 				C2190CA819597C1700AF0202 /* BaseTabBarViewController.swift in Sources */,
 				C214F21B1959F0CD00D53562 /* UIImageCache.swift in Sources */,
@@ -735,6 +746,7 @@
 				C2A0D3681962B06A00EDB6A6 /* FMDatabaseAdditions.m in Sources */,
 				C2ED3DDE195D4B3000C14C63 /* DataStoreViewController.swift in Sources */,
 				C2A0D36A1962B06A00EDB6A6 /* FMDatabaseQueue.m in Sources */,
+				C2DF1B8C1966D4CA009E760E /* TypeCastingController.swift in Sources */,
 				C2DF1B6819664CD6009E760E /* OptionalsValueController.swift in Sources */,
 				C2A0D3691962B06A00EDB6A6 /* FMDatabasePool.m in Sources */,
 				C208AC5C1964390E00E9ED76 /* webService.swift in Sources */,
