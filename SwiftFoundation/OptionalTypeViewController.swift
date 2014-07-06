@@ -73,7 +73,7 @@ class OptionalTypeViewController: BaseViewController {
         因为let声明的常量只能是在初始化函数中进行初始化。
         （2）当我们不知道是否会有值的时候，这个变量可以声明为optional,比如代理，我们并没有要求必须传代理过来，那么就需要声明为optional。
         （3）作为函数参数时，如果这个参数可以没有值，那么就使用optional类型，比如传代理的时候，通常就是可选的，可以设置为nil
-        ......暂时只想到这些，任何人都可以继续往下补充！
+        
         */
     }
 

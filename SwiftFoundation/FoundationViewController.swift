@@ -22,7 +22,30 @@ class FoundationViewController: BaseViewController,UITableViewDelegate, UITableV
         self.foundationArray = ["Closures闭包",
                             "Protocol传值",
                             "单例模式",
-                             "网络请求"
+                             "网络请求",
+                            "常量和变量 ",
+                            "整型和浮点",
+                            "元组",
+                            "可选值",
+                            "基础运算",
+                             "字符串和字符",
+                             "数组和字典",
+                             "控制流",
+                             "函数",
+                             "闭包",
+                             "可选类型",
+                             "类和结构体",
+                             "属性",
+                             "方法",
+                             "继承",
+                             "扩展",
+                             "构造函数",
+                             "析构函数",
+                             "ARC机制",
+                             "可选链",
+                             "泛型",
+                             "类型检查",
+                             "类型嵌套"
                           ]
         self.foundationTableView  = UITableView(frame:self.view.frame, style:UITableViewStyle.Plain)
         self.foundationTableView!.delegate = self
@@ -79,6 +102,98 @@ class FoundationViewController: BaseViewController,UITableViewDelegate, UITableV
             self.navigationController.pushViewController(detailViewController, animated:false)
         case 3:
             var detailViewController = webRequestViewController()
+            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
+            self.navigationController.pushViewController(detailViewController, animated:false)
+        case 4:
+            var detailViewController = ConstantAndVariablesController()
+            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
+            self.navigationController.pushViewController(detailViewController, animated:false)
+        case 5:
+            var detailViewController = IntegerAndFloatController()
+            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
+            self.navigationController.pushViewController(detailViewController, animated:false)
+        case 6:
+            var detailViewController = TuplesViewController(nibName:nil,bundle:nil)
+            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
+            self.navigationController.pushViewController(detailViewController, animated:false)
+        case 7:
+            var detailViewController = OptionalsValueController(nibName:nil,bundle:nil)
+            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
+            self.navigationController.pushViewController(detailViewController, animated:false)
+        case 8:
+            var detailViewController = BasicOperatorsController(nibName:nil,bundle:nil)
+            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
+            self.navigationController.pushViewController(detailViewController, animated:false)
+        case 9:
+            var detailViewController = StringsAndCharactersController(nibName:nil,bundle:nil)
+            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
+            self.navigationController.pushViewController(detailViewController, animated:false)
+        case 10:
+            var detailViewController = ArrayAndDictionaryController(nibName:nil,bundle:nil)
+            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
+            self.navigationController.pushViewController(detailViewController, animated:false)
+        case 11:
+            var detailViewController = FlowControlController(nibName:nil,bundle:nil)
+            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
+            self.navigationController.pushViewController(detailViewController, animated:false)
+        case 12:
+            var detailViewController = FunctionsViewController(nibName:nil,bundle:nil)
+            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
+            self.navigationController.pushViewController(detailViewController, animated:false)
+        case 13:
+            var detailViewController = ClosuresViewController(nibName:nil,bundle:nil)
+            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
+            self.navigationController.pushViewController(detailViewController, animated:false)
+        case 14:
+            var detailViewController = OptionalTypeViewController(nibName:nil,bundle:nil)
+            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
+            self.navigationController.pushViewController(detailViewController, animated:false)
+        case 15:
+            var detailViewController = ClassAndStructController(nibName:nil,bundle:nil)
+            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
+            self.navigationController.pushViewController(detailViewController, animated:false)
+        case 16:
+            var detailViewController = PropertiesController(nibName:nil,bundle:nil)
+            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
+            self.navigationController.pushViewController(detailViewController, animated:false)
+        case 17:
+            var detailViewController = InstanceMethodsController(nibName:nil,bundle:nil)
+            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
+            self.navigationController.pushViewController(detailViewController, animated:false)
+        case 18:
+            var detailViewController = InheritanceController(nibName:nil,bundle:nil)
+            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
+            self.navigationController.pushViewController(detailViewController, animated:false)
+        case 19:
+            var detailViewController = ExtensionsController(nibName:nil,bundle:nil)
+            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
+            self.navigationController.pushViewController(detailViewController, animated:false)
+        case 20:
+            var detailViewController = InitializationController(nibName:nil,bundle:nil)
+            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
+            self.navigationController.pushViewController(detailViewController, animated:false)
+        case 21:
+            var detailViewController = DeinitializationController(nibName:nil,bundle:nil)
+            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
+            self.navigationController.pushViewController(detailViewController, animated:false)
+        case 22:
+            var detailViewController = AutomaticReferenceCountController(nibName:nil,bundle:nil)
+            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
+            self.navigationController.pushViewController(detailViewController, animated:false)
+        case 23:
+            var detailViewController = OptionalChainningController(nibName:nil,bundle:nil)
+            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
+            self.navigationController.pushViewController(detailViewController, animated:false)
+        case 24:
+            var detailViewController = GenericController(nibName:nil,bundle:nil)
+            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
+            self.navigationController.pushViewController(detailViewController, animated:false)
+        case 25:
+            var detailViewController = TypeCastingController(nibName:nil,bundle:nil)
+            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
+            self.navigationController.pushViewController(detailViewController, animated:false)
+        case 26:
+            var detailViewController = NestedTypesController(nibName:nil,bundle:nil)
             detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
             self.navigationController.pushViewController(detailViewController, animated:false)
         default:

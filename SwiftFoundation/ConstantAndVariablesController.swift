@@ -7,17 +7,18 @@
 //
 
 import UIKit
-
+/**
+*    常量和变量
+*/
 class ConstantAndVariablesController: BaseViewController {
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        // Custom initialization
-    }
+//    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+//        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+//        // Custom initialization
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // 分号加不加都行，如果看不习惯，可以自行添加
         // 声明了一个名叫maximumNumberOfLoginAttempts的常量，由于没有指定类型，而又进行了初始化，其值为10，
         // 所以swift会自动推断出常量maximumNumberOfLoginAttempts的类型为Int
         // 这个写法相当于：let maximumNumberOfLoginAttempts: Int = 10
