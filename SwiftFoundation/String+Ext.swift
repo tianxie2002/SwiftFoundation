@@ -1,15 +1,23 @@
 //
-//  StringExt.swift
+//  String+Ext.swift
 //  SwiftFoundation
 //
-//  Created by baxiang on 14-6-25.
+//  Created by baxiang on 14-7-7.
 //  Copyright (c) 2014年 baxiang. All rights reserved.
 //
 
-import UIKit
 import Foundation
-extension String{
-    var length:Int {return countElements(self)}
+
+extension String
+{
+    /**
+    * 获取字符串的长度
+    */
+    var length:Int
+    {
+    return countElements(self)
+    }
+    
     
     func containsString(s:String) -> Bool
     {
@@ -34,7 +42,11 @@ extension String{
             return false
         }
     }
-    
+    /**
+    *  字符串翻转
+    *
+    *  @return <#return value description#>
+    */
     func reverse() -> String
     {
         var reverseString : String = ""
@@ -44,6 +56,6 @@ extension String{
         }
         return reverseString
     }
-
+        
+    
 }
-

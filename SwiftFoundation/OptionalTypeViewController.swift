@@ -20,6 +20,7 @@ class OptionalTypeViewController: BaseViewController {
     */
     override func viewDidLoad() {
         super.viewDidLoad()
+         println("---------------------------------可选类型-------------------------------------------------------")
         //error: variable 'stringValue' used before being initialized
         //let hashValue = stringValue.hashValue
 

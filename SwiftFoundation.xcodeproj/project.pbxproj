@@ -62,6 +62,7 @@
 		C2C021F519646469006CBCBA /* 雷雨.png in Resources */ = {isa = PBXBuildFile; fileRef = C2C021E219646469006CBCBA /* 雷雨.png */; };
 		C2C021F619646469006CBCBA /* 雾.png in Resources */ = {isa = PBXBuildFile; fileRef = C2C021E319646469006CBCBA /* 雾.png */; };
 		C2C021F719646469006CBCBA /* 风.png in Resources */ = {isa = PBXBuildFile; fileRef = C2C021E419646469006CBCBA /* 风.png */; };
+		C2C5FB6C196A85F800FF717B /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C5FB6B196A85F800FF717B /* String+Ext.swift */; };
 		C2C8186A1963A4540028A8CB /* SingletonOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C818691963A4540028A8CB /* SingletonOne.swift */; };
 		C2C8186C1963A5850028A8CB /* SingletonTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8186B1963A5850028A8CB /* SingletonTwo.swift */; };
 		C2C8186E1963A5BA0028A8CB /* SingletonThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8186D1963A5BA0028A8CB /* SingletonThree.swift */; };
@@ -189,6 +190,7 @@
 		C2C021E219646469006CBCBA /* 雷雨.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "雷雨.png"; sourceTree = "<group>"; };
 		C2C021E319646469006CBCBA /* 雾.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "雾.png"; sourceTree = "<group>"; };
 		C2C021E419646469006CBCBA /* 风.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "风.png"; sourceTree = "<group>"; };
+		C2C5FB6B196A85F800FF717B /* String+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		C2C818691963A4540028A8CB /* SingletonOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingletonOne.swift; sourceTree = "<group>"; };
 		C2C8186B1963A5850028A8CB /* SingletonTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingletonTwo.swift; sourceTree = "<group>"; };
 		C2C8186D1963A5BA0028A8CB /* SingletonThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingletonThree.swift; sourceTree = "<group>"; };
@@ -510,6 +512,7 @@
 				C208AC4B1963F39800E9ED76 /* Agent.swift */,
 				C2C818721963B91B0028A8CB /* FileUtility.swift */,
 				C2CCD2191963E7EC000F08A5 /* UIImageView+WebCache.swift */,
+				C2C5FB6B196A85F800FF717B /* String+Ext.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -689,6 +692,7 @@
 				C2190C8E1959733700AF0202 /* AppDelegate.swift in Sources */,
 				C214F2151959EBCA00D53562 /* StringExt.swift in Sources */,
 				C2DF1B641966496D009E760E /* IntegerAndFloatController.swift in Sources */,
+				C2C5FB6C196A85F800FF717B /* String+Ext.swift in Sources */,
 				C2190CB419597FD500AF0202 /* OtherViewController.swift in Sources */,
 				C2A0D3671962B06A00EDB6A6 /* FMDatabase.m in Sources */,
 				C2DF1B861966BE4B009E760E /* AutomaticReferenceCountController.swift in Sources */,

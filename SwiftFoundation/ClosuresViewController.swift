@@ -17,6 +17,7 @@ class ClosuresViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+         println("---------------------------------闭包（Closures）-------------------------------------------------------")
         /* 闭包（Closures）
         * 闭包是自包含的功能代码块，可以在代码中使用或者用来作为参数传值。
         * 在Swift中的闭包与C、OC中的blocks和其它编程语言（如Python）中的lambdas类似。
@@ -78,7 +79,6 @@ class ClosuresViewController: BaseViewController {
         // 最简单的一种写法：使用操作符
         reversed = sort(names, >)
         
-        
         /*
         * 尾随闭包（Trailing Closures）
         * 如果函数需要一个闭包参数作为参数，且这个参数是最后一个参数，而这个闭包表达式又很长时，
@@ -114,6 +114,7 @@ class ClosuresViewController: BaseViewController {
         // 闭包是引用类型，所以incrementByTen声明为常量也可以修改total
         let incrementByTen = increment(amount: 10) 
         incrementByTen() // return 10,incrementByTen是一个闭包
+        println( incrementByTen())
         // 这里是没有改变对increment的引用，所以会保存之前的值
         incrementByTen() // return 20	
         incrementByTen() // return 30	

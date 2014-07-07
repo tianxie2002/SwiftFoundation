@@ -63,6 +63,7 @@ class DataImporter {
     The class is assumed to take a non-trivial amount of time to initialize.
     */
     var fileName = "data.txt"
+    
     // the DataImporter class would provide data importing functionality here
 }
 
@@ -70,6 +71,10 @@ class DataManager {
     @lazy var importer = DataImporter()
     var data = String[]()
     // the DataManager class would provide data management functionality here
+}
+struct FixedLengthRange {
+    var firstValue: Int
+    let length: Int
 }
 class PropertiesController: BaseViewController {
 
@@ -80,15 +85,14 @@ class PropertiesController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        println("---------------------------------属性-------------------------------------------------------")
         /**
         *  1.存储属性
         存储在类或结构体的实例中的一个变量或常量，可以在定义的时候赋值，也可以在构造过程时候赋值
         */
         // length定义为常量，在创建实例的时候赋值，之后就无法再修改了
-        struct FixedLengthRange {
-            var firstValue: Int
-            let length: Int
-        }
+        
         var rangeOfThreeItems = FixedLengthRange(firstValue: 0, length: 3)
         // the range represents integer values 0, 1, and 2
         rangeOfThreeItems.firstValue = 6
@@ -114,6 +118,7 @@ class PropertiesController: BaseViewController {
         let manager = DataManager()
         manager.data += "Some data"
         manager.data += "Some more data"
+        //println(manager.importer)
         // the DataImporter instance for the importer property has not yet been created
         
         //计算属性不直接存储值，提供一个getter来获取，可选的setter来设置
@@ -228,7 +233,8 @@ class PropertiesController: BaseViewController {
         // prints "10"
         println(AudioChannel.maxInputLevelForAllChannels)
         // prints "10"
-        
+        println("---------------------------------属性-------------------------------------------------------")
+
     }
 
     override func didReceiveMemoryWarning() {
