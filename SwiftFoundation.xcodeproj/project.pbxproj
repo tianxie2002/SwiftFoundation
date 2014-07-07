@@ -444,6 +444,7 @@
 				C2DF1B7B1966ACAB009E760E /* PropertiesController.swift */,
 				C2DF1B7D1966AF54009E760E /* InstanceMethodsController.swift */,
 				C2DF1B7F1966B9BD009E760E /* InheritanceController.swift */,
+				C2DF1B8F1966D7BA009E760E /* ExtensionsController.swift */,
 				C2DF1B811966BAE1009E760E /* InitializationController.swift */,
 				C2DF1B831966BD23009E760E /* DeinitializationController.swift */,
 				C2DF1B851966BE4B009E760E /* AutomaticReferenceCountController.swift */,
@@ -451,7 +452,6 @@
 				C2DF1B891966C570009E760E /* GenericController.swift */,
 				C2DF1B8B1966D4CA009E760E /* TypeCastingController.swift */,
 				C2DF1B8D1966D6BB009E760E /* NestedTypesController.swift */,
-				C2DF1B8F1966D7BA009E760E /* ExtensionsController.swift */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
