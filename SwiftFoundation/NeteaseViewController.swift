@@ -29,7 +29,8 @@ class NeteaseViewController: BaseViewController,UITableViewDelegate, UITableView
         var nib = UINib(nibName:"NewsViewCell", bundle: nil)
         //println(NeteaseNewsCell);
         //self.tableView?.registerNib(nib, forCellReuseIdentifier: identifier)
-        self.dataTableView!.registerNib(nib, forCellReuseIdentifier: "NewsCell")
+        //self.dataTableView!.registerNib(nil, forCellReuseIdentifier: "NewsCell")
+        self.dataTableView!.registerClass(NewsViewCell.self, forCellReuseIdentifier: "NewsCell")
         self.view.addSubview(self.dataTableView)
         loadDataSource()
         //        let refreshControl = UIRefreshControl()
@@ -80,14 +81,13 @@ class NeteaseViewController: BaseViewController,UITableViewDelegate, UITableView
         let cell = tableView.dequeueReusableCellWithIdentifier("NewsCell", forIndexPath: indexPath) as NewsViewCell
         
         let object = dataArray[indexPath.row] as NSDictionary
-        cell.title.text = object["title"] as? String
-        cell.title.font = UIFont.systemFontOfSize(14)
-        cell.newsDetail.numberOfLines = 0
-        cell.newsDetail.text = object["digest"] as? String
-        cell.newsDetail.font = UIFont.systemFontOfSize(12)
-        //cell.imageView.image = UIImage(named :"cell_photo_default_small")
-        cell.newsImage.contentMode = UIViewContentMode.ScaleAspectFit
-        cell.newsImage.setImage(object["imgsrc"] as String, placeHolder: nil)
+        cell.newsTitle!.text = object["title"] as? String
+        //cell.title.font = UIFont.systemFontOfSize(14)
+       // cell.newsDescrip!.numberOfLines = 0
+        cell.newsDescrip!.text = object["digest"] as? String
+        cell.newsDescrip!.font = UIFont.systemFontOfSize(12)
+        cell.newsImageView!.contentMode = UIViewContentMode.ScaleAspectFit
+        cell.newsImageView!.setImage(object["imgsrc"] as String, placeHolder: UIImage(named :"cell_photo_default_small"))
         //        let request = NSURLRequest(URL :NSURL.URLWithString(object["imgsrc"] as String))
         //        NSURLConnection.sendAsynchronousRequest(request, queue: thumbQueue, completionHandler: { response, data, error in
         //            if error {
