@@ -103,6 +103,11 @@ class InheritanceController: BaseViewController {
         println("SpeedLimitedCar: \(limitedCar.description())")
         // SpeedLimitedCar: 4 wheels; up to 5 passengers; traveling at 40.0 mph
         
+        
+        /**
+        *  注意：
+        你不可以为继承来的常量存储型属性或继承来的只读计算型属性添加属性观察器。这些属性的值是不可以被设置的，所以，为它们提供willSet或didSet实现是不恰当。此外还要注意，你不可以同时提供重写的 setter 和重写的属性观察器。如果你想观察属性值的变化，并且你已经为那个属性提供了定制的 setter，那么你在 setter 中就可以观察到任何值变化了。
+        */
         let automatic = AutomaticCar()
         automatic.speed = 35.0
         println("AutomaticCar: \(automatic.description())")

@@ -58,19 +58,19 @@ class Player {
         playerName = name
     }
 }
-
+/**
+*  实例方法 (Instance Methods)
+实例方法是属于某个特定类、结构体或者枚举类型实例的方法，提供访问和修改实例属性的方法或提供与实例目的相关的功能，语法与函数一致
+实例方法写在类里面，能够访问所属类型的其他方法和属性，只能被它所属类的特定实例调用
+*/
 class InstanceMethodsController: BaseViewController {
 
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
-        println("---------------------------------实例化方法-------------------------------------------------------")
+        println("---------------------------------方法-------------------------------------------------------")
         // Custom initialization
-        /**
-        *  1.实例方法 (Instance Methods)
-        实例方法是属于某个特定类、结构体或者枚举类型实例的方法，提供访问和修改实例属性的方法或提供与实例目的相关的功能，语法与函数一致
-        实例方法写在类里面，能够访问所属类型的其他方法和属性，只能被它所属类的特定实例调用
-        */
+       
         let counter = Counter()
         // the initial counter value is 0
         counter.increment()
@@ -158,7 +158,7 @@ class InstanceMethodsController: BaseViewController {
             println("level 6 has not yet been unlocked")  
         }
         
-        println("---------------------------------实例化方法-------------------------------------------------------")
+        println("---------------------------------方法-------------------------------------------------------")
     }
 
     override func viewDidLoad() {
