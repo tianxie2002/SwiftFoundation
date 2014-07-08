@@ -226,6 +226,9 @@
 		C2DF1B8B1966D4CA009E760E /* TypeCastingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeCastingController.swift; sourceTree = "<group>"; };
 		C2DF1B8D1966D6BB009E760E /* NestedTypesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NestedTypesController.swift; sourceTree = "<group>"; };
 		C2DF1B8F1966D7BA009E760E /* ExtensionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionsController.swift; sourceTree = "<group>"; };
+		C2E8BF86196B91E10034B1AE /* ArrayAndDictionary.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ArrayAndDictionary.playground; sourceTree = "<group>"; };
+		C2E8BF87196B93210034B1AE /* FlowControlController.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FlowControlController.playground; sourceTree = "<group>"; };
+		C2E8BF88196B94C10034B1AE /* UILable.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = UILable.playground; sourceTree = "<group>"; };
 		C2ED3DDD195D4B3000C14C63 /* DataStoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStoreViewController.swift; sourceTree = "<group>"; };
 		C2ED3DE0195D4DAB00C14C63 /* icon-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-29@2x.png"; sourceTree = "<group>"; };
 		C2ED3DE1195D4DAB00C14C63 /* icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-40@2x.png"; sourceTree = "<group>"; };
@@ -304,6 +307,7 @@
 		C2190C8A1959733700AF0202 /* SwiftFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				C2E8BF85196B919A0034B1AE /* Playground */,
 				C2C818711963B8AB0028A8CB /* Util */,
 				C249C05219626B3400E5D3AA /* Classes */,
 				C249C05119626A6600E5D3AA /* Resources */,
@@ -540,6 +544,16 @@
 				C2DF1B5E1965479E009E760E /* NewsViewCell.xib */,
 			);
 			name = DataStore;
+			sourceTree = "<group>";
+		};
+		C2E8BF85196B919A0034B1AE /* Playground */ = {
+			isa = PBXGroup;
+			children = (
+				C2E8BF86196B91E10034B1AE /* ArrayAndDictionary.playground */,
+				C2E8BF87196B93210034B1AE /* FlowControlController.playground */,
+				C2E8BF88196B94C10034B1AE /* UILable.playground */,
+			);
+			name = Playground;
 			sourceTree = "<group>";
 		};
 		C2ED3DDF195D4DAB00C14C63 /* Images */ = {

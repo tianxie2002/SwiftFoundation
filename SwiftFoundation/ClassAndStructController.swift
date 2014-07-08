@@ -105,6 +105,7 @@ class ClassAndStructController: BaseViewController {
         */
         //将整数(Int)数组赋值给a，b，c变量
         var a = [1, 2, 3]
+    
         var b = a
         var c = a
         
