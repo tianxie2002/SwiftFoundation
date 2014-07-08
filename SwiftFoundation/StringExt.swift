@@ -9,41 +9,41 @@
 import UIKit
 import Foundation
 extension String{
-    var length:Int {return countElements(self)}
+//    var length:Int {return countElements(self)}
     
-    func containsString(s:String) -> Bool
-    {
-        if(self.rangeOfString(s))
-        {
-            return true
-        }
-        else
-        {
-            return false
-        }
-    }
+//    func containsString(s:String) -> Bool
+//    {
+//        if(self.rangeOfString(s))
+//        {
+//            return true
+//        }
+//        else
+//        {
+//            return false
+//        }
+//    }
     
-    func containsString(s:String, compareOption: NSStringCompareOptions) -> Bool
-    {
-        if(self.rangeOfString(s, options: compareOption))
-        {
-            return true
-        }
-        else
-        {
-            return false
-        }
-    }
+//    func containsString(s:String, compareOption: NSStringCompareOptions) -> Bool
+//    {
+//        if(self.rangeOfString(s, options: compareOption))
+//        {
+//            return true
+//        }
+//        else
+//        {
+//            return false
+//        }
+//    }
     
-    func reverse() -> String
-    {
-        var reverseString : String = ""
-        for c in self
-        {
-            reverseString = c + reverseString
-        }
-        return reverseString
-    }
+//    func reverse() -> String
+//    {
+//        var reverseString : String = ""
+//        for c in self
+//        {
+//            reverseString = c + reverseString
+//        }
+//        return reverseString
+//    }
 
 }
 

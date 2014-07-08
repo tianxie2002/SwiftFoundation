@@ -63,6 +63,8 @@ class InstanceMethodsController: BaseViewController {
 
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        
+        println("---------------------------------实例化方法-------------------------------------------------------")
         // Custom initialization
         /**
         *  1.实例方法 (Instance Methods)
@@ -155,6 +157,8 @@ class InstanceMethodsController: BaseViewController {
         } else {
             println("level 6 has not yet been unlocked")  
         }
+        
+        println("---------------------------------实例化方法-------------------------------------------------------")
     }
 
     override func viewDidLoad() {

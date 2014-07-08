@@ -77,7 +77,8 @@ class ArrayAndDictionaryController: BaseViewController {
         for (index, value) in enumerate(shoppingList) {
             println("Item at index \(index + 1) is \(value)")
         }
-        
+    
+
         // 创建和初始化数组
         var shomInts = Int[]() // 创建空数组，元素的个数为0
         // 调用初始化器
@@ -99,7 +100,8 @@ class ArrayAndDictionaryController: BaseViewController {
         数据类型都是可哈希的，这些基本类型都可以作为字典的值。
         */
         // 创建空字典
-        var emptyDict = Dictionary<String, String>()
+        var emptyDict = Dictionary<String, Int>()
+        emptyDict = ["T": 1, "D":2]
         // 初始化
         var airports: Dictionary<String, String> = ["T": "Tokyo", "D": "Doubin"]
         // 如果初始化，可以不明确指明类型，可以自动根据初始值推测出来

@@ -34,7 +34,7 @@ class ClassAndStructController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        println("---------------------------------类和结构体-------------------------------------------------------")
         //使用初始化方法来生成新的实例
         let someResolution = Resolution()
         let someVideoMode = VideoMode()
@@ -105,6 +105,7 @@ class ClassAndStructController: BaseViewController {
         */
         //将整数(Int)数组赋值给a，b，c变量
         var a = [1, 2, 3]
+    
         var b = a
         var c = a
         
@@ -115,6 +116,16 @@ class ClassAndStructController: BaseViewController {
         println(c[0])
         // 1
         
+        /**
+        *  注意 xcode6 编译器bug  应该返回的是true 目前编译结果是false
+        */
+        if b === c {
+            println("b and c  === a elements.")
+        } else {
+            println("b and c  !== elements.")
+        }
+        
+        
         a[0] = 42
         println(a[0])
         // 42
@@ -124,26 +135,26 @@ class ClassAndStructController: BaseViewController {
         // 42
         
         //当长度发生变化，Swift会创建这个数组的拷贝，a将会是原数组的一个独立拷贝
-        a.append(4)
-        a[0] = 777
-        println(a[0])
-        // 777
-        println(b[0])
-        // 42
-        println(c[0])
-        // 42
-        
-        
-        /**
-        *  操作数组的时候有必要确认这个数组是有一个唯一拷贝的，调用unshare方法确定数组引用的唯一性，如果一个数组被多个变量引用，在其中的一个变量调用unshare方法则会拷贝此数组，此时这个变量会有属于他自己的独立数组拷贝。
-        */
-        b.unshare()
-        b[0] = -105
-        println(a[0])
-        // 777
-        println(b[0])
-        // -105
-        println(c[0])
+//        a.append(4)
+//        a[0] = 777
+//        println(a[0])
+//        // 777
+//        println(b[0])
+//        // 42
+//        println(c[0])
+//        // 42
+//        
+//        
+//        /**
+//        *  操作数组的时候有必要确认这个数组是有一个唯一拷贝的，调用unshare方法确定数组引用的唯一性，如果一个数组被多个变量引用，在其中的一个变量调用unshare方法则会拷贝此数组，此时这个变量会有属于他自己的独立数组拷贝。
+//        */
+//        b.unshare()
+//        b[0] = -105
+//        println(a[0])
+//        // 777
+//        println(b[0])
+//        // -105
+//        println(c[0])
         // 42
         
         if b === c {
@@ -177,6 +188,7 @@ class ClassAndStructController: BaseViewController {
         *
         *  @return <#return value description#>
         */
+        println("---------------------------------数组和结构体-------------------------------------------------------")
     }
 
     override func didReceiveMemoryWarning() {

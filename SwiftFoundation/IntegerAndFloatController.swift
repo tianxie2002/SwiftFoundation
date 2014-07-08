@@ -19,6 +19,7 @@ class IntegerAndFloatController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+         println("---------------------------------整型与浮点型-------------------------------------------------------")
         // 整型转换
         // 不同类型的整型常量或者变量能够存储的数值范围是不同的。
         // Int8整型常量或者变量能够存储的数值是-128到127，而UInt8整型常量或者变量能够存储的
@@ -72,7 +73,7 @@ class IntegerAndFloatController: BaseViewController {
         // 由于前面已经定义了类型别名，那么这里使用AudioSample也相当于使用UInt16
         //所以AudioSample.min = UInt16.min,也就是0.
         var maxAmplitudeFound = AudioSample.min
-        
+        println("---------------------------------整型与浮点型-------------------------------------------------------")
     }
 
 }

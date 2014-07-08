@@ -19,6 +19,7 @@ class BasicOperatorsController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+     println("---------------------------------基本运算符-------------------------------------------------------")
         // 赋值操作符=，表示把某个值赋给对应的常量或者变量
         let b = 10
         var a = 5

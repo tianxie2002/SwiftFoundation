@@ -30,8 +30,6 @@
 		C278DAB8196145F400110012 /* MapViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C278DAB7196145F400110012 /* MapViewViewController.swift */; };
 		C27E9C5219614A9D00D839D1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27E9C5119614A9D00D839D1 /* MapKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		C27E9C5419614AB200D839D1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27E9C5319614AB200D839D1 /* CoreLocation.framework */; };
-		C292017519617E2D00D7CDE6 /* CustomCellByXibViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C292017419617E2D00D7CDE6 /* CustomCellByXibViewController.swift */; };
-		C292017719617EAD00D7CDE6 /* CustomCellByXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = C292017619617EAD00D7CDE6 /* CustomCellByXib.xib */; };
 		C2A0D3671962B06A00EDB6A6 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A0D35D1962B06A00EDB6A6 /* FMDatabase.m */; };
 		C2A0D3681962B06A00EDB6A6 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A0D35F1962B06A00EDB6A6 /* FMDatabaseAdditions.m */; };
 		C2A0D3691962B06A00EDB6A6 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A0D3611962B06A00EDB6A6 /* FMDatabasePool.m */; };
@@ -64,6 +62,7 @@
 		C2C021F519646469006CBCBA /* 雷雨.png in Resources */ = {isa = PBXBuildFile; fileRef = C2C021E219646469006CBCBA /* 雷雨.png */; };
 		C2C021F619646469006CBCBA /* 雾.png in Resources */ = {isa = PBXBuildFile; fileRef = C2C021E319646469006CBCBA /* 雾.png */; };
 		C2C021F719646469006CBCBA /* 风.png in Resources */ = {isa = PBXBuildFile; fileRef = C2C021E419646469006CBCBA /* 风.png */; };
+		C2C5FB6C196A85F800FF717B /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C5FB6B196A85F800FF717B /* String+Ext.swift */; };
 		C2C8186A1963A4540028A8CB /* SingletonOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C818691963A4540028A8CB /* SingletonOne.swift */; };
 		C2C8186C1963A5850028A8CB /* SingletonTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8186B1963A5850028A8CB /* SingletonTwo.swift */; };
 		C2C8186E1963A5BA0028A8CB /* SingletonThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8186D1963A5BA0028A8CB /* SingletonThree.swift */; };
@@ -151,8 +150,6 @@
 		C278DAB7196145F400110012 /* MapViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewViewController.swift; sourceTree = "<group>"; };
 		C27E9C5119614A9D00D839D1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C27E9C5319614AB200D839D1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		C292017419617E2D00D7CDE6 /* CustomCellByXibViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellByXibViewController.swift; sourceTree = "<group>"; };
-		C292017619617EAD00D7CDE6 /* CustomCellByXib.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCellByXib.xib; sourceTree = "<group>"; };
 		C2A0D35C1962B06A00EDB6A6 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		C2A0D35D1962B06A00EDB6A6 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		C2A0D35E1962B06A00EDB6A6 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -193,6 +190,7 @@
 		C2C021E219646469006CBCBA /* 雷雨.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "雷雨.png"; sourceTree = "<group>"; };
 		C2C021E319646469006CBCBA /* 雾.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "雾.png"; sourceTree = "<group>"; };
 		C2C021E419646469006CBCBA /* 风.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "风.png"; sourceTree = "<group>"; };
+		C2C5FB6B196A85F800FF717B /* String+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		C2C818691963A4540028A8CB /* SingletonOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingletonOne.swift; sourceTree = "<group>"; };
 		C2C8186B1963A5850028A8CB /* SingletonTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingletonTwo.swift; sourceTree = "<group>"; };
 		C2C8186D1963A5BA0028A8CB /* SingletonThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingletonThree.swift; sourceTree = "<group>"; };
@@ -228,6 +226,9 @@
 		C2DF1B8B1966D4CA009E760E /* TypeCastingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeCastingController.swift; sourceTree = "<group>"; };
 		C2DF1B8D1966D6BB009E760E /* NestedTypesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NestedTypesController.swift; sourceTree = "<group>"; };
 		C2DF1B8F1966D7BA009E760E /* ExtensionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionsController.swift; sourceTree = "<group>"; };
+		C2E8BF86196B91E10034B1AE /* ArrayAndDictionary.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ArrayAndDictionary.playground; sourceTree = "<group>"; };
+		C2E8BF87196B93210034B1AE /* FlowControlController.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FlowControlController.playground; sourceTree = "<group>"; };
+		C2E8BF88196B94C10034B1AE /* UILable.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = UILable.playground; sourceTree = "<group>"; };
 		C2ED3DDD195D4B3000C14C63 /* DataStoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStoreViewController.swift; sourceTree = "<group>"; };
 		C2ED3DE0195D4DAB00C14C63 /* icon-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-29@2x.png"; sourceTree = "<group>"; };
 		C2ED3DE1195D4DAB00C14C63 /* icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-40@2x.png"; sourceTree = "<group>"; };
@@ -306,6 +307,7 @@
 		C2190C8A1959733700AF0202 /* SwiftFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				C2E8BF85196B919A0034B1AE /* Playground */,
 				C2C818711963B8AB0028A8CB /* Util */,
 				C249C05219626B3400E5D3AA /* Classes */,
 				C249C05119626A6600E5D3AA /* Resources */,
@@ -514,6 +516,7 @@
 				C208AC4B1963F39800E9ED76 /* Agent.swift */,
 				C2C818721963B91B0028A8CB /* FileUtility.swift */,
 				C2CCD2191963E7EC000F08A5 /* UIImageView+WebCache.swift */,
+				C2C5FB6B196A85F800FF717B /* String+Ext.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -523,8 +526,6 @@
 			children = (
 				C2190CAD19597D6B00AF0202 /* UIKitViewController.swift */,
 				C2CA1AFA1960170700027DEF /* UITableBaseViewController.swift */,
-				C292017419617E2D00D7CDE6 /* CustomCellByXibViewController.swift */,
-				C292017619617EAD00D7CDE6 /* CustomCellByXib.xib */,
 				C2A0D3701962B3DC00EDB6A6 /* UIKitDetailViewController.swift */,
 			);
 			name = UIKitView;
@@ -543,6 +544,16 @@
 				C2DF1B5E1965479E009E760E /* NewsViewCell.xib */,
 			);
 			name = DataStore;
+			sourceTree = "<group>";
+		};
+		C2E8BF85196B919A0034B1AE /* Playground */ = {
+			isa = PBXGroup;
+			children = (
+				C2E8BF86196B91E10034B1AE /* ArrayAndDictionary.playground */,
+				C2E8BF87196B93210034B1AE /* FlowControlController.playground */,
+				C2E8BF88196B94C10034B1AE /* UILable.playground */,
+			);
+			name = Playground;
 			sourceTree = "<group>";
 		};
 		C2ED3DDF195D4DAB00C14C63 /* Images */ = {
@@ -654,7 +665,6 @@
 				C2C021F219646469006CBCBA /* 阴转晴.png in Resources */,
 				C2ED3DF0195D4DAB00C14C63 /* tab_icon_data@2x.png in Resources */,
 				C2ED3DEB195D4DAB00C14C63 /* icon-29@2x.png in Resources */,
-				C292017719617EAD00D7CDE6 /* CustomCellByXib.xib in Resources */,
 				C2ED3DF1195D4DAB00C14C63 /* tab_icon_other@2x.png in Resources */,
 				C2190C901959733700AF0202 /* Images.xcassets in Resources */,
 				C2C021E919646469006CBCBA /* 多云.png in Resources */,
@@ -696,6 +706,7 @@
 				C2190C8E1959733700AF0202 /* AppDelegate.swift in Sources */,
 				C214F2151959EBCA00D53562 /* StringExt.swift in Sources */,
 				C2DF1B641966496D009E760E /* IntegerAndFloatController.swift in Sources */,
+				C2C5FB6C196A85F800FF717B /* String+Ext.swift in Sources */,
 				C2190CB419597FD500AF0202 /* OtherViewController.swift in Sources */,
 				C2A0D3671962B06A00EDB6A6 /* FMDatabase.m in Sources */,
 				C2DF1B861966BE4B009E760E /* AutomaticReferenceCountController.swift in Sources */,
@@ -726,7 +737,6 @@
 				C2A0D3711962B3DC00EDB6A6 /* UIKitDetailViewController.swift in Sources */,
 				C2DF1B801966B9BD009E760E /* InheritanceController.swift in Sources */,
 				C2CA1AFB1960170700027DEF /* UITableBaseViewController.swift in Sources */,
-				C292017519617E2D00D7CDE6 /* CustomCellByXibViewController.swift in Sources */,
 				C2DF1B7619669D78009E760E /* OptionalTypeViewController.swift in Sources */,
 				C2A0D36F1962B13300EDB6A6 /* FMDBViewController.swift in Sources */,
 				C208AC4C1963F39800E9ED76 /* Agent.swift in Sources */,
