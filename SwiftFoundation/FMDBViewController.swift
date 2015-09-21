@@ -29,7 +29,7 @@ extension UIView{
 
 class FMDBViewController: BaseViewController {
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }
@@ -47,7 +47,7 @@ class FMDBViewController: BaseViewController {
         nameField!.borderStyle = UITextBorderStyle.Line
         nameField!.backgroundColor = UIColor.whiteColor()
         nameField!.placeholder = "请输入姓名"
-        self.view.addSubview(self.nameField)
+        self.view.addSubview(self.nameField!)
         let phonelabel = UILabel(frame:CGRectMake(10.0, namelabel.bottom+10, 50, 30.0))
         phonelabel.text = "号码"
         self.view.addSubview(phonelabel)
@@ -55,7 +55,7 @@ class FMDBViewController: BaseViewController {
         phoneField!.borderStyle = UITextBorderStyle.Line
         phoneField!.backgroundColor = UIColor.whiteColor()
         phoneField!.placeholder = "请输入号码"
-        self.view.addSubview(phoneField)
+        self.view.addSubview(phoneField!)
         let tapRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "backupgroupTap")
         self.view.addGestureRecognizer(tapRecognizer)
         
@@ -67,7 +67,7 @@ class FMDBViewController: BaseViewController {
         button?.setTitle("保存", forState: UIControlState.Normal)
         button?.addTarget(self, action: "saveData", forControlEvents: UIControlEvents.TouchUpInside)
         button!.tag = 100
-        self.view.addSubview(button)
+        self.view.addSubview(button!)
         // Do any additional setup after loading the view.
     }
     
@@ -80,24 +80,24 @@ class FMDBViewController: BaseViewController {
     
     func saveData()
     {
-        let docDirPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory,
-            NSSearchPathDomainMask.UserDomainMask, true)[0] as String
-        
-        let databasePath = docDirPath.stringByAppendingPathComponent("contact.db")
-        let db = FMDatabase(path: databasePath)
-        if db.open() {
-            let name: NSString = nameField!.text
-            let phone: NSString = phoneField!.text
-            db.executeUpdate("INSERT INTO CONTACTS(NAME, PHONE) VALUES(?, ?)", withArgumentsInArray: [name, phone])
-            if db.hadError() {
-                let error = db.lastError()
-              //  label.text = error.localizedDescription
-            } else {
-               // label.text = name as String + " Saved"
-            }
-            db.close()
-        }
-       self.navigationController.popViewControllerAnimated(false)
+//        let docDirPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory,
+//            NSSearchPathDomainMask.UserDomainMask, true)[0] as String
+//        
+//        let databasePath = docDirPath.stringByAppendingPathComponent("contact.db")
+//        let db = FMDatabase(path: databasePath)
+//        if db.open() {
+//            let name: NSString = nameField!.text
+//            let phone: NSString = phoneField!.text
+//            db.executeUpdate("INSERT INTO CONTACTS(NAME, PHONE) VALUES(?, ?)", withArgumentsInArray: [name, phone])
+//            if db.hadError() {
+//                let error = db.lastError()
+//              //  label.text = error.localizedDescription
+//            } else {
+//               // label.text = name as String + " Saved"
+//            }
+//            db.close()
+//        }
+       self.navigationController?.popViewControllerAnimated(false)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

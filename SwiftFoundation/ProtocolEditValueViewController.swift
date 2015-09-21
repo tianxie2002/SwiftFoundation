@@ -28,20 +28,20 @@ class ProtocolEditValueViewController: BaseViewController {
         stringField!.borderStyle = UITextBorderStyle.Line
         stringField!.backgroundColor = UIColor.whiteColor()
         stringField!.placeholder = "请输入内容"
-        self.view.addSubview(self.stringField)
+        self.view.addSubview(self.stringField!)
         var btn = UIButton.buttonWithType(UIButtonType.System) as?UIButton
         btn!.frame = CGRectMake(0,150,320,50)
         btn!.setTitle("回调" ,forState:UIControlState.Normal)
         btn!.addTarget(self,action:"btnClicked", forControlEvents:UIControlEvents.TouchUpInside)
-        self.view.addSubview(btn)
+        self.view.addSubview(btn!)
         // Do any additional setup after loading the view.
     }
     func btnClicked(){
-        if delegate {
+        if (delegate != nil) {
             delegate!.changeString(self,string:stringField!.text)
            
         }
-         self.navigationController.popViewControllerAnimated(false)
+         self.navigationController?.popViewControllerAnimated(false)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

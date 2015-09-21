@@ -37,7 +37,7 @@ class Players {
 
 class DeinitializationController: BaseViewController {
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }
@@ -49,14 +49,14 @@ class DeinitializationController: BaseViewController {
         
         
         
-        var playerOne: Players? = Players(coins: 100)
+        var playerOne: Players! = Players(coins: 100)
         println("A new player has joined the game with \(playerOne!.coinsInPurse) coins")
         // prints "A new player has joined the game with 100 coins"
         println("There are now \(Bank.coinsInBank) coins left in the bank")
         // prints "There are now 9900 coins left in the bank"
         
         
-        playerOne!.winCoins(2_000)
+        playerOne.winCoins(2_000)
         println("PlayerOne won 2000 coins & now has \(playerOne!.coinsInPurse) coins")
         // prints "PlayerOne won 2000 coins & now has 2100 coins"
         println("The bank now only has \(Bank.coinsInBank) coins left")

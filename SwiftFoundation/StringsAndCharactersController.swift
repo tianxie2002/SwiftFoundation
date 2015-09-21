@@ -16,13 +16,13 @@ Swift中的String与Character类型提供了快速，与Unicode兼容的方式�
 */
 class StringsAndCharactersController: BaseViewController {
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
        // 字符串中可以包含特殊字符，
         let wiseWords = "\"Imagintion is more important than knowledge\" - Einstein"
-        let dollarSign = "\x24"
-        let balckHeart = "\u2665"
-        let sparkingHeart = "\U0001F496"
+//        let dollarSign = "\x24"
+//        let balckHeart = "\u2665"
+//        let sparkingHeart = "\U0001F496"
         
         //初始化空字符串
         // 下面这两个都是是空串，这两个是相等的
@@ -54,14 +54,8 @@ class StringsAndCharactersController: BaseViewController {
         
         let str1 = "hello"
         let str2 = " mimi"
-        let character1: Character = "!"
-        let character2: Character = "?"
-        
-        let stringPlusCharacter = str1 + character1 // equals "hello!"
-        let stringPlusString = str1 + str2// equals "hello mimi"
-        let characterPlusString = character1 + str1 // equals "!hello"
-        let characterPlusCharacter = character1 + character2 // equals "!?"
-        
+       let stringPlusString = str1 + str2// equals "hello mimi"
+
         //使用 += 给已经存在的字符串追加字符串
         var instroduction = "look over"
         let str = ",I am here"

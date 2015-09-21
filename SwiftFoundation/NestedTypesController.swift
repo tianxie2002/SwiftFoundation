@@ -34,7 +34,7 @@ struct BlackjackCard {
         case .Jack, .Queen, .King:
             return Values(first: 10, second: nil)
         default:
-            return Values(first: self.toRaw(), second: nil)
+            return Values(first: self.rawValue, second: nil)
             }
         }
     }
@@ -42,7 +42,7 @@ struct BlackjackCard {
     // BlackjackCard properties and methods
     let rank: Rank, suit: Suit
     var description: String {
-    var output = "suit is \(suit.toRaw()),"
+    var output = "suit is \(suit.rawValue),"
         output += " value is \(rank.values.first)"
         if let second = rank.values.second {
             output += " or \(second)"
@@ -57,7 +57,7 @@ struct BlackjackCard {
 
 class NestedTypesController: BaseViewController {
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }
@@ -68,7 +68,7 @@ class NestedTypesController: BaseViewController {
         let theAceOfSpades = BlackjackCard(rank: .Ace, suit: .Spades)
         println("theAceOfSpades: \(theAceOfSpades.description)")
         
-        let heartsSymbol = BlackjackCard.Suit.Hearts.toRaw() 
+        //let heartsSymbol = BlackjackCard.SuirawValues.toRaw()
     }
 
     override func didReceiveMemoryWarning() {

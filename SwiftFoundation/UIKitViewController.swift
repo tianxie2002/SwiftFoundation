@@ -20,51 +20,51 @@ class UIKitViewController: BaseViewController, UITableViewDelegate, UITableViewD
          self.uikitTableView  = UITableView(frame:self.view.frame, style:UITableViewStyle.Plain)
         self.uikitTableView!.delegate = self
         self.uikitTableView!.dataSource = self
-        // self.uikitTableView!.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        self.uikitTableView!.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
        // self.uikitTableView!.
-        self.view.addSubview(self.uikitTableView)
+        self.view.addSubview(self.uikitTableView!)
     }
     // UITableViewDataSource Methods
     func numberOfSectionsInTableView(tableView: UITableView!) -> Int
     {
         return 1
     }
-    func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat{
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat{
     
     
         return 50;
     }
-    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return self.uikitArray!.count
     }
     
-    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!
+   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-       //let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell!
+       let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
        //let cell =  UITableViewCell.init(style: UITableViewCellStyle.Value2, reuseIdentifier: "Cell")
-        var cell = tableView.dequeueReusableCellWithIdentifier("CELL") as? UITableViewCell
+       // var cell = tableView.dequeueReusableCellWithIdentifier("CELL") as? UITableViewCell
         
-        if !cell {
-            cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "CELL")
-        }
-        cell!.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
-        cell!.textLabel.text = self.uikitArray?.objectAtIndex(indexPath.row) as String
+//        if !cell {
+//            cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "CELL")
+//        }
+//        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+        cell.textLabel?.text = self.uikitArray!.objectAtIndex(indexPath.row) as? String
         return cell
     }
     
-    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!)
-    {
-        self.uikitTableView!.deselectRowAtIndexPath(indexPath, animated: true)
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+    
+        //self.uikitTableView.deselectRowAtIndexPath(indexPath, animated: true)
         switch indexPath.row{
         case 0 :
             var detailViewController = UITableBaseViewController()
-           detailViewController.title = self.uikitArray?.objectAtIndex(indexPath.row)  as String
-            self.navigationController.pushViewController(detailViewController, animated:false)
+           detailViewController.title = self.uikitArray!.objectAtIndex(indexPath.row)  as? String
+            self.navigationController?.pushViewController(detailViewController, animated:false)
         default:
             var detailViewController = UIKitDetailViewController()
-            detailViewController.title = self.uikitArray?.objectAtIndex(indexPath.row)  as String
-            self.navigationController.pushViewController(detailViewController, animated:false)
+            detailViewController.title = self.uikitArray!.objectAtIndex(indexPath.row)  as? String
+            self.navigationController?.pushViewController(detailViewController, animated:false)
         }
 
         
@@ -73,9 +73,6 @@ class UIKitViewController: BaseViewController, UITableViewDelegate, UITableViewD
 //        self.navigationController.pushViewController(detailViewController, animated:true)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+
     
 }

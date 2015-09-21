@@ -27,7 +27,7 @@ class Vehicle {
 
 // Bicycle继承了Vehicle的属性和方法
 class Bicycle: Vehicle {
-    init() {
+    override init() {
         super.init()
         numberOfWheels = 2
     }
@@ -35,7 +35,7 @@ class Bicycle: Vehicle {
 
 // 子类可以继续被其他类继承
 class Tandem: Bicycle {
-    init() {
+    override init() {
         super.init()
         maxPassengers = 2
     }
@@ -43,7 +43,7 @@ class Tandem: Bicycle {
 
 class Car: Vehicle {
     var speed: Double = 0.0
-    init() {
+    override init() {
         super.init()
         maxPassengers = 5
         numberOfWheels = 4
@@ -81,7 +81,7 @@ class AutomaticCar: Car {
 
 class InheritanceController: BaseViewController {
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }

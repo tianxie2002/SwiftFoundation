@@ -23,7 +23,7 @@ protocol Container {
 // IntStack的非泛型版本，实现Container协议的所有三个要求
 struct IntStack: Container {
     // original IntStack implementation
-    var items = Int[]()
+    var items = [Int]()
     mutating func push(item: Int) {
         items.append(item)
     }
@@ -46,7 +46,7 @@ struct IntStack: Container {
 // 遵循Container协议的泛型版本
 struct Stack<T>: Container {
     // original Stack<T> implementation
-    var items = T[]()
+    var items = [T]()
     mutating func push(item: T) {
         items.append(item)
     }
@@ -70,7 +70,7 @@ extension Array: Container {
 }
 class GenericController: BaseViewController {
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }
@@ -113,6 +113,11 @@ class GenericController: BaseViewController {
         }
        
     }
+    
+    /*
+    这个函数的泛型版本使用了占位类型名字（通常此情况下用字母T来表示）来代替实际类型名（如Int、String或Double）。占位类型名没有提示T必须是什么类型，但是它提示了a和b必须是同一类型T，而不管T表示什么类型。只有swapTwoValues函数在每次调用时所传入的实际类型才能决定T所代表的类型。
+        泛型函数名后面跟着的占位类型名字（T）是用尖括号括起来的（<T>）。这个尖括号告诉 Swift 那个T是swapTwoValues函数所定义的一个类型。因为T是一个占位命名类型，Swift 不会去查找命名为T的实际类型
+    */
     func swapTwoValues<T>(inout a: T, inout b: T) {
         let temporaryA = a
         a = b
@@ -135,7 +140,8 @@ class GenericController: BaseViewController {
 //        b = temporaryA
 //    }
     
-    func findStringIndex(array: String[], valueToFind: String) -> Int? {
+    func findStringIndex(array: [String
+        ], valueToFind: String) -> Int? {
         for (index, value) in enumerate(array) {
             if value == valueToFind {
                 return index
@@ -161,7 +167,7 @@ class GenericController: BaseViewController {
     /**
     *  Swift标准库定义了一个Equatable协议，要求任何遵循的类型实现等式 == 和不等式 != 对两个该类型进行比较。所有的Swift标准类型自动支持Equatable协议
     */
-    func findIndex<T: Equatable>(array: T[], valueToFind: T) -> Int? {
+    func findIndex<T: Equatable>(array: [T], valueToFind: T) -> Int? {
         for (index, value) in enumerate(array) {
             if value == valueToFind {
                 return index
@@ -177,7 +183,7 @@ class GenericController: BaseViewController {
             }
             
             // check each pair of items to see if they are equivalent
-            for i in 0..someContainer.count {
+            for i in 0..<someContainer.count {
                 if someContainer[i] != anotherContainer[i] {
                     return false
                 }

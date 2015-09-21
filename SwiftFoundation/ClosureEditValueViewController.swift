@@ -19,7 +19,7 @@ class ClosureEditValueViewController: BaseViewController {
            customClosure = closure
     }
     
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
         // Custom initialization
@@ -38,18 +38,18 @@ class ClosureEditValueViewController: BaseViewController {
         btn!.frame = CGRectMake(0,100,320,50)
         btn!.setTitle("回调" ,forState:UIControlState.Normal)
         btn!.addTarget(self,action:"action", forControlEvents:UIControlEvents.TouchUpInside)
-        self.view.addSubview(btn)
+        self.view.addSubview(btn!)
         
         // Do any additional setup after loading the view.
     }
     func action(){
        
         //判空
-        if customClosure{
+        if (customClosure != nil){
             //闭包隐式调用someFunctionThatTakesAClosure函数：回调。
             customClosure!(string: "我是从第二个界面传过来的")
         }
-        self.navigationController.popViewControllerAnimated(false)
+        self.navigationController?.popViewControllerAnimated(false)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

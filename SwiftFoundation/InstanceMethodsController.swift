@@ -8,8 +8,12 @@
 
 import UIKit
 
-
-//Count类定义了3个实例方法，通过点操作符调用
+/// 方法
+/*
+*  实例方法 (Instance Methods)
+实例方法是属于某个特定类、结构体或者枚举类型实例的方法，提供访问和修改实例属性的方法或提供与实例目的相关的功能，语法与函数一致
+实例方法写在类里面，能够访问所属类型的其他方法和属性，只能被它所属类的特定实例调用
+*/
 class Counter {
     var count = 0
     func increment() {
@@ -21,7 +25,7 @@ class Counter {
     func reset() {
         count = 0
     }
-    func incrementBy(amount: Int, numberOfTimes: Int) {
+    func incrementBy(#amount: Int, numberOfTimes: Int) {
         count += amount * numberOfTimes
     }
    
@@ -58,14 +62,10 @@ class Player {
         playerName = name
     }
 }
-/**
-*  实例方法 (Instance Methods)
-实例方法是属于某个特定类、结构体或者枚举类型实例的方法，提供访问和修改实例属性的方法或提供与实例目的相关的功能，语法与函数一致
-实例方法写在类里面，能够访问所属类型的其他方法和属性，只能被它所属类的特定实例调用
-*/
+
 class InstanceMethodsController: BaseViewController {
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
         println("---------------------------------方法-------------------------------------------------------")
@@ -79,7 +79,7 @@ class InstanceMethodsController: BaseViewController {
         // the counter's value is now 6
         counter.reset()
         // the counter's value is now 0
-        
+        counter.incrementBy(amount: 5, numberOfTimes: 5);
         /**
         *  3.self属性
         类型的每个实例都有一个隐藏的属性self，等同于实例本身，但其实只要在一个方法中使用一个已知的属性或方法，即使没有明确的写出self，Swift也会假定是当前的，但是如果实例方法的某个参数名称与实例的某个属性名称相同时，这种情况下参数名称享有优先权，这时需要self来区分参数名称和属性名称

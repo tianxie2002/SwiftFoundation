@@ -50,36 +50,31 @@ class FoundationViewController: BaseViewController,UITableViewDelegate, UITableV
         self.foundationTableView  = UITableView(frame:self.view.frame, style:UITableViewStyle.Plain)
         self.foundationTableView!.delegate = self
         self.foundationTableView!.dataSource = self
-        // self.uikitTableView!.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        self.foundationTableView!.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         // self.uikitTableView!.
-        self.view.addSubview(self.foundationTableView)
+        self.view.addSubview(self.foundationTableView!)
     }
     // UITableViewDataSource Methods
     func numberOfSectionsInTableView(tableView: UITableView!) -> Int
     {
         return 1
     }
-    func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat{
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat{
         
         
         return 50;
     }
-    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return self.foundationArray!.count
     }
     
-    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!
+     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        //let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell!
-        //let cell =  UITableViewCell.init(style: UITableViewCellStyle.Value2, reuseIdentifier: "Cell")
-        var cell = tableView.dequeueReusableCellWithIdentifier("CELL") as? UITableViewCell
-        
-        if !cell {
-            cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "CELL")
-        }
-        cell!.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
-        cell!.textLabel.text = self.foundationArray?.objectAtIndex(indexPath.row) as String
+        var cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+         cell.textLabel?.text = self.foundationArray!.objectAtIndex(indexPath.row) as? String
+
         return cell
     }
     
@@ -90,112 +85,112 @@ class FoundationViewController: BaseViewController,UITableViewDelegate, UITableV
         {
         case 0:
          var detailViewController = ClosureShowValueViewController()
-         detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
-         self.navigationController.pushViewController(detailViewController, animated:false)
+         detailViewController.title = self.foundationArray!.objectAtIndex(indexPath.row)  as NSString
+         self.navigationController?.pushViewController(detailViewController, animated:false)
         case 1:
             var detailViewController = ProtocolShowValueViewController()
-            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
-            self.navigationController.pushViewController(detailViewController, animated:false)
+            detailViewController.title = self.foundationArray!.objectAtIndex(indexPath.row)  as NSString
+            self.navigationController?.pushViewController(detailViewController, animated:false)
         case 2:
             var detailViewController = SingletonPatternViewController()
-            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
-            self.navigationController.pushViewController(detailViewController, animated:false)
+            detailViewController.title = self.foundationArray!.objectAtIndex(indexPath.row)  as NSString
+            self.navigationController?.pushViewController(detailViewController, animated:false)
         case 3:
             var detailViewController = webRequestViewController()
-            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
-            self.navigationController.pushViewController(detailViewController, animated:false)
+            detailViewController.title = self.foundationArray!.objectAtIndex(indexPath.row)  as NSString
+            self.navigationController?.pushViewController(detailViewController, animated:false)
         case 4:
             var detailViewController = ConstantAndVariablesController()
-            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
-            self.navigationController.pushViewController(detailViewController, animated:false)
+            detailViewController.title = self.foundationArray!.objectAtIndex(indexPath.row)  as NSString
+            self.navigationController?.pushViewController(detailViewController, animated:false)
         case 5:
             var detailViewController = IntegerAndFloatController()
-            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
-            self.navigationController.pushViewController(detailViewController, animated:false)
+            detailViewController.title = self.foundationArray!.objectAtIndex(indexPath.row)  as NSString
+            self.navigationController?.pushViewController(detailViewController, animated:false)
         case 6:
             var detailViewController = TuplesViewController(nibName:nil,bundle:nil)
-            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
-            self.navigationController.pushViewController(detailViewController, animated:false)
+            detailViewController.title = self.foundationArray!.objectAtIndex(indexPath.row)  as NSString
+            self.navigationController?.pushViewController(detailViewController, animated:false)
         case 7:
             var detailViewController = OptionalsValueController(nibName:nil,bundle:nil)
-            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
-            self.navigationController.pushViewController(detailViewController, animated:false)
+            detailViewController.title = self.foundationArray!.objectAtIndex(indexPath.row)  as NSString
+            self.navigationController?.pushViewController(detailViewController, animated:false)
         case 8:
             var detailViewController = BasicOperatorsController(nibName:nil,bundle:nil)
-            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
-            self.navigationController.pushViewController(detailViewController, animated:false)
+            detailViewController.title = self.foundationArray!.objectAtIndex(indexPath.row)  as NSString
+            self.navigationController?.pushViewController(detailViewController, animated:false)
         case 9:
             var detailViewController = StringsAndCharactersController(nibName:nil,bundle:nil)
-            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
-            self.navigationController.pushViewController(detailViewController, animated:false)
+            detailViewController.title = self.foundationArray!.objectAtIndex(indexPath.row)  as NSString
+            self.navigationController?.pushViewController(detailViewController, animated:false)
         case 10:
             var detailViewController = ArrayAndDictionaryController(nibName:nil,bundle:nil)
-            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
-            self.navigationController.pushViewController(detailViewController, animated:false)
+            detailViewController.title = self.foundationArray!.objectAtIndex(indexPath.row)  as NSString
+            self.navigationController?.pushViewController(detailViewController, animated:false)
         case 11:
             var detailViewController = FlowControlController(nibName:nil,bundle:nil)
-            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
-            self.navigationController.pushViewController(detailViewController, animated:false)
+            detailViewController.title = self.foundationArray!.objectAtIndex(indexPath.row)  as NSString
+            self.navigationController?.pushViewController(detailViewController, animated:false)
         case 12:
             var detailViewController = FunctionsViewController(nibName:nil,bundle:nil)
-            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
-            self.navigationController.pushViewController(detailViewController, animated:false)
+            detailViewController.title = self.foundationArray!.objectAtIndex(indexPath.row)  as NSString
+            self.navigationController?.pushViewController(detailViewController, animated:false)
         case 13:
             var detailViewController = ClosuresViewController(nibName:nil,bundle:nil)
-            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
-            self.navigationController.pushViewController(detailViewController, animated:false)
+            detailViewController.title = self.foundationArray!.objectAtIndex(indexPath.row)  as NSString
+            self.navigationController?.pushViewController(detailViewController, animated:false)
         case 14:
             var detailViewController = OptionalTypeViewController(nibName:nil,bundle:nil)
-            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
-            self.navigationController.pushViewController(detailViewController, animated:false)
+            detailViewController.title = self.foundationArray!.objectAtIndex(indexPath.row)  as NSString
+            self.navigationController?.pushViewController(detailViewController, animated:false)
         case 15:
             var detailViewController = ClassAndStructController(nibName:nil,bundle:nil)
-            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
-            self.navigationController.pushViewController(detailViewController, animated:false)
+            detailViewController.title = self.foundationArray!.objectAtIndex(indexPath.row)  as NSString
+            self.navigationController?.pushViewController(detailViewController, animated:false)
         case 16:
             var detailViewController = PropertiesController(nibName:nil,bundle:nil)
-            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
-            self.navigationController.pushViewController(detailViewController, animated:false)
+            detailViewController.title = self.foundationArray!.objectAtIndex(indexPath.row)  as NSString
+            self.navigationController?.pushViewController(detailViewController, animated:false)
         case 17:
             var detailViewController = InstanceMethodsController(nibName:nil,bundle:nil)
-            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
-            self.navigationController.pushViewController(detailViewController, animated:false)
+            detailViewController.title = self.foundationArray!.objectAtIndex(indexPath.row)  as NSString
+            self.navigationController?.pushViewController(detailViewController, animated:false)
         case 18:
             var detailViewController = InheritanceController(nibName:nil,bundle:nil)
-            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
-            self.navigationController.pushViewController(detailViewController, animated:false)
+            detailViewController.title = self.foundationArray!.objectAtIndex(indexPath.row)  as NSString
+            self.navigationController?.pushViewController(detailViewController, animated:false)
         case 19:
             var detailViewController = ExtensionsController(nibName:nil,bundle:nil)
-            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
-            self.navigationController.pushViewController(detailViewController, animated:false)
+            detailViewController.title = self.foundationArray!.objectAtIndex(indexPath.row)  as NSString
+            self.navigationController?.pushViewController(detailViewController, animated:false)
         case 20:
             var detailViewController = InitializationController(nibName:nil,bundle:nil)
-            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
-            self.navigationController.pushViewController(detailViewController, animated:false)
+            detailViewController.title = self.foundationArray!.objectAtIndex(indexPath.row)  as NSString
+            self.navigationController?.pushViewController(detailViewController, animated:false)
         case 21:
             var detailViewController = DeinitializationController(nibName:nil,bundle:nil)
-            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
-            self.navigationController.pushViewController(detailViewController, animated:false)
+            detailViewController.title = self.foundationArray!.objectAtIndex(indexPath.row)  as NSString
+            self.navigationController?.pushViewController(detailViewController, animated:false)
         case 22:
             var detailViewController = AutomaticReferenceCountController(nibName:nil,bundle:nil)
-            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
-            self.navigationController.pushViewController(detailViewController, animated:false)
+            detailViewController.title = self.foundationArray!.objectAtIndex(indexPath.row)  as NSString
+            self.navigationController?.pushViewController(detailViewController, animated:false)
         case 23:
             var detailViewController = OptionalChainningController(nibName:nil,bundle:nil)
-            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
-            self.navigationController.pushViewController(detailViewController, animated:false)
+            detailViewController.title = self.foundationArray!.objectAtIndex(indexPath.row)  as NSString
+            self.navigationController?.pushViewController(detailViewController, animated:false)
         case 24:
             var detailViewController = GenericController(nibName:nil,bundle:nil)
-            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
-            self.navigationController.pushViewController(detailViewController, animated:false)
+            detailViewController.title = self.foundationArray!.objectAtIndex(indexPath.row)  as NSString
+            self.navigationController?.pushViewController(detailViewController, animated:false)
         case 25:
             var detailViewController = TypeCastingController(nibName:nil,bundle:nil)
-            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
-            self.navigationController.pushViewController(detailViewController, animated:false)
+            detailViewController.title = self.foundationArray!.objectAtIndex(indexPath.row)  as NSString
+            self.navigationController?.pushViewController(detailViewController, animated:false)
         case 26:
             var detailViewController = NestedTypesController(nibName:nil,bundle:nil)
-            detailViewController.title = self.foundationArray?.objectAtIndex(indexPath.row)  as String
-            self.navigationController.pushViewController(detailViewController, animated:false)
+            detailViewController.title = self.foundationArray!.objectAtIndex(indexPath.row)  as NSString
+            self.navigationController?.pushViewController(detailViewController, animated:false)
         default:
             println()
         }

@@ -15,11 +15,11 @@ class webRequestViewController: BaseViewController,DataServiceDelegate {
     override func viewDidLoad() {
         // 自定义代码
         super.viewDidLoad()
-        var dataService = webService(url: "http://www.weather.com.cn/data/cityinfo/101010100.html")
-        // 1.代理获取数据方式
-        // dataService.delegate = self
-        
-        // 2.闭包获取数据方式 第一种
+       var dataService = webService(url: "http://www.weather.com.cn/data/cityinfo/101010100.html")
+//////        // 1.代理获取数据方式
+//////        // dataService.delegate = self
+//////        
+//////        // 2.闭包获取数据方式 第一种
         dataService.dataClosure = dataReceviedFinishedClosure
         dataService.connectionErrorClosure = connectionErrorClosure
         dataService.headerResponse = receviedResponseClosure
@@ -35,22 +35,37 @@ class webRequestViewController: BaseViewController,DataServiceDelegate {
 //        (dataService: webService, error: NSError) -> Void in
 //        // 接受数据发生错误
 //        println("error:\(error)")
-//        })
+//       })
 //        dataServiceClosure.start()
 
-        
-        dataService.start()
+        [self .loadJsonData()];
+        //dataService.start()
         setupView()
     }
     
+    func loadJsonData(){
+        //定义获取json数据的接口地址，这里定义的是获取天气的API接口,还有一个好处，就是swift语句可以不用强制在每条语句结束的时候用";"
+        var url = NSURL(string:"http://www.weather.com.cn/data/sk/101110101.html")
+        //获取JSON数据
+        var resultData = NSData(contentsOfURL: url!,options:NSDataReadingOptions.DataReadingUncached,error:nil)
+       let jsonObject : AnyObject! = NSJSONSerialization.JSONObjectWithData(resultData!, options: NSJSONReadingOptions.MutableContainers, error: nil)
+        println("\(jsonObject)");
+        //解析获取JSON字段值
+//        var weatherInfo:AnyObject = json.objectForKey("weatherinfo")!! //json结构字段名。
+//        var city:AnyObject = weatherInfo.objectForKey("city")!
+        //以此类推获取其他字段的信息,再此我就不过多赘述了。
+        
+        //然后把获取到的json值赋值个相应的控件即可。
+        
+    }
     func setupView(){
     
-        var imagebg     = UIImage(named: "天气预报.png")
+        var imagebg : UIImage  = UIImage(named: "天气预报.png")!
         var imageViewbg = UIImageView(frame: CGRectMake( 50, 120.0, 220, imagebg.size.height+50))
         imageViewbg.image = imagebg
         self.view.addSubview(imageViewbg)
         imageViewIcon = UIImageView(frame: CGRectMake((CGRectGetWidth(self.view.bounds) - imagebg.size.width) / 2.0-40, 80.0, 175, 100))
-        self.view.addSubview(imageViewIcon)
+        self.view.addSubview(imageViewIcon!)
         var label = UILabel(frame: CGRectMake(150, 130.0, 100, 25))
         label.backgroundColor = UIColor.clearColor()
         label.textAlignment = NSTextAlignment.Center
@@ -63,14 +78,16 @@ class webRequestViewController: BaseViewController,DataServiceDelegate {
         weathlabel!.textAlignment = NSTextAlignment.Center
         weathlabel!.font = UIFont.boldSystemFontOfSize(17)
         weathlabel!.textColor = UIColor.whiteColor()
-        
-        self.view.addSubview(weathlabel)
+        self.view.addSubview(weathlabel!)
     }
     // 定义数据加载完毕请求闭包
     func dataReceviedFinishedClosure(dataService: webService, data: NSData) -> Void {
-        let jsonData = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
-        
-        let  jsonWeather   = jsonData["weatherinfo"] as NSDictionary
+       //println("----------------\(data)")
+        var error : NSError?
+        var options = NSJSONReadingOptions.MutableContainers
+        let jsonData:AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options:NSJSONReadingOptions.AllowFragments, error:&error)
+         println("----------------\(jsonData)")
+        let  jsonWeather = jsonData?["weatherinfo"] as NSDictionary
         println("天气预报 数据是:\(jsonWeather)")
         let  strWeather = jsonWeather["weather"] as String
         weathlabel!.text = strWeather

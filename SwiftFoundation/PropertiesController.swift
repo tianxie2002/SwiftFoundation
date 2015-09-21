@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class StepCounter {
     var totalSteps: Int = 0 {
     willSet(newTotalSteps) {
@@ -37,8 +39,8 @@ struct AudioChannel {
     }
     }
 }
-
-//使用关键字static定义值类型的类型属性，class定义类
+/*-----------------类型属性语法-----------------------------------------*/
+//使用关键字static定义值类型的类型属性，关键字class来为类（class）定义类型属性
 struct SomeStructure {
     static var storedTypeProperty = "Some value."
     static var computedTypeProperty: Int {
@@ -47,16 +49,26 @@ struct SomeStructure {
 }
 enum SomeEnumeration {
     static var storedTypeProperty = "Some value."
+    static var computedValues = 3;
+    static var computerString:String{
+     return "test"
+    }
     static var computedTypeProperty: Int {
     return 2
         
     }
 }
+//  类型属性 类型属性写在类最外层的花括号内，因此它的作用范围也就在类型支持的范围内
 class SomeClass {
+    class var storety: String{
+      return "new value"
+    }
     class var computedTypeProperty: Int {
     return 42
     }
 }
+/*----------------------------------------------------------*/
+
 class DataImporter {
     /*
     DataImporter is a class to import data from an external file.
@@ -68,9 +80,8 @@ class DataImporter {
 }
 
 class DataManager {
-    @lazy var importer = DataImporter()
-    var data = String[]()
-    // the DataManager class would provide data management functionality here
+    lazy var importer = DataImporter()
+    var data = [String]()
 }
 struct FixedLengthRange {
     var firstValue: Int
@@ -78,7 +89,7 @@ struct FixedLengthRange {
 }
 class PropertiesController: BaseViewController {
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }
@@ -91,13 +102,13 @@ class PropertiesController: BaseViewController {
         *  1.存储属性（Stored Properties）
            存储在类或结构体的实例中的一个变量或常量，可以在定义的时候赋值，也可以在构造过程时候赋值
         */
-        // length定义为常量，在创建实例的时候赋值，之后就无法再修改了
+        
         
         var rangeOfThreeItems = FixedLengthRange(firstValue: 0, length: 3)
         // the range represents integer values 0, 1, and 2
         rangeOfThreeItems.firstValue = 6
-        // the range now represents integer values 6, 7, and 8
-        
+        // length定义为常量，在创建实例的时候赋值，之后就无法再修改了
+        //rangeOfThreeItems.length = 3;
         /**
         *  2.常量和存储属性 Stored Properties of Constant Structure Instances
 
@@ -110,16 +121,14 @@ class PropertiesController: BaseViewController {
         
         /**
         *  3.延迟存储属性 Lazy Stored Properties
-        当第一次被调用的时候才会计算其初始值，使用@lazy标志，属性的值在实例构造完成之前可能为空，而常量要求构造完成之前必须有初始值，所以延迟属性必须是变量
+        当第一次被调用的时候才会计算其初始值，使用@lazy标志，属性的值在实例构造完成之前可能为空，
+        注意： 常量属性在构造过程完成之前必须要有初始值，因此无法声明成延迟属性，所以延迟属性必须是变量
         */
-        
         // DataImporter在初始化的时候需要消耗不少时间，因为可能要打开文件并读取文件内容，所以在创建DataManager的时候不需要创建DataImporter实例，而是当用到才创建
-       
-        
         let manager = DataManager()
-        manager.data += "Some data"
-        manager.data += "Some more data"
-        //println(manager.importer)
+        manager.data.append("Some data")
+        manager.data.append("Some more data")
+        println(manager.importer.fileName)
         // the DataImporter instance for the importer property has not yet been created
         //当属性的值依赖于在实例的构造过程结束前无法知道具体值的外部因素时，或者当属性的值需要复杂或大量计算时，可以只在需要的时候来计算它。
         
@@ -190,7 +199,7 @@ class PropertiesController: BaseViewController {
         
         
         /**
-        * 属性监视器
+        * 属性观察器
         监控属性值的变化，在属性被设置新值的时候调用，即使新值与原有相同，可以为延迟属性添加监视器，不需要为无法重载的计算属性添加监视器，因为可以通过setter直接监控
         wilSet 在设置新值前调用
         didSet 新的值被设定后调用
@@ -247,7 +256,7 @@ class PropertiesController: BaseViewController {
         // prints "10"
         println(AudioChannel.maxInputLevelForAllChannels)
         // prints "10"
-        println("---------------------------------属性-------------------------------------------------------")
+      
 
     }
 

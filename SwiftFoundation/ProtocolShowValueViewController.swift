@@ -24,14 +24,14 @@ class ProtocolShowValueViewController: BaseViewController,ProtocolEditValueDeleg
         myLabel = UILabel(frame:CGRectMake(0,100,320,60))
         myLabel!.text = "当前值——0"
         myLabel!.textAlignment = NSTextAlignment.Center
-        self.view.addSubview(myLabel)
+        self.view.addSubview(myLabel!)
         // Do any additional setup after loading the view.
     }
     func nextBtnClicked()
     {
       let svc = ProtocolEditValueViewController()
       svc.delegate = self
-      self.navigationController.pushViewController(svc,animated:false)
+      self.navigationController?.pushViewController(svc,animated:false)
     }
     func changeString(controller:ProtocolEditValueViewController,string:String){
       myLabel!.text = string

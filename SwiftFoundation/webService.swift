@@ -14,10 +14,10 @@ typealias connectionError=(dataService: webService, error: NSError) -> Void
 typealias recevieHeaderResponse=(dataService: webService, respond: NSURLResponse) -> Void
 
 @objc protocol DataServiceDelegate: NSObjectProtocol {
-    @optional func connectionDidFailed(dataService: webService!, error: NSError!) // 请求发送失败
-    @optional func dataServiceFinished(dataService: webService!, respond: NSURLResponse!) // 接受到响应头
-    @optional func dataServiceRecevieData(data: NSData!, dataService: webService!) // 正在接受数据,可以显示数据加载的百分比
-    @optional func dataServiceRecevieDataFinished(data: NSData!, dataService: webService!) // 数据全部接受完毕调用
+    optional func connectionDidFailed(dataService: webService!, error: NSError!) // 请求发送失败
+    optional func dataServiceFinished(dataService: webService!, respond: NSURLResponse!) // 接受到响应头
+    optional func dataServiceRecevieData(data: NSData!, dataService: webService!) // 正在接受数据,可以显示数据加载的百分比
+    optional func dataServiceRecevieDataFinished(data: NSData!, dataService: webService!) // 数据全部接受完毕调用
 }
 
 class webService: NSObject,NSURLConnectionDelegate, NSURLConnectionDataDelegate
@@ -35,7 +35,7 @@ class webService: NSObject,NSURLConnectionDelegate, NSURLConnectionDataDelegate
     var headerResponse: recevieHeaderResponse?
     
     // 初始化
-    init() {
+    override init() {
         super.init()
         _data = NSMutableData()
     }
@@ -62,20 +62,22 @@ class webService: NSObject,NSURLConnectionDelegate, NSURLConnectionDataDelegate
     func start() {
         var request:NSURLRequest?
         // 判断网址是否为空
-        if !urlString {
+        if !(urlString != nil) {
             println("您没有实例化 urlString属性的值")
             return
         }
-        var url = NSURL(string: urlString)
-        // 设置请求超时时间
-        if !timeout {
-            println("没有设置请求超时时间")
-            request = NSURLRequest(URL: url)
-        } else {
-            request = NSURLRequest(URL: url, cachePolicy: .UseProtocolCachePolicy, timeoutInterval: timeout!)
-        }
+        var url = NSURL(string: urlString!)
+         request = NSURLRequest(URL: url!, cachePolicy: .UseProtocolCachePolicy, timeoutInterval: 20)
+        
+//        // 设置请求超时时间
+//        if !(timeout != nil) {
+//            println("没有设置请求超时时间")
+//            request = NSURLRequest(URL: url!)
+//        } else {
+//           
+//        }
         // 建立网络请求
-        connection = NSURLConnection(request: request, delegate: self, startImmediately: false)
+        connection = NSURLConnection(request: request!, delegate: self, startImmediately: false)
         // 开始网络请求
         connection!.start()
     }
@@ -87,7 +89,7 @@ class webService: NSObject,NSURLConnectionDelegate, NSURLConnectionDataDelegate
     *  @return 无
     */
     func cancel() {
-        if connection {
+        if (connection != nil) {
             connection!.cancel()
             connection = nil
         }
@@ -104,12 +106,12 @@ class webService: NSObject,NSURLConnectionDelegate, NSURLConnectionDataDelegate
     func connection(connection: NSURLConnection!, didFailWithError error: NSError!) {
         _data!.resetBytesInRange(NSRange(location: 0,length: _data!.length))
         _data!.length = 0
-        if connectionErrorClosure {
+        if (connectionErrorClosure != nil) {
             // 标识又闭包
             connectionErrorClosure?(dataService: self, error: error)
         }
         
-        if delegate {
+        if (delegate != nil) {
             delegate?.connectionDidFailed!(self, error: error)
         }
     }
@@ -123,12 +125,12 @@ class webService: NSObject,NSURLConnectionDelegate, NSURLConnectionDataDelegate
     *  @return 无
     */
     func connection(connection: NSURLConnection!, didReceiveResponse response: NSURLResponse!){
-        if headerResponse {
+        if (headerResponse != nil) {
             // 标识又闭包
             headerResponse?(dataService: self, respond: response)
         }
         
-        if delegate {
+        if (delegate != nil) {
             delegate?.dataServiceFinished!(self, respond: response)
         }
     }
@@ -143,7 +145,7 @@ class webService: NSObject,NSURLConnectionDelegate, NSURLConnectionDataDelegate
     */
     func connection(connection: NSURLConnection!, didReceiveData data: NSData!){
         _data!.appendData(data)
-        if delegate {
+        if (delegate != nil) {
             delegate?.dataServiceRecevieData!(data, dataService: self)
         }
     }
@@ -156,12 +158,12 @@ class webService: NSObject,NSURLConnectionDelegate, NSURLConnectionDataDelegate
     *  @return return value description
     */
     func connectionDidFinishLoading(connection: NSURLConnection!) {
-        if dataClosure {
+        if (dataClosure != nil) {
             // 表示传的是闭包过来
             dataClosure?(dataService: self, data: _data!)
         }
         
-        if delegate {
+        if (delegate != nil) {
             delegate?.dataServiceRecevieDataFinished!(_data, dataService: self)
         }
     }

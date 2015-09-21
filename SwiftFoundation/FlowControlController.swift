@@ -8,15 +8,20 @@
 
 import UIKit
 
+/*
+     控制流
+*/
 class FlowControlController: BaseViewController {
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        println(" 控制流")
         /*
         控制流
         for for-in while do-while
@@ -24,21 +29,22 @@ class FlowControlController: BaseViewController {
         
         let count = 5
         for var i = 0; i < count; i++ {
-            print("\(i)")
+            print("\(i*2)-")
         }
-        
-        for i in 0..count {
-            print("\(i)")
+        println()
+        for i in 0..<count {
+            print("\(i*2)-")
         }
-        
-        let base = 4
-        let power = 10
+       
+        println()
+        let base = 2
+        let power = 5
         var answer = 1
         // 使用_来忽略某个值
         for _ in 1...power {
             answer *= base
         }
-        
+        println("\(answer)")
         // 访问数组
         let names = ["Anna", "Alex", "Brian", "Jack"]
         for name in names {
@@ -52,7 +58,7 @@ class FlowControlController: BaseViewController {
             }
             
             // 循环遍历字符串
-            for c in "Hello" {
+        for c in "Hello" {
             println(c)
         }
         
@@ -78,6 +84,18 @@ class FlowControlController: BaseViewController {
         } while countDo < timesDo
         
         
+        let puzzleInput = "great minds think alike"
+        var puzzleOutput = ""
+        for character in puzzleInput {
+            switch character {
+            case "a", "e", "i", "o", "u", " ":
+                continue
+            default:
+                puzzleOutput.append(character)
+            }
+        }
+        println(puzzleOutput)
+        
         
         // switch 语句在swift中与C和OC中是不同的，在Swift中匹配到一个Case后，不需要添加break,
         // 也会在执行完匹配的那一项后自动Break。
@@ -101,6 +119,19 @@ class FlowControlController: BaseViewController {
         case 1000...9999: msg = "lower than then thousand"
         case 10000...99999: msg = "lower than one million"
         default: msg = "no value"
+        }
+        let somePoint = (1, 1)
+        switch somePoint {
+        case (0, 0):
+            println("(0, 0) is at the origin")
+        case (_, 0):
+            println("(\(somePoint.0), 0) is on the x-axis")
+        case (0, _):
+            println("(0, \(somePoint.1)) is on the y-axis")
+        case (-2...2, -2...2):
+            println("(\(somePoint.0), \(somePoint.1)) is inside the box")
+        default:
+            println("(\(somePoint.0), \(somePoint.1)) is outside of the box")
         }
         
         // 值绑定（Value Binding）
@@ -126,24 +157,7 @@ class FlowControlController: BaseViewController {
             println("(\(x), \(y)) is just some arbitrary point")
         }
         
-        /*
-        continue
-        break
-        falthrough
-        return
-        */
-        // continue、break、return跟C、OC中的continue、break、return是一样的
-        let puzzleInput = "great minds think alike"
-        var puzzleOutput = ""
-        for c in puzzleInput {
-            switch c {
-            case "a", "e", "i", "o", "u":// 相当于遇到这几种字符就会就会继续循环而不往下执行
-                continue
-            default:
-                puzzleOutput += c
-            }
-        }
-        
+    
         let numberSymbol: Character = "三"
         var possibleIntegerValue: Int?
         switch numberSymbol {
@@ -169,17 +183,17 @@ class FlowControlController: BaseViewController {
         // 可以给循环添加标签
         var integerValue = 0
         let countValue = 10
-        GameLoopLabel: while integerValue < countValue {
-            switch integerValue {
-            case integerValue % 2 == 0: 
-                break GameLoopLabel // 调用此语句后，就退出了while循环
-            case let inValue where (inValue > 5 && inValue % 2 != 0):
-                continue GameLoopLabel
-            default:
-                println("run default")
-                break GameLoopLabel
-            }
-        }
+//        GameLoopLabel: while integerValue < countValue {
+//            switch integerValue {
+//            case integerValue % 2 == 0: 
+//                break GameLoopLabel // 调用此语句后，就退出了while循环
+//            case let inValue where (inValue > 5 && inValue % 2 != 0):
+//                continue GameLoopLabel
+//            default:
+//                println("run default")
+//                break GameLoopLabel
+//            }
+//        }
 
         // Do any additional setup after loading the view.
     }

@@ -40,7 +40,7 @@ extension Rect {
 }
 extension Int {
     func repetitions(task: () -> ()) {
-        for i in 0..self {
+        for i in 0..<self {
             task()
         }
     }
@@ -78,7 +78,7 @@ extension Character {
 }
 class ExtensionsController: BaseViewController {
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E306FE1D1AC6BA1C2911F443B7B353A5623F4718",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E306FE1D1AC6BA1C2911F443B7B353A5623F4718" : 0,
+    "D187D82D-4941-4B68-83B2-EBB76C196AAE" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C3A17304-1894-4A8D-AB76-346819F3C954",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E306FE1D1AC6BA1C2911F443B7B353A5623F4718" : "SwiftFoundation1.1",
+    "D187D82D-4941-4B68-83B2-EBB76C196AAE" : "SwiftFoundation"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SwiftFoundation",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SwiftFoundation.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/baxiang\/SwiftFoundation.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D187D82D-4941-4B68-83B2-EBB76C196AAE"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/baxiang\/SwiftFoundation.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E306FE1D1AC6BA1C2911F443B7B353A5623F4718"
+    }
+  ]
+}

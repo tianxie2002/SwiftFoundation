@@ -27,12 +27,13 @@ class UITableViewManager: NSObject,UITableViewDelegate, UITableViewDataSource
         didSelectRowAtIndexPath = aDidSelectRowAtIndexPath
     }
     
-    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+
     {
         return numberOfRowsInsection(tableView, section)
     }
     
-    func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath:NSIndexPath!) -> UITableViewCell!
+   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         return cellForRowAtIndexPath(tableView, indexPath);
     }

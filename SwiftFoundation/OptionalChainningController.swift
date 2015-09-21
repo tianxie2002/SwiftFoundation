@@ -21,7 +21,7 @@ class Persons {
 }
 
 class Residences {
-    var rooms = Rooms[]()
+    var rooms = [Rooms]()
     var numberOfRooms: Int {
     return rooms.count
     }
@@ -45,9 +45,9 @@ class Addresss {
     var buildingNumber: String?
     var street: String?
     func buildingIdentifier() -> String? {
-        if buildingName {
+        if (buildingName != nil) {
             return buildingName
-        } else if buildingNumber {
+        } else if (buildingNumber != nil) {
             return buildingNumber
         } else {
             return nil
@@ -57,7 +57,7 @@ class Addresss {
 
 class OptionalChainningController: BaseViewController {
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }
@@ -84,10 +84,10 @@ class OptionalChainningController: BaseViewController {
         // prints "Unable to retrieve the first room name."
         
         
-        let johnsHouse = Residences()
-        johnsHouse.rooms += Rooms(name: "Living Room")
-        johnsHouse.rooms += Rooms(name: "Kitchen")
-        john.residence = johnsHouse
+//        let johnsHouse = Residences()
+//        johnsHouse.rooms += Rooms(name: "Living Room")
+//        johnsHouse.rooms += Rooms(name: "Kitchen")
+//        john.residence = johnsHouse
         /**
         *  可以使用可选链来尝试从子脚本中获取值并检查子脚本的调用是否成功，但不能通过可选链来设置子代码
         */
@@ -110,7 +110,7 @@ class OptionalChainningController: BaseViewController {
         let johnsAddress = Addresss()
         johnsAddress.buildingName = "The Larches"
         johnsAddress.street = "Laurel Street"
-        john.residence!.address = johnsAddress
+        john.residence?.address = johnsAddress
         
         if let johnsStreet = john.residence?.address?.street {
             println("John's street name is \(johnsStreet).")

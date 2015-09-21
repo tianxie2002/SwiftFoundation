@@ -10,7 +10,7 @@ import UIKit
 
 class OptionalTypeViewController: BaseViewController {
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }
@@ -34,7 +34,7 @@ class OptionalTypeViewController: BaseViewController {
         */
         var stringValue: String?
         // 判断optional是否有值
-        if stringValue {
+        if (stringValue != nil) {
             // do what you need to do here
         }
         /*
@@ -62,7 +62,7 @@ class OptionalTypeViewController: BaseViewController {
         
         let integer = strValue!.toInt()
         // 更安全的写法是
-        if strValue {
+        if (strValue != nil) {
             let integer = strValue!.toInt()
         }
         

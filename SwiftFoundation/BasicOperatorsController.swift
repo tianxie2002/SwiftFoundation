@@ -12,7 +12,7 @@ import UIKit
 */
 class BasicOperatorsController: BaseViewController {
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }
@@ -40,7 +40,7 @@ class BasicOperatorsController: BaseViewController {
         //两个Character值或者一个是Character值，另一个是String类型，可以相加形成字符串:
         let dog: Character = "D"
         let cow: Character = "C"
-        let dogCow = dog + cow
+       // let dogCow = dog + cow
         
         //在swift中，求余可以是浮点数。
         //a = (b * some multiplier) + remainder
@@ -74,7 +74,7 @@ class BasicOperatorsController: BaseViewController {
         
        //范围运算符 在swift中提供了两种范围运算符，a..b和a...b，前者不包含b，后者包含b
         // 打印出12
-        for index in 1..3 {
+        for index in 1..<3 {
             print("\(index)")
         }
         

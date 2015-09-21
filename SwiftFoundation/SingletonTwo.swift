@@ -18,7 +18,7 @@ class SingletonTwo: NSObject {
         }
         return StaticInstance.instance
     }
-    init(){
+    override  init(){
       println("222222")
     }
 }

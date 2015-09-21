@@ -12,7 +12,7 @@ import UIKit
 */
 class OptionalsValueController: BaseViewController {
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }
@@ -21,7 +21,7 @@ class OptionalsValueController: BaseViewController {
         super.viewDidLoad()
         println("---------------------------------可选值-------------------------------------------------------")
 //        在C或者OC中不存在Optionals这个概念。在OC中最接近这个概念意思的是：在函数调用时，返回对象或者返回nil，这个nil意味着
-//        有效对象的absence value.然后，这仅对对象起作用，对结构体、基本C类型或者枚举值类型不起作用，对于这些类型，OC中通过
+//        缺少一个合法的对象.然后，这仅对对象起作用，对结构体、基本C类型或者枚举值类型不起作用，对于这些类型，OC中通过
 //        返回NSNotFound这个特殊的值来表明absence value，通过这个值，函数调用者就可以检测处理。在Swift中，optionals可以是任何
 //        类型，不需要特殊的常量表示。
         
@@ -34,6 +34,7 @@ class OptionalsValueController: BaseViewController {
         
         // 这个字符串是完全由数字组成的
         let possibleNumber = "123"
+        // convertedNumber 被推测为类型 "Int?"， 或者类型 "optional Int"
         // 这里调用toInt()方法时，转换可能会失败，所以返回的是Optional类型，也就是Int?类型，
         // 相当于Optional<Int>，返回值是说：要么有整型值，要么根本就没有值
         // 因为这里possibleNumber完全是由数字组成的字符串，所以转换成功，因此得到整型值123
@@ -138,7 +139,7 @@ class OptionalsValueController: BaseViewController {
         */
         // convertedNumber is an optional value
         // 如果convertedNumber存在值，那么表达式就是true
-        if convertedNumber {
+        if (convertedNumber != nil) {
             // 如果能够进到这里，表示convertedNumber一定有值，那么我们就可以强制拆包
             // 强制拆包就是在optional value后面添加一个！，也就是convertedNumber!
             // 但这也是需要注意的地方，使用强制拆包一定要确保这个可选值有值，否则
@@ -154,7 +155,8 @@ class OptionalsValueController: BaseViewController {
         var serverResponseCode: String? = "404"
         // 把serverResponseCode设置为nil后，serverResponseCode现在不再有值，也就是Optional.None
         serverResponseCode = nil
-        //serverResponseCode!.toInt()
+        //注意：使用!来获取一个不存在的可选值会导致运行时错误。使用!来强制解析值之前，一定要确定可选包含一个非nil的值
+        //var  intResult = serverResponseCode!.toInt()
         
 //        可选绑定（optional binding）
 //        我们可以使用optional binding来判断这个optional 是否包含一个值，确保值是可用的，并作为临时常量或者变量的值。
@@ -165,7 +167,7 @@ class OptionalsValueController: BaseViewController {
 //            statements
 //        }
         
-        let number = "123"
+        var number = "123"
         if let actualNumber = number.toInt() {
             println("\(possibleNumber) has an integer value of \(actualNumber)")
         } else {
@@ -182,7 +184,7 @@ class OptionalsValueController: BaseViewController {
 //        optional可以设置任何类型值为nil，不仅仅是对象类型。
 //        
 //        隐式拆包可选值(Implicitly Unwrapped Optionals)
-//        有时候，我们可以确定一旦变量或者常量被创建并初始化后，一直都会有值，那么可以就可以使用隐式拆包方式获取值。
+//        每次都要判断和解析可选值是非常低效的，因为可以确定它总会有值,有时候，我们可以确定一旦变量或者常量被创建并初始化后，一直都会有值，那么可以就可以使用隐式拆包方式获取值。
 //        在声明变量时，不是使用？来声明可选值，而是使用！来声明。
         let possibleString: Optional<String> = "An optional string."
         println(possibleString!)
@@ -194,7 +196,7 @@ class OptionalsValueController: BaseViewController {
 //        如果尝试访问的隐式拆包可选值不包含值，会触发运行时错误。
 //        一旦声明为Optional的，如果不显式的赋值就会有个默认值nil。判断一个Optional的值是否有值，使用if或者while 判断隐式拆包可选值是否包含值，如果包含值，会返回true,否则返回false
         
-        if assumedString {
+        if (assumedString != nil) {
             println(assumedString)
         }
         //如果还可以像正常的optional一样使用optional binding来使用隐式拆包可选值。

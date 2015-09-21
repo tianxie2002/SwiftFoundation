@@ -30,7 +30,7 @@ class ClosureShowValueViewController: BaseViewController {
         btn!.setTitle("获取下一页的值" ,forState:UIControlState.Normal)
         btn!.setTitleColor(UIColor.redColor(), forState: UIControlState.Normal)
         btn!.addTarget(self,action:"nextBtnClicked", forControlEvents:UIControlEvents.TouchUpInside)
-        self.view.addSubview(btn)
+        self.view.addSubview(btn!)
         
         // Do any additional setup after loading the view.
     }
@@ -40,7 +40,7 @@ class ClosureShowValueViewController: BaseViewController {
     }
     func nextBtnClicked(){
         let second = ClosureEditValueViewController(getCurrentClosureValue)
-        self.navigationController.pushViewController(second,animated:false)
+        self.navigationController?.pushViewController(second,animated:false)
         
     }
     

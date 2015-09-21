@@ -8,8 +8,8 @@
 
 import UIKit
 /**
-*  类型检查
-类型检查是一种检查类实例的方式，或让实例称为他的父类或子类的一种方式，使用is和as操作符实现
+*  类型转换
+  类型转换是一种检查类实例的方式，或让实例称为他的父类或子类的一种方式，使用is和as操作符实现
 */
 
 class MediaItem {
@@ -43,7 +43,7 @@ let library = [
 ]
 class TypeCastingController: BaseViewController {
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
         
@@ -86,7 +86,7 @@ class TypeCastingController: BaseViewController {
         */
         
         // 定义一个AnyObject[] 类型的数组并填入三个Movie类型的实例
-        let someObjects: AnyObject[] = [
+        let someObjects: [AnyObject] = [
             Movie(name: "2001: A Space Odyssey", director: "Stanley Kubrick"),
             Movie(name: "Moon", director: "Duncan Jones"),
             Movie(name: "Alien", director: "Ridley Scott")
@@ -102,7 +102,7 @@ class TypeCastingController: BaseViewController {
         // Movie: 'Alien', dir. Ridley Scott
         
         // 简化写法
-        for movie in someObjects as Movie[] {
+        for movie in someObjects as [Movie] {
             println("Movie: '\(movie.name)', dir. \(movie.director)")
         }
         // Movie: '2001: A Space Odyssey', dir. Stanley Kubrick
@@ -110,7 +110,7 @@ class TypeCastingController: BaseViewController {
         // Movie: 'Alien', dir. Ridley Scott
         
         // 使用Any类型来混合不同类型一起工作，包括class类型
-        var things = Any[]()
+        var things = [Any]()
         
         things.append(0)
         things.append(0.0)

@@ -34,7 +34,7 @@ class SurveyQuestion {
 为了简化指定构造器和便利构造器之间的调用关系，Swift 采用以下三条规则来限制构造器之间的代理调用：
 
 规则 1 指定构造器必须调用其直接父类的的指定构造器。
-规则 2便利构造器必须调用同一类中定义的其它构造器。
+规则 2 便利构造器必须调用同一类中定义的其它构造器。
 规则 3 便利构造器必须最终以调用一个指定构造器结束。
 
 一个更方便记忆的方法是：
@@ -56,7 +56,7 @@ class RecipeIngredient: Food {
         self.quantity = quantity
         super.init(name: name)
     }
-    convenience init(name: String) {
+    convenience  override init(name: String) {
         self.init(name: name, quantity: 1)
     }
 }
@@ -106,7 +106,7 @@ struct Celsius {
 }
 class InitializationController: BaseViewController {
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }
@@ -191,8 +191,8 @@ class InitializationController: BaseViewController {
 //        }
         
         struct Checkerboard {
-            let boardColors: Bool[] = {
-                var temporaryBoard = Bool[]()
+            let boardColors: [Bool] = {
+                var temporaryBoard = [Bool]()
                 var isBlack = false
                 for i in 1...10 {
                     for j in 1...10 {

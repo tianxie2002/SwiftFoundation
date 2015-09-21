@@ -8,9 +8,12 @@
 
 import UIKit
 import Foundation
+/*
+   字典和数组
+*/
 class ArrayAndDictionaryController: BaseViewController {
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }
@@ -18,20 +21,15 @@ class ArrayAndDictionaryController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
         /* Swift 提供了两种集合类型，即数组(Array)和字典(Dictionary),存储值的集合
         数组存储相同类型的顺序列表值。字典存储无序同类型值的集合，通过键来查询和
         引用。
         在Swift中，数组和字典总是值和键的存储类型是明确的。这意味着不能插入错误的类型到字典
         和数组中。这种显示类型可以保证你的代码中值的类型总是明确的。
         */
-        // 数组类型全型为Array<SomeType>，也可以使用SomeType[]这种写法。虽然这两种类型是一样的，但
-        // 后者更佳，并且都会使用后者。
-        var shoppingList: String[] = ["Egg", "Milk"]
+        // 数组类型全型为Array<SomeType>，也可以使用SomeType[]这种写法。虽然这两种类型是一样的，
+        var shoppingList  = ["Egg", "Milk"]
+        // var shoppingList: [String] = ["Egg", "Milk"]
         // 访问和修改数组元素
         println("The shopping list contains \(shoppingList.count) items")
         
@@ -44,16 +42,20 @@ class ArrayAndDictionaryController: BaseViewController {
         
         // 追加元素 可以使用append方法 ，可以使用+=
         shoppingList.append("Flour") // 变成：["Egg", "Milk", "Flour"]
-        shoppingList += "Baking Power" // 变成：["Egg", "Milk", "Flour", "Baking Power"]
+        //shoppingList += "Baking Power" // 变成：["Egg", "Milk", "Flour", "Baking Power"]
         
         // 通过下标访问元素
         var firstItem = shoppingList[0] // Egg
         // 通过下标修改元素
         shoppingList[0] = "Six eggs" // 把Egg变成了Six eggs
         // 通过范围下标修改
-        shoppingList[1..3] = ["Egg", "Eggg"] // ["Egg", "Eggg", "Flour", "Baking Power"]
-        shoppingList[1...3] = ["Egg", "Eggg", "Egggg"] // ["Egg", "Eggg", "Egggg", "Baking Power"]
-        
+        shoppingList[1..<3] = ["Egg", "Eggg"] // ["Egg", "Eggg", "Flour", "Baking Power"]
+        shoppingList[0...2] = ["Egg", "Eggg","Egggg"] // ["Egg", "Eggg", "Egggg", "Baking Power"]
+        //我们不能使用下标语法在数组尾部添加新项。如果我们试着用这种方法对索引越界的数据进行检索或者设置新值的操作，我们会引发一个运行期错误
+        // shoppingList[3...6] = ["Egg", "Eggg","Egggg"]
+        for item in shoppingList {
+            println(item)
+        }
         // 通过insert方法在指定下标插入元素
         //变成：["InsertedValue", "Egg", "Eggg", "Egggg", "Baking Power"]
         shoppingList.insert("InsertedValue", atIndex: 0)
@@ -62,11 +64,11 @@ class ArrayAndDictionaryController: BaseViewController {
         // 执行后，变成： ["Egg", "Eggg", "Egggg", "Baking Power"]
         let removedObj = shoppingList.removeAtIndex(0)
         
-        // 移除最后一个元素
+        // 移除最后一个元素 一定需要判断当前的数字是不是为空 否则crash
         // 方式一：
-        var lastObj = shoppingList.removeLast()
+         shoppingList.removeLast()
         // 方式二：
-       // var lastObj = shoppingList.removeAtIndex(shoppingList.cout - 1)
+        // shoppingList.removeAtIndex(shoppingList.count - 1)
         
         // 循环迭代数组
         for item in shoppingList {
@@ -77,12 +79,13 @@ class ArrayAndDictionaryController: BaseViewController {
         for (index, value) in enumerate(shoppingList) {
             println("Item at index \(index + 1) is \(value)")
         }
-    
-
+        
+        
         // 创建和初始化数组
-        var shomInts = Int[]() // 创建空数组，元素的个数为0
+        var shomInts = [Int]() // 创建空数组，元素的个数为0
+        var shomIntsSame = [];
         // 调用初始化器
-        var threeDoubles = Double[](count: 3, repeatedValue: 0.0)
+        var threeDoubles = [Double](count: 3, repeatedValue: 0.0)
         // 通过类型自动推测，不用指定特定类型
         var anotherThreeDoubles = Array(count: 3, repeatedValue: 2.4)
         // 两个数组相加,新数组的类型会根据这两个数组的类型推断出来
@@ -126,7 +129,7 @@ class ArrayAndDictionaryController: BaseViewController {
         }
         
         // 通过下标键移除键值对，只需要设置为nil 这种方式Xcode 会报错
-       // airports["A"] = "Apple International"
+        // airports["A"] = "Apple International"
         //airport["L"] = nil // 移除
         
         // 可以通过removeValueForKey移除
@@ -158,6 +161,11 @@ class ArrayAndDictionaryController: BaseViewController {
         namesOfIntegers[10] = "ten" // 有一个键值对
         namesOfIntegers = [:] // 又变成空字典了，由于前面已经指定过类型了，这里可以重复不指定
 
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        
     }
     
 

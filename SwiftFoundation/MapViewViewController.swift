@@ -13,21 +13,13 @@ class MapViewViewController: BaseViewController,MKMapViewDelegate,CLLocationMana
 
     var locationManager: CLLocationManager?
     var mapView: MKMapView?
-    init()
-    {
-       super.init(coder:nil)
-//        locationManager = CLLocationManager()
-//        locationManager!.desiredAccuracy = kCLDistanceFilterNone
-//        locationManager!.delegate = self
-        
-    
-    }
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         self.mapView = MKMapView(frame: UIScreen.mainScreen().applicationFrame)
         self.mapView!.showsUserLocation = true
         self.mapView!.delegate = self
-        self.view.addSubview(self.mapView);
+        self.view.addSubview(self.mapView!);
         locationManager = CLLocationManager()
         locationManager!.desiredAccuracy = kCLDistanceFilterNone
         locationManager!.delegate = self
@@ -54,7 +46,7 @@ class MapViewViewController: BaseViewController,MKMapViewDelegate,CLLocationMana
         }
     }
     
-    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: AnyObject[]!) {
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         println("Did update location")
          let location = (locations as NSArray).lastObject as CLLocation
          //var location = locations[locations.count-1] as CLLocation

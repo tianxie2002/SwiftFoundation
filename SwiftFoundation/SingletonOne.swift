@@ -15,7 +15,7 @@ class SingletonOne: NSObject {
     class var shareInstance:SingletonOne{
         return _SingletonShareInstance
     }
-    init()
+    override init()
     {
        println("1111111")
     }

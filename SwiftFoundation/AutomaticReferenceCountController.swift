@@ -16,7 +16,10 @@ class Person {
     let name: String
     init(name: String) { self.name = name }
     var apartment: Apartment?
-    deinit { println("\(name) is being deinitialized") }
+    deinit {
+        // 只有最后一个引用被断开 才会被调用析构函数
+        println("\(name) is being deinitialized")
+    }
 }
 
 class Apartment {
@@ -54,7 +57,7 @@ class HTMLElement {
     let name: String
     let text: String?
     
-    @lazy var asHTML: () -> String = {
+    lazy var asHTML: () -> String = {
         [unowned self] in
         if let text = self.text {
             return "<\(self.name)>\(text)</\(self.name)>"
@@ -76,7 +79,7 @@ class HTMLElement {
 
 class AutomaticReferenceCountController: BaseViewController {
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }

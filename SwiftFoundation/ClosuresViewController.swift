@@ -10,7 +10,7 @@ import UIKit
 
 class ClosuresViewController: BaseViewController {
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }
@@ -49,35 +49,35 @@ class ClosuresViewController: BaseViewController {
         }
         // 这里第二个参数，传了一个函数
         // reversed is equal to ["Swift", "Soga", "Donary", "Arial"]
-        var reversed = sort(names, backwards)
+        var reversed: () = sort(&names, backwards)
         
         // 第二种方式：使用闭包方式
         // 完整闭包写法是在花括号内有参数列表和返回值，用关键字in表明闭包体的开始
         // (firstString: String, secondString: String) 闭包参数列表
         // -> Bool 指明闭包返回值类型是Bool
         // in关键字表明闭包体的开始
-        reversed = sort(names, { (firstString: String, secondString: String) -> Bool in
+        reversed = sort(&names, { (firstString: String, secondString: String) -> Bool in
             return firstString > secondString
             })
         
         // 这里可以进一步简化写法，因为闭包代码比较短，可以写到一行上
-        reversed = sort(names, { (firstString: String, secondString: String) -> Bool in return firstString > secondString})
+        reversed = sort(&names, { (firstString: String, secondString: String) -> Bool in return firstString > secondString})
         
         // 下面再进一步简化写法 ：根据环境上下文自动推断出类型
         // 参数列表都没有指明类型，也没有指明返回值类型，这是因为swift可以根据上下文推测出
         // firstString和secondString的类型会是names数组元素的类型，而返回值类型会根据return语句结果得到
-        reversed = sort(names, { firstString, secondString in return firstString > secondString})
+        reversed = sort(&names, { firstString, secondString in return firstString > secondString})
         
         // 再进一步简化：隐式返回（单行语句闭包）
         // 因为闭包体只有一行代码，可以省略return
-        reversed = sort(names, { firstString, secondString in firstString > secondString})
-        
-        // 再进一步简化：使用简化参数名（$i,i=0,1,2...从0开始的）
-        // Swift会推断出闭包需要两个参数，类型与names数组元素相同
-        reversed = sort(names, { $0 > $1 })
+//        reversed = sort(&names, { firstString, secondString in firstString > secondString})
+//        
+//        // 再进一步简化：使用简化参数名（$i,i=0,1,2...从0开始的）
+//        // Swift会推断出闭包需要两个参数，类型与names数组元素相同
+//        reversed = sort(&names, { $0 > $1 })
         
         // 最简单的一种写法：使用操作符
-        reversed = sort(names, >)
+        reversed = sort(&names, >)
         
         /*
         * 尾随闭包（Trailing Closures）

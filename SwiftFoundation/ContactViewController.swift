@@ -24,7 +24,7 @@ class ContactViewController: BaseViewController,UITableViewDelegate, UITableView
     var dataTableView: UITableView?
     var dataArray = NSMutableArray()
     var databasePath: String!
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }
@@ -42,7 +42,7 @@ class ContactViewController: BaseViewController,UITableViewDelegate, UITableView
         footView.backgroundColor = UIColor.lightGrayColor()
         self.dataTableView!.tableFooterView = footView
         self.dataTableView!.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-        self.view.addSubview(self.dataTableView)
+        self.view.addSubview(self.dataTableView!)
         
         
     }
@@ -100,7 +100,7 @@ class ContactViewController: BaseViewController,UITableViewDelegate, UITableView
         let db = FMDatabase(path: databasePath)
         if db.open() {
             let resultSet = db.executeQuery("SELECT * FROM CONTACTS",withArgumentsInArray:nil)
-            if resultSet {
+            if (resultSet != nil)  {
                 while resultSet.next() {
                     //addressField.text = resultSet.stringForColumn("ADDRESS")
                     //phoneField.text = resultSet.stringForColumn("PHONE")
@@ -133,7 +133,7 @@ class ContactViewController: BaseViewController,UITableViewDelegate, UITableView
     {
         var detailViewController = FMDBViewController(nibName: nil, bundle: nil)
         detailViewController.title = "添加联系人"
-        self.navigationController.pushViewController(detailViewController, animated:false)
+        self.navigationController?.pushViewController(detailViewController, animated:false)
 
     }
     override func didReceiveMemoryWarning() {
@@ -144,7 +144,7 @@ class ContactViewController: BaseViewController,UITableViewDelegate, UITableView
         return 1
     }
     
-    func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.dataArray.count
     }
       func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat{
@@ -152,7 +152,7 @@ class ContactViewController: BaseViewController,UITableViewDelegate, UITableView
         return 100;
     }
     
-    func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath?) -> UITableViewCell? {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         
 //        let cell = tableView?.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
 //        cell.textLabel.numberOfLines = 0
@@ -162,16 +162,14 @@ class ContactViewController: BaseViewController,UITableViewDelegate, UITableView
 //        return cell
         
         
-        var cell = tableView!.dequeueReusableCellWithIdentifier("CELL") as? UITableViewCell
-        
-        if !cell {
+        var cell = tableView.dequeueReusableCellWithIdentifier("CELL") as? UITableViewCell
+        if (cell != nil) {
             cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "CELL")
         }
-        let  contact = self.dataArray[indexPath!.row] as Contacter
-        cell!.textLabel.text = contact.name
-        cell!.detailTextLabel.text = contact.phoneNum
-       
-        return cell
+        let  contact = self.dataArray[indexPath.row] as Contacter
+//        cell.textLabel?.text = contact.name
+//        cell.detailTextLabel.text = contact.phoneNum!
+        return cell!;
     }
 
 

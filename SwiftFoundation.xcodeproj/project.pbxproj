@@ -281,7 +281,6 @@
 		C214F21C1959F22B00D53562 /* UIViews */ = {
 			isa = PBXGroup;
 			children = (
-				C214F21D1959F2B900D53562 /* UITableViewManager.swift */,
 			);
 			name = UIViews;
 			sourceTree = "<group>";
@@ -419,10 +418,32 @@
 		C2A0D3591962AFBE00EDB6A6 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				C2190CAB19597D2000AF0202 /* FoundationViewController.swift */,
+				C2DF1B61196647CF009E760E /* ConstantAndVariablesController.swift */,
+				C2DF1B631966496D009E760E /* IntegerAndFloatController.swift */,
+				C2DF1B6519664B64009E760E /* TuplesViewController.swift */,
+				C2DF1B6719664CD6009E760E /* OptionalsValueController.swift */,
+				C2DF1B7519669D78009E760E /* OptionalTypeViewController.swift */,
+				C2DF1B69196660CE009E760E /* BasicOperatorsController.swift */,
+				C2DF1B6B1966800F009E760E /* StringsAndCharactersController.swift */,
+				C2DF1B6D19668489009E760E /* ArrayAndDictionaryController.swift */,
+				C2DF1B6F1966898F009E760E /* FlowControlController.swift */,
+				C2DF1B71196693F8009E760E /* FunctionsViewController.swift */,
+				C2DF1B73196699F6009E760E /* ClosuresViewController.swift */,
 				C2A682381963081F00E46F8E /* ClosureShowValueViewController.swift */,
+				C2DF1B791966A739009E760E /* ClassAndStructController.swift */,
+				C2DF1B7B1966ACAB009E760E /* PropertiesController.swift */,
+				C2DF1B7D1966AF54009E760E /* InstanceMethodsController.swift */,
+				C2DF1B7F1966B9BD009E760E /* InheritanceController.swift */,
+				C2DF1B811966BAE1009E760E /* InitializationController.swift */,
+				C2DF1B831966BD23009E760E /* DeinitializationController.swift */,
+				C2DF1B851966BE4B009E760E /* AutomaticReferenceCountController.swift */,
+				C2DF1B871966BFFC009E760E /* OptionalChainningController.swift */,
+				C2DF1B8B1966D4CA009E760E /* TypeCastingController.swift */,
+				C2DF1B8F1966D7BA009E760E /* ExtensionsController.swift */,
+				C2DF1B891966C570009E760E /* GenericController.swift */,
 				C2A6823A1963085700E46F8E /* ClosureEditValueViewController.swift */,
 				C2A6823C1963114E00E46F8E /* ProtocolShowValueViewController.swift */,
+				C2190CAB19597D2000AF0202 /* FoundationViewController.swift */,
 				C2A6823E1963119E00E46F8E /* ProtocolEditValueViewController.swift */,
 				C2C818691963A4540028A8CB /* SingletonOne.swift */,
 				C2C8186B1963A5850028A8CB /* SingletonTwo.swift */,
@@ -431,28 +452,6 @@
 				C208AC571964256600E9ED76 /* ClosureBaseViewController.swift */,
 				C208AC5B1964390E00E9ED76 /* webService.swift */,
 				C208AC5D19643AE100E9ED76 /* webRequestViewController.swift */,
-				C2DF1B61196647CF009E760E /* ConstantAndVariablesController.swift */,
-				C2DF1B631966496D009E760E /* IntegerAndFloatController.swift */,
-				C2DF1B6519664B64009E760E /* TuplesViewController.swift */,
-				C2DF1B6719664CD6009E760E /* OptionalsValueController.swift */,
-				C2DF1B69196660CE009E760E /* BasicOperatorsController.swift */,
-				C2DF1B6B1966800F009E760E /* StringsAndCharactersController.swift */,
-				C2DF1B6D19668489009E760E /* ArrayAndDictionaryController.swift */,
-				C2DF1B6F1966898F009E760E /* FlowControlController.swift */,
-				C2DF1B71196693F8009E760E /* FunctionsViewController.swift */,
-				C2DF1B73196699F6009E760E /* ClosuresViewController.swift */,
-				C2DF1B7519669D78009E760E /* OptionalTypeViewController.swift */,
-				C2DF1B791966A739009E760E /* ClassAndStructController.swift */,
-				C2DF1B7B1966ACAB009E760E /* PropertiesController.swift */,
-				C2DF1B7D1966AF54009E760E /* InstanceMethodsController.swift */,
-				C2DF1B7F1966B9BD009E760E /* InheritanceController.swift */,
-				C2DF1B8F1966D7BA009E760E /* ExtensionsController.swift */,
-				C2DF1B811966BAE1009E760E /* InitializationController.swift */,
-				C2DF1B831966BD23009E760E /* DeinitializationController.swift */,
-				C2DF1B851966BE4B009E760E /* AutomaticReferenceCountController.swift */,
-				C2DF1B871966BFFC009E760E /* OptionalChainningController.swift */,
-				C2DF1B891966C570009E760E /* GenericController.swift */,
-				C2DF1B8B1966D4CA009E760E /* TypeCastingController.swift */,
 				C2DF1B8D1966D6BB009E760E /* NestedTypesController.swift */,
 			);
 			name = Foundation;
@@ -524,6 +523,7 @@
 		C2CA1AF9196016A500027DEF /* UIKitView */ = {
 			isa = PBXGroup;
 			children = (
+				C214F21D1959F2B900D53562 /* UITableViewManager.swift */,
 				C2190CAD19597D6B00AF0202 /* UIKitViewController.swift */,
 				C2CA1AFA1960170700027DEF /* UITableBaseViewController.swift */,
 				C2A0D3701962B3DC00EDB6A6 /* UIKitDetailViewController.swift */,
@@ -619,6 +619,7 @@
 		C2190C801959733700AF0202 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = baxiang;
 				TargetAttributes = {
@@ -870,28 +871,30 @@
 		C2190CA01959733700AF0202 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = SwiftFoundation/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SwiftFoundation/Swift-Bridg-Header.h";
+				SDKROOT = iphoneos8.0;
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftFoundation/SwiftFoundation-Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		C2190CA11959733700AF0202 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = SwiftFoundation/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SwiftFoundation/Swift-Bridg-Header.h";
+				SDKROOT = iphoneos8.0;
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftFoundation/SwiftFoundation-Bridging-Header.h";
 			};
 			name = Release;
 		};

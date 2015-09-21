@@ -22,11 +22,15 @@ class NewsViewCell: UITableViewCell {
 //        setupViews()
 //    }
    
-     init(style: UITableViewCellStyle, reuseIdentifier: String!)
+     override init(style: UITableViewCellStyle, reuseIdentifier: String!)
     {
        super.init(style: style, reuseIdentifier: reuseIdentifier)
          setupViews()
     }
+
+     required init(coder aDecoder: NSCoder) {
+         fatalError("init(coder:) has not been implemented")
+     }
     
     func setupViews()
     {
@@ -37,13 +41,13 @@ class NewsViewCell: UITableViewCell {
         newsImageView = UIImageView(frame: CGRect(x: 5, y: 2, width: 100, height: 76))
         newsImageView!.contentMode = UIViewContentMode.ScaleAspectFill
         newsImageView!.backgroundColor = UIColor.clearColor()
-        self.contentView.addSubview(newsImageView)
+        self.contentView.addSubview(newsImageView!)
         newsDescrip = UILabel(frame:CGRectMake(115,25,195,50))
         newsDescrip!.numberOfLines = 0
         newsDescrip!.backgroundColor = UIColor.clearColor()
         newsDescrip!.textColor =  UIColor.lightGrayColor()
         newsDescrip!.font = UIFont.systemFontOfSize(13)
-        self.contentView.addSubview(newsDescrip)
+        self.contentView.addSubview(newsDescrip!)
     }
     override func layoutSubviews()
     {

@@ -23,7 +23,7 @@ class UIImageCacheViewController: BaseViewController,UITableViewDataSource, UITa
         dataArray.append("http://pic1.win4000.com/pic/9/44/4263456573.jpg")
         return dataArray
         }()
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }
@@ -34,7 +34,7 @@ class UIImageCacheViewController: BaseViewController,UITableViewDataSource, UITa
         tableView!.autoresizingMask = UIViewAutoresizing.FlexibleHeight | UIViewAutoresizing.FlexibleWidth
         tableView!.delegate = self
         tableView!.dataSource = self
-        self.view!.addSubview(tableView)
+        self.view!.addSubview(tableView!)
         // Do any additional setup after loading the view.
     }
 
@@ -46,13 +46,13 @@ class UIImageCacheViewController: BaseViewController,UITableViewDataSource, UITa
         return 1
     }
     
-    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return mdataArray.count
     }
     
-    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell: UITableViewCell! = tableView.dequeueReusableCellWithIdentifier("CellIdentifier") as? UITableViewCell
-        if !cell  {
+        if !(cell != nil)  {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "CellIdentifier")
             var imageView = UIImageView(frame: CGRect(x: 20, y: 0, width: 200, height: 150))
             imageView.contentMode = UIViewContentMode.ScaleAspectFit

@@ -15,7 +15,7 @@ import UIKit
 */
 class FunctionsViewController: BaseViewController {
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }
@@ -49,6 +49,7 @@ class FunctionsViewController: BaseViewController {
         return "Hello, world"
     }
     
+  
     // 无返回值的函数,其实这里没有指定返回值，也会返回一个特殊的值，Void
     func sayGoodbye(personName: String) -> Void{
         println("Goodbye, \(personName)!")
@@ -89,11 +90,12 @@ class FunctionsViewController: BaseViewController {
         return (vowels, consonants, others)
     }
     
+    ///希望函数的使用者在调用函数时提供参数名字，那就需要给每个参数除了局部参数名外再定义一个外部参数名。外部参数名写在局部参数名之前，用空格分隔
     func joinOne(OhsString lhsString: String, OrhsString rhsString: String, Ojoiner joiner:String) -> String {
         return lhsString + joiner + rhsString
     }
     // 加上#号后，参数名与外部名相同，这是快捷方式
-    func joinTwo(#ssString: String, #rsString: String, #sjoiner:String) -> String {
+    func joinTwo(#ssString: String, rsString: String, sjoiner:String) -> String {
         return ssString + sjoiner + rsString
     }
     // 可以不使用快捷方式
@@ -121,16 +123,16 @@ class FunctionsViewController: BaseViewController {
     // 常量和变量参数
     // 在函数参数列表中，如果没有指定参数是常量还是变量，那么默认是let，即常量
     // 这里Str需要在函数体内修改，所以需要指定为变量类型，即用关键字var
-    func alignRight(var str: String, count: Int, pad: Character) -> String {
-        let amountToPad = count - countElements(str)
-        
-        // 使用_表示忽略，因为这里没有使用到
-        for _ in 1...amountToPad {
-            str = pad + str
-        }
-        
-        return str
-    }
+//    func alignRight(var str: String, count: Int, pad: Character) -> String {
+//        let amountToPad = count - countElements(str)
+//        
+//        // 使用_表示忽略，因为这里没有使用到
+//        for _ in 1...amountToPad {
+//            str = pad + str
+//        }
+//        
+//        return str
+//    }
     // 输入/输出参数
     // 有时候，在函数体内修改了参数的值，如何能直接修改原始实参呢？就是使用In-Out参数
     // 使用inout关键字声明的变量就是了
@@ -189,7 +191,7 @@ class FunctionsViewController: BaseViewController {
        
         println(joinTwo(ssString: "hello", rsString: "world", sjoiner: "-two-"))
         //  可以不使用快捷方式
-        println(joinThree("hello", threeString:"world", joiner: "-three-"))
+        println(joinThree("hello", threeString: "world", joiner: "-three-"))
        
         joinFour(originalString: "hello", destinationString: "world", withJoiner: "-") // prints "hello-world"
         joinFour(originalString: "hello", destinationString: "world") // prints "hello world"
@@ -223,8 +225,8 @@ class FunctionsViewController: BaseViewController {
             println("Result: \(mathFunction(first, second))")
         }
         
-        printMathResult(addTwoInts, 3, 5) // prints "Result: 8"
-        printMathResult(multiplyTwoInts, 3, 5) // prints "Result: 15"
+        printMathResult(addTwoInts, first: 3, second: 5) // prints "Result: 8"
+        printMathResult(multiplyTwoInts, first: 3, second: 5) // prints "Result: 15"
         
         // 函数作为返回类型
         func stepForward(input: Int) -> Int {
@@ -252,7 +254,7 @@ class FunctionsViewController: BaseViewController {
             }
             return backwards ? stepBackward : stepForward 
         }
-        println("---------------------------------函数-------------------------------------------------------")
+        print("---------------------------------函数-------------------------------------------------------")
     }
 
     override func didReceiveMemoryWarning() {

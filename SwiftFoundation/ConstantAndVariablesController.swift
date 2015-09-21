@@ -8,7 +8,8 @@
 
 import UIKit
 /**
-*    常量和变量
+*    常量和变量 常量的值一旦设定就不能改变，而变量的值可以随意更改
+*     与其他大部分编程语言不同，Swift 并不强制要求你在每条语句的结尾处使用分号（;）
 */
 class ConstantAndVariablesController: BaseViewController {
 
@@ -40,6 +41,7 @@ class ConstantAndVariablesController: BaseViewController {
         let n = 3.14159
         let 你好 = "你好，Swift" // 虽然可以用中文作为变量名，但我不建议这么做。。。个人建议
         
+        // 一旦你将常量或者变量声明为确定的类型，你就不能使用相同的名字再次进行声明，或者改变其存储的值的类型。同时，你也不能将常量与变量进行互转
         // 在swift中打印语句可以用println,print
         // 前者是打印最后添加了一个换行，后者则没有添加
         println(welcomeMessage) // 会换行
@@ -47,17 +49,18 @@ class ConstantAndVariablesController: BaseViewController {
         
         // 注意到这里打印的方式了吗？使用\()把变量放到括号中
         println("The welcomeMessage is \(welcomeMessage)")
-        
         // 这是单行注释
         
         /* 这也是注释，但是多行注释
         /*多行注释在swift中是可以嵌套的*/
         /*原官方指导教程上说嵌套多行注释可以快速、简单地把大的代码块分成多块来注释 */
         */
-        let catOne = "a cat" // 可以不添加分号
+        
+        
+        let catOne = "a cat" // 表达式都可以不添加分号
         let catTwo = "a cat"; println(catTwo)// 除了最后一条语句可以不添加分号外，其它都需要添加分号来隔开
         let catThree = "a cat"; let name = "mimi"; println("\(name) is \(catThree)")
-    
+        
     }
 
     override func didReceiveMemoryWarning() {

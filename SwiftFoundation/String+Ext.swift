@@ -21,7 +21,7 @@ extension String
     
     func containsString(s:String) -> Bool
     {
-        if(self.rangeOfString(s))
+        if((self.rangeOfString(s)) != nil)
         {
             return true
         }
@@ -33,7 +33,7 @@ extension String
     
     func containsString(s:String, compareOption: NSStringCompareOptions) -> Bool
     {
-        if(self.rangeOfString(s, options: compareOption))
+        if((self.rangeOfString(s, options: compareOption)) != nil)
         {
             return true
         }
@@ -42,20 +42,7 @@ extension String
             return false
         }
     }
-    /**
-    *  字符串翻转
-    *
-    *  @return <#return value description#>
-    */
-    func reverse() -> String
-    {
-        var reverseString : String = ""
-        for c in self
-        {
-            reverseString = c + reverseString
-        }
-        return reverseString
-    }
+    
         
     
 }

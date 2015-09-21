@@ -14,7 +14,7 @@ class NeteaseViewController: BaseViewController,UITableViewDelegate, UITableView
     var dataArray = NSMutableArray()
     var thumbQueue = NSOperationQueue()
     let NeteaseNewsApiUrl = "http://c.m.163.com/nc/article/headline/T1348647853363/0-20.html"
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }
@@ -31,7 +31,7 @@ class NeteaseViewController: BaseViewController,UITableViewDelegate, UITableView
         //self.tableView?.registerNib(nib, forCellReuseIdentifier: identifier)
         //self.dataTableView!.registerNib(nil, forCellReuseIdentifier: "NewsCell")
         self.dataTableView!.registerClass(NewsViewCell.self, forCellReuseIdentifier: "NewsCell")
-        self.view.addSubview(self.dataTableView)
+        self.view.addSubview(self.dataTableView!)
         loadDataSource()
         //        let refreshControl = UIRefreshControl()
         //        refreshControl.attributedTitle = NSAttributedString(string: "下拉刷新")
@@ -41,12 +41,12 @@ class NeteaseViewController: BaseViewController,UITableViewDelegate, UITableView
     }
     func loadDataSource() {
         //self.refreshControl.beginRefreshing()
-        var loadURL = NSURL.URLWithString(NeteaseNewsApiUrl)
-        var request = NSURLRequest(URL: loadURL)
+        var url = NSURL(string:NeteaseNewsApiUrl)
+        var request = NSURLRequest(URL: url!)
         var loadDataSourceQueue = NSOperationQueue();
         
         NSURLConnection.sendAsynchronousRequest(request, queue: loadDataSourceQueue, completionHandler: { response, data, error in
-            if error {
+            if (error  != nil) {
                 println(error)
                 dispatch_async(dispatch_get_main_queue(), {
                     //self.refreshControl.endRefreshing()

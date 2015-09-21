@@ -11,10 +11,10 @@ import UIKit
 extension UIImageView {
     
     func setImage(urlString:String,placeHolder:UIImage!) {
-        let url = NSURL.URLWithString(urlString)
+        var url :NSURL = NSURL(string:urlString)!
         let imageName = url.lastPathComponent
         let fileCache = FileCache()
-        let image : AnyObject = fileCache.getImage(imageName)
+        let image : AnyObject = fileCache.getImage(imageName!)
         if image as NSObject != NSNull() {
             self.image = (image as UIImage)//.makeThumbnail(CGSizeMake(88,88))
         }
@@ -24,7 +24,7 @@ extension UIImageView {
             let queue = NSOperationQueue();
             NSURLConnection.sendAsynchronousRequest(req, queue: queue, completionHandler: {
                 response, data, error in
-                if error {
+                if (error != nil) {
                     dispatch_async(dispatch_get_main_queue(), {
                         self.image = placeHolder
                         })
@@ -39,7 +39,7 @@ extension UIImageView {
                         else
                         {
                             self.image = image//.makeThumbnail(CGSizeMake(88,88))
-                            fileCache.saveImage(imageName,image:data)
+                            fileCache.saveImage(imageName!,image:data)
                         }
                         })
                 }
@@ -69,7 +69,7 @@ class FileCache: NSObject {
         let exist = NSFileManager.defaultManager().fileExistsAtPath(path)
         //println("get:"+path)
         if exist {
-            return  UIImage(contentsOfFile: path)
+            return  UIImage(contentsOfFile: path)!
         }
         return NSNull()
     }

@@ -35,7 +35,7 @@ class UITableBaseViewController: UIViewController,UITableViewDataSource,UITableV
         self.tableView!.dataSource = self
         self.tableView!.delegate = self
         self.tableView!.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        self.view.addSubview(self.tableView)
+        self.view.addSubview(self.tableView!)
     }
     /**
     *  初始化左边的navi编辑
@@ -51,8 +51,8 @@ class UITableBaseViewController: UIViewController,UITableViewDataSource,UITableV
         //self.addItemBtn!.tag = 100
         self.editItemBtn!.userInteractionEnabled = true
         self.editItemBtn?.addTarget(self, action: "addUITableDataSouce", forControlEvents: UIControlEvents.TouchUpInside)
-        var barButtonItem = UIBarButtonItem(customView: self.editItemBtn)
-        self.navigationItem!.rightBarButtonItem = barButtonItem
+        var barButtonItem = UIBarButtonItem(customView: self.editItemBtn!)
+        self.navigationItem.rightBarButtonItem = barButtonItem
     }
     /**
     *  初始化右边的navaItem
@@ -68,8 +68,8 @@ class UITableBaseViewController: UIViewController,UITableViewDataSource,UITableV
         //self.addItemBtn!.tag = 100
         self.addItemBtn!.userInteractionEnabled = true
         self.addItemBtn?.addTarget(self, action: "addUITableDataSouce", forControlEvents: UIControlEvents.TouchUpInside)
-        var barButtonItem = UIBarButtonItem(customView: self.addItemBtn)
-        self.navigationItem!.rightBarButtonItem = barButtonItem
+        var barButtonItem = UIBarButtonItem(customView: self.addItemBtn!)
+        self.navigationItem.rightBarButtonItem = barButtonItem
     }
     /**
     *  添加数据
@@ -85,15 +85,15 @@ class UITableBaseViewController: UIViewController,UITableViewDataSource,UITableV
      self.addItemBtn!.userInteractionEnabled = true
       
     }
-    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return self.itemArray!.count
     }
-    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!
+   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let cell = tableView .dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
         //cell.textLabel.text = String(format: "%i", indexPath.row+1)
-        cell.textLabel.text = self.itemArray!.objectAtIndex(indexPath.row) as String
+        cell.textLabel?.text = self.itemArray!.objectAtIndex(indexPath.row) as? String
         return cell
     }
     func tableView(tableView: UITableView!, canEditRowAtIndexPath indexPath: NSIndexPath!) -> Bool

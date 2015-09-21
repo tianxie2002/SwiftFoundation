@@ -10,11 +10,13 @@ import UIKit
 /**
 *   元组
 *   元组是多个值组合而成的复合值。元组中的值可以是任意类型，而且每一个元素的类型可以是不同的。
+*  作为函数返回值时，元组非常有用。一个用来获取网页的函数可能会返回一个(Int, String)元组来描述是否获取成功。和只能返回一个类型的值比较起来，
+*   一个包含两个不同类型值的元组可以让函数的返回信息更有用
 */
 
 class TuplesViewController: BaseViewController {
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }
@@ -23,7 +25,7 @@ class TuplesViewController: BaseViewController {
         super.viewDidLoad()
 
         // http404Error是(Int, String)类型
-        // 这个元组是二元组，是一个整型和字符串类型的组合，这里代表着404的意思是Not Found
+        // 一个Int值和一个String值组合起来表示 HTTP 状态码的两个部分：一个数字和一个人类可读的描述。这个元组可以被描述为“一个类型为(Int, String)的元组
         let http404Error = (404, "Not Found")
         
         // 元组是可以分解的。

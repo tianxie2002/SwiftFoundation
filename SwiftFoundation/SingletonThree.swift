@@ -37,7 +37,7 @@ class SingletonThree: NSObject {
         static var onceToke:dispatch_once_t = 0
         static var singletion: SingletonThree?
     }
-    init() {
+    override init() {
         println("333333");
     }
 }
